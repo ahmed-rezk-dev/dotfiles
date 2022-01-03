@@ -1,0 +1,244 @@
+[
+  {
+    "Constant" : [
+
+    ],
+    "submodules" : [
+
+    ],
+    "Function" : [
+
+    ],
+    "Variable" : [
+      {
+        "doc" : "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+        "desc" : "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+        "def" : "TimedExecution.logger",
+        "stripped_doc" : [
+          "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon."
+        ],
+        "notes" : [
+
+        ],
+        "signature" : "TimedExecution.logger",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "logger",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "String",
+        "desc" : "String",
+        "def" : "TimedExecution.starting_at",
+        "stripped_doc" : [
+          "String"
+        ],
+        "notes" : [
+
+        ],
+        "signature" : "TimedExecution.starting_at",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "starting_at",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "String",
+        "desc" : "String",
+        "def" : "TimedExecution.ending_at",
+        "stripped_doc" : [
+          "String"
+        ],
+        "notes" : [
+
+        ],
+        "signature" : "TimedExecution.ending_at",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "ending_at",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "String representing the delay between running your function. \nExamples:\n  * \"00:20\" - every 20 minutes\n  * \"01:00\" - every hour",
+        "desc" : "String representing the delay between running your function.",
+        "def" : "TimedExecution.every",
+        "stripped_doc" : [
+          "String representing the delay between running your function. ",
+          "Examples:",
+          "  * \"00:20\" - every 20 minutes",
+          "  * \"01:00\" - every hour"
+        ],
+        "notes" : [
+
+        ],
+        "signature" : "TimedExecution.every",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "every",
+        "parameters" : [
+
+        ]
+      }
+    ],
+    "stripped_doc" : [
+
+    ],
+    "desc" : "Send clipboard contents to TimedExecution",
+    "Deprecated" : [
+
+    ],
+    "type" : "Module",
+    "Constructor" : [
+
+    ],
+    "doc" : "Send clipboard contents to TimedExecution\n\nConversion of tldm's pastebin gist to a Spoon https:\/\/gist.github.com\/tdlm\/5eba0299f2924a8aaf46\nCode by @tdlm, spoon by Tyler Thrailkill <tyler.b.thrailkill@gmail.com>\n\nhttps:\/\/github.com\/snowe2010",
+    "Method" : [
+      {
+        "doc" : "Start a timer that runs a function every N minutes",
+        "desc" : "Start a timer that runs a function every N minutes",
+        "def" : "TimedExecution:start()",
+        "stripped_doc" : [
+          "Start a timer that runs a function every N minutes"
+        ],
+        "notes" : [
+
+        ],
+        "signature" : "TimedExecution:start()",
+        "type" : "Method",
+        "returns" : [
+
+        ],
+        "name" : "start",
+        "parameters" : [
+
+        ]
+      }
+    ],
+    "Command" : [
+
+    ],
+    "Field" : [
+
+    ],
+    "items" : [
+      {
+        "doc" : "String",
+        "desc" : "String",
+        "def" : "TimedExecution.ending_at",
+        "stripped_doc" : [
+          "String"
+        ],
+        "notes" : [
+
+        ],
+        "signature" : "TimedExecution.ending_at",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "ending_at",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "String representing the delay between running your function. \nExamples:\n  * \"00:20\" - every 20 minutes\n  * \"01:00\" - every hour",
+        "desc" : "String representing the delay between running your function.",
+        "def" : "TimedExecution.every",
+        "stripped_doc" : [
+          "String representing the delay between running your function. ",
+          "Examples:",
+          "  * \"00:20\" - every 20 minutes",
+          "  * \"01:00\" - every hour"
+        ],
+        "notes" : [
+
+        ],
+        "signature" : "TimedExecution.every",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "every",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+        "desc" : "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon.",
+        "def" : "TimedExecution.logger",
+        "stripped_doc" : [
+          "Logger object used within the Spoon. Can be accessed to set the default log level for the messages coming from the Spoon."
+        ],
+        "notes" : [
+
+        ],
+        "signature" : "TimedExecution.logger",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "logger",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "String",
+        "desc" : "String",
+        "def" : "TimedExecution.starting_at",
+        "stripped_doc" : [
+          "String"
+        ],
+        "notes" : [
+
+        ],
+        "signature" : "TimedExecution.starting_at",
+        "type" : "Variable",
+        "returns" : [
+
+        ],
+        "name" : "starting_at",
+        "parameters" : [
+
+        ]
+      },
+      {
+        "doc" : "Start a timer that runs a function every N minutes",
+        "desc" : "Start a timer that runs a function every N minutes",
+        "def" : "TimedExecution:start()",
+        "stripped_doc" : [
+          "Start a timer that runs a function every N minutes"
+        ],
+        "notes" : [
+
+        ],
+        "signature" : "TimedExecution:start()",
+        "type" : "Method",
+        "returns" : [
+
+        ],
+        "name" : "start",
+        "parameters" : [
+
+        ]
+      }
+    ],
+    "name" : "TimedExecution"
+  }
+]
