@@ -147,7 +147,7 @@ module.start = function()
 		local idx = tostring(n)
 
 		-- important: use this with onKeyReleased, not onKeyPressed
-		hs.hotkey.bind({ "ctrl", "shift" }, idx, nil, function()
+		hs.hotkey.bind(meh, idx, nil, function()
 			local win = hs.window.focusedWindow()
 
 			-- if there's no focused window, just move to that space
