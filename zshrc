@@ -220,7 +220,7 @@ alias ibrew='arch -x86_64 /usr/local/bin/brew'
 #alias dotnet='dotnetx64'
 alias lvim="/Users/ahmedrezk/.local/bin/lvim"
 
-ln -sf ~/dotfiles/.zshrc ~/.zshrc
-ln -sf ~/dotfiles/.hammerspoon ~/.hammerspoon
+ln -sf ~/dotfiles/zshrc ~/.zshrc
+ln -sf ~/dotfiles/hammerspoon ~/.hammerspoon
 ln -sf ~/dotfiles/nvim ~/.config/nvim
 
