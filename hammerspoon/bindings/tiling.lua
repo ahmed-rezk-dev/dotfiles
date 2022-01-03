@@ -4,6 +4,9 @@ local capitalize = require("ext.utils").capitalize
 local module = {}
 local hhtwm = wm.cache.hhtwm
 
+hyper = { "cmd", "alt", "shift", "ctrl" }
+meh = { "alt", "shift", "ctrl" }
+
 local move = function(dir)
 	local win = hs.window.frontmostWindow()
 
@@ -49,7 +52,7 @@ end
 
 module.start = function()
 	local bind = function(key, fn)
-		hs.hotkey.bind({ "ctrl", "shift" }, key, fn, nil, fn)
+		hs.hotkey.bind(meh, key, fn, nil, fn)
 	end
 
 	-- move window

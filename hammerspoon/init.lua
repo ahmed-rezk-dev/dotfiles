@@ -1,7 +1,11 @@
-hs.hotkey.alertDuration = 0
-hs.hints.showTitleThresh = 0
-hs.window.animationDuration = 0
-hs.logger.defaultLogLevel = "info"
+-- global stuff
+require("console").init()
+require("overrides").init()
+
+--[[ hs.hotkey.alertDuration = 0
+hs.hints.showTitleThresh = 0 ]]
+-- hs.window.animationDuration = 0
+-- hs.logger.defaultLogLevel = "info"
 
 hs.loadSpoon "SpoonInstall"
 
@@ -15,10 +19,10 @@ Install:andUse("Reload", {
 hs.ipc.cliInstall()
 
 -- lower logging level for hotkeys
-require("hs.hotkey").setLogLevel "warning"
+-- require("hs.hotkey").setLogLevel "warning"
 
 -- global config
-config = {
+Config = {
 	apps = {
 		terms = { "kitty" },
 		browsers = { "Google Chrome", "Safari" },
@@ -37,14 +41,14 @@ config = {
 	},
 
 	window = {
-		highlightBorder = false,
+		highlightBorder = true,
 		highlightMouse = true,
 		historyLimit = 0,
 	},
 
-	network = {
+	--[[ network = {
 		home = "Skynet 5G",
-	},
+	}, ]]
 
 	homebridge = {
 		studioSpeakers = { aid = 10, iid = 11, name = "Studio Speakers" },
@@ -75,11 +79,22 @@ controlplane.enabled = { "autohome", "automount" }
 
 -- watchers
 watchers.enabled = { "urlevent" }
-watchers.urlPreference = config.apps.browsers
+watchers.urlPreference = Config.apps.browsers
 
 -- bindings
-bindings.enabled = { "ask-before-quit", "block-hide", "ctrl-esc", "f-keys", "focus", "global", "tiling", "term-ctrl-i", "viscosity" }
-bindings.askBeforeQuitApps = config.apps.browsers
+bindings.enabled = {
+	"ask-before-quit",
+	"block-hide",
+	"ctrl-esc",
+	"f-keys",
+	"focus",
+	"global",
+	"tiling",
+	"term-ctrl-i",
+	"viscosity",
+	"gird",
+}
+bindings.askBeforeQuitApps = Config.apps.browsers
 
 -- start/stop modules
 local modules = { bindings, controlplane, watchers, wm }

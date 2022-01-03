@@ -7,7 +7,6 @@ local cache = {
 local module = { cache = cache }
 
 local focusAndHighlight = function(cmd)
-	print "fff"
 	return function()
 		cache.focusFilter[cmd](cache.focusFilter, nil, false, true)
 
@@ -26,7 +25,6 @@ module.start = function()
 		{ key = "k", cmd = "focusWindowNorth" },
 		{ key = "l", cmd = "focusWindowEast" },
 	}, function(object)
-		print "focused"
 		bind({ "alt" }, object.key, focusAndHighlight(object.cmd))
 	end)
 end
