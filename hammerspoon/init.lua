@@ -55,6 +55,9 @@ Config = {
 		studioLights = { aid = 9, iid = 11, name = "Studio Lights" },
 		tvLights = { aid = 6, iid = 11, name = "TV Lights" },
 	},
+	keymap = {
+		hyper = { "cmd", "alt", "shift", "ctrl" },
+	},
 }
 
 -- requires
