@@ -124,28 +124,7 @@ M.setup = function()
     end,
   }
 
-  -- OLD LSP
-  --[[ ins_left {
-    -- Lsp server name .
-    function()
-      local msg = "No Active Lsp"
-      local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
-      local clients = vim.lsp.get_active_clients()
-      if next(clients) == nil then
-        return msg
-      end
-      for _, client in ipairs(clients) do
-        local filetypes = client.config.filetypes
-        if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-          return client.name
-        end
-      end
-      return msg
-    end,
-    icon = " LSP:",
-    color = { fg = "#ffffff", gui = "bold" },
-  } ]]
-
+  -- Active LSP
   ins_left {
     function(msg)
       msg = msg or "LS Inactive"
@@ -170,7 +149,7 @@ M.setup = function()
     end,
     color = { gui = "bold" },
     cond = conditions.hide_in_width,
-    icon = " LSP:",
+    icon = " LSP:",
   }
 
   -- Active Formatter
@@ -193,20 +172,21 @@ M.setup = function()
       local supported_formatters = formatters.active_formatter(buf_ft)
       vim.list_extend(buf_client_formatter, supported_formatters)
 
-      return "[" .. table.concat(buf_client_formatter, ", ") .. "]"
+      return table.concat(buf_client_formatter, ", ")
     end,
     color = { fg = colors.green, gui = "bold" },
     cond = conditions.hide_in_width,
-    icon = " Formatting:",
+    icon = " Formatting:",
   }
 
+  -- Active Diagnostics
   ins_left {
     function(msg)
-      msg = msg or "Formatting Inactive"
+      msg = msg or "Diagnostics Inactive"
       local buf_clients = vim.lsp.buf_get_clients()
       if next(buf_clients) == nil then
         if type(msg) == "boolean" or #msg == 0 then
-          return "Formatting Inactive"
+          return "Diagnostics Inactive"
         end
         return msg
       end
@@ -218,11 +198,11 @@ M.setup = function()
       local supported_linters = linters.active_linter(buf_ft)
       vim.list_extend(buf_client_linter, supported_linters)
 
-      return "[" .. table.concat(buf_client_linter, ", ") .. "]"
+      return table.concat(buf_client_linter, ", ")
     end,
     color = { fg = colors.blue, gui = "bold" },
     cond = conditions.hide_in_width,
-    icon = " Linter:",
+    icon = " Diagnostics:",
   }
 
   -- ins_left { "filetype" }
