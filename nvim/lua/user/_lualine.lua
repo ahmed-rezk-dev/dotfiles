@@ -154,15 +154,7 @@ M.setup = function()
 
   -- Active Formatter
   ins_left {
-    function(msg)
-      msg = msg or "Formatting Inactive"
-      local buf_clients = vim.lsp.buf_get_clients()
-      if next(buf_clients) == nil then
-        if type(msg) == "boolean" or #msg == 0 then
-          return "Formatting Inactive"
-        end
-        return msg
-      end
+    function()
       local buf_ft = vim.bo.filetype
       local buf_client_formatter = {}
 
@@ -171,6 +163,10 @@ M.setup = function()
       local formatters = require "user.lsp.utils"
       local supported_formatters = formatters.active_formatter(buf_ft)
       vim.list_extend(buf_client_formatter, supported_formatters)
+
+      if next(buf_client_formatter) == nil then
+        return "Not Found"
+      end
 
       return table.concat(buf_client_formatter, ", ")
     end,
@@ -181,15 +177,7 @@ M.setup = function()
 
   -- Active Diagnostics
   ins_left {
-    function(msg)
-      msg = msg or "Diagnostics Inactive"
-      local buf_clients = vim.lsp.buf_get_clients()
-      if next(buf_clients) == nil then
-        if type(msg) == "boolean" or #msg == 0 then
-          return "Diagnostics Inactive"
-        end
-        return msg
-      end
+    function()
       local buf_ft = vim.bo.filetype
       local buf_client_linter = {}
 
@@ -197,6 +185,10 @@ M.setup = function()
       local linters = require "user.lsp.utils"
       local supported_linters = linters.active_linter(buf_ft)
       vim.list_extend(buf_client_linter, supported_linters)
+
+      if next(buf_client_linter) == nil then
+        return "Not Found"
+      end
 
       return table.concat(buf_client_linter, ", ")
     end,
