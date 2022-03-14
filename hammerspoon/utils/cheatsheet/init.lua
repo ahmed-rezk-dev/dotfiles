@@ -18,7 +18,7 @@ end
 
 if not _G.requirePackage then
 	function _G.requirePackage(name, isInternal)
-		local location = not isInternal and "/deps/share/lua/" .. luaVersion .. "/" or "/"
+		local location = not isInternal and "/share/lua/" .. luaVersion .. "/" or "/"
 		local packagePath = _G.getSpoonPath() .. location .. name .. ".lua"
 
 		return dofile(packagePath)
@@ -145,6 +145,15 @@ function Cheatsheet._createShortcutBlocks(shortcutList)
 	table.insert(glyphMapBlock, { hotkey = "␣", name = "Space" })
 
 	table.insert(shortcutBlocks, { shortcuts = glyphMapBlock })
+
+	local vimShorcust = { {
+		isTitle = true,
+		name = "Vim shortcuts",
+	} }
+	table.insert(vimShorcust, { hotkey = "%s/hello/world/", name = "search and replace" })
+	table.insert(vimShorcust, { hotkey = "y$", name = "Yank entire line without the newline at the end." })
+
+	table.insert(shortcutBlocks, { shortcuts = vimShorcust })
 
 	return shortcutBlocks
 end

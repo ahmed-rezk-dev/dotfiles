@@ -57,6 +57,7 @@ Config = {
 	},
 	keymap = {
 		hyper = { "cmd", "alt", "shift", "ctrl" },
+		mash = { "alt", "shift", "ctrl" },
 	},
 }
 
@@ -147,59 +148,91 @@ units = {
 	maximum = { x = 0.00, y = 0.00, w = 1.00, h = 1.00 },
 }
 
-mash = { "ctrl", "alt" }
-hs.hotkey.bind(mash, "left", function()
+hs.hotkey.bind(Config.keymap.mash, "left", function()
 	hs.window.focusedWindow():move(units.left, nil, true)
 end)
-hs.hotkey.bind(mash, "right", function()
+hs.hotkey.bind(Config.keymap.mash, "right", function()
 	hs.window.focusedWindow():move(units.right, nil, true)
 end)
-hs.hotkey.bind(mash, "up", function()
+hs.hotkey.bind(Config.keymap.mash, "up", function()
 	hs.window.focusedWindow():move(units.up, nil, true)
 end)
-hs.hotkey.bind(mash, "down", function()
+hs.hotkey.bind(Config.keymap.mash, "down", function()
 	hs.window.focusedWindow():move(units.down, nil, true)
 end)
 
-hs.hotkey.bind(mash, "u", function()
+hs.hotkey.bind(Config.keymap.mash, "u", function()
 	hs.window.focusedWindow():move(units.topleft, nil, true)
 end)
-hs.hotkey.bind(mash, "i", function()
+hs.hotkey.bind(Config.keymap.mash, "i", function()
 	hs.window.focusedWindow():move(units.topright, nil, true)
 end)
-hs.hotkey.bind(mash, "j", function()
+hs.hotkey.bind(Config.keymap.mash, "j", function()
 	hs.window.focusedWindow():move(units.bottomleft, nil, true)
 end)
-hs.hotkey.bind(mash, "k", function()
+hs.hotkey.bind(Config.keymap.mash, "k", function()
 	hs.window.focusedWindow():move(units.bottomright, nil, true)
 end)
 
-hs.hotkey.bind(mash, "1", function()
+hs.hotkey.bind(Config.keymap.mash, "1", function()
 	hs.window.focusedWindow():move(units.left33, nil, true)
 end)
-hs.hotkey.bind(mash, "3", function()
+hs.hotkey.bind(Config.keymap.mash, "3", function()
 	hs.window.focusedWindow():move(units.left50, nil, true)
 end)
-hs.hotkey.bind(mash, "2", function()
+hs.hotkey.bind(Config.keymap.mash, "2", function()
 	hs.window.focusedWindow():move(units.left67, nil, true)
 end)
 
-hs.hotkey.bind(mash, "f", function()
+hs.hotkey.bind(Config.keymap.mash, "f", function()
 	hs.window.focusedWindow():move(units.center13, nil, true)
 end)
-hs.hotkey.bind(mash, "8", function()
+hs.hotkey.bind(Config.keymap.mash, "8", function()
 	hs.window.focusedWindow():move(units.right67, nil, true)
 end)
-hs.hotkey.bind(mash, "7", function()
+hs.hotkey.bind(Config.keymap.mash, "7", function()
 	hs.window.focusedWindow():move(units.right50, nil, true)
 end)
-hs.hotkey.bind(mash, "6", function()
+hs.hotkey.bind(Config.keymap.mash, "6", function()
 	hs.window.focusedWindow():move(units.right33, nil, true)
 end)
 
-hs.hotkey.bind(mash, "c", function()
+hs.hotkey.bind(Config.keymap.mash, "c", function()
 	hs.window.focusedWindow():move(units.center, nil, true)
 end)
-hs.hotkey.bind(mash, "return", function()
+hs.hotkey.bind(Config.keymap.mash, "return", function()
 	hs.window.focusedWindow():move(units.maximum, nil, true)
+end)
+
+--[[ local VimMode = hs.loadSpoon "VimMode"
+local vim = VimMode:new() ]]
+
+--[[ vim:enterWithSequence "jk"
+vim:bindHotKeys { enter = { { "ctrl" }, ";" } } ]]
+
+local function openChromeWithDeb()
+	hs.execute("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome --remote-debugging-port=9222", true)
+
+	-- /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --remote-debugging-port=9222
+end
+
+hs.hotkey.bind(hyper, "d", function()
+	openChromeWithDeb()
+end)
+
+local cheatsheet = require "utils.cheatsheet"
+
+hs.hotkey.bind(hyper, "h", function()
+	local commonDirectoryShortcuts = {
+		{
+			nil,
+			"t",
+			function() end,
+			{ "Help", "Open File in Folder with App" },
+		},
+	}
+
+	cheatsheet:init("Help", "VIM / Hammerspoon Shortcuts", commonDirectoryShortcuts)
+
+	cheatsheet:show()
 end)

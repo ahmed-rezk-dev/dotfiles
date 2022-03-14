@@ -17,7 +17,9 @@ end
 cache.osxApperance = getOSXAppearance()
 
 module.getHighlightWindowColor = function()
-	local blueColor = { red = 50 / 255, green = 138 / 255, blue = 215 / 255, alpha = 1.0 }
+	local blueColor = { red = 41 / 255, green = 128 / 255, blue = 185 / 255, alpha = 1.0 }
+	-- local redColor = { red = 255, green = 0, blue = 0, alpha = 1.0 }
+	-- local yellowColor = { red = 09, green = 187, blue = 0, alpha = 1.0 }
 	local grayColor = { red = 143 / 255, green = 143 / 255, blue = 143 / 255, alpha = 1.0 }
 
 	return cache.osxApperance == "graphite" and grayColor or blueColor
@@ -27,11 +29,11 @@ module.drawBorder = function(opts)
 	local focusedWindow = hs.window.focusedWindow()
 
 	local alpha = 0.8
-	local borderWidth = 4
+	local borderWidth = 8
 	local distance = 2
-	local roundRadix = 8
+	local roundRadix = 10
 
-	local fadeTime = opts and opts.fadeTime or 0.5
+	local fadeTime = opts and opts.fadeTime or 0.4
 	local showTime = opts and opts.showTime or 0.0
 
 	if not cache.borderDrawing then
@@ -68,7 +70,7 @@ module.drawBorder = function(opts)
 
 	cache.borderDrawing:show(fadeTime)
 
-	if showTime > 0 then
+	--[[ if showTime > 0 then
 		if cache.borderDrawingFadeOut then
 			cache.borderDrawingFadeOut:stop()
 		end
@@ -77,7 +79,7 @@ module.drawBorder = function(opts)
 			cache.borderDrawing:hide(fadeTime)
 			cache.borderDrawingFadeOut = nil
 		end)
-	end
+	end ]]
 end
 
 module.highlightWindow = function()
@@ -95,7 +97,7 @@ module.highlightWindow = function()
 
 	-- TODO: test if this still works
 	if Config.window.highlightBorder then
-		module.drawBorder { fadeTime = 0.5, showTime = 0.5 }
+		module.drawBorder { fadeTime = 0.8, showTime = 0.5 }
 	end
 end
 
