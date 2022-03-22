@@ -23,9 +23,9 @@ wk.setup {
     group = "+", -- symbol prepended to a group
   },
   window = {
-    border = "single", -- none, single, double, shadow
+    border = "double", -- none, single, double, shadow
     position = "bottom", -- bottom, top
-    margin = { 1, 0, 1, 0 }, -- extra window margin [top, right, bottom, left]
+    margin = { 1, 2, 1, 4 }, -- extra window margin [top, right, bottom, left]
     padding = { 2, 2, 2, 2 }, -- extra window padding [top, right, bottom, left]
   },
   layout = {
@@ -115,6 +115,7 @@ local mappings = {
   g = {
     name = "Git",
     g = { "<cmd>lua _LAZYGIT_TOGGLE()<cr>", "LazyGit" },
+    n = { "<cmd>Neogit<cr>", "Neogit" },
     j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
     k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
     l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },

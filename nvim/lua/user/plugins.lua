@@ -83,8 +83,8 @@ return packer.startup(function(use)
     end,
   }
   -- Colorschemes
-  -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-  -- use("lunarvim/darkplus.nvim")
+  use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
+  use "lunarvim/darkplus.nvim"
   --[[ use({
 		"EdenEast/nightfox.nvim",
 		config = function()
@@ -96,7 +96,13 @@ return packer.startup(function(use)
     "folke/tokyonight.nvim",
     config = function()
       require("tokyonight.colors").setup {}
-      vim.cmd [[colorscheme tokyonight]]
+      -- vim.cmd [[colorscheme tokyonight]]
+    end,
+  }
+  use {
+    "olimorris/onedarkpro.nvim",
+    config = function()
+      require("themes.onedarkPro").setup()
     end,
   }
   --[[ use({
@@ -138,6 +144,7 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-cmdline"
   use "saadparwaiz1/cmp_luasnip"
   use "hrsh7th/cmp-nvim-lsp"
+  use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
 
   -- snippets
   use "L3MON4D3/LuaSnip"
@@ -161,6 +168,20 @@ return packer.startup(function(use)
 
   -- Git
   use "lewis6991/gitsigns.nvim"
+  use {
+    "sindrets/diffview.nvim",
+    config = function()
+      require("user._git").diffviewSetup()
+    end,
+  }
+
+  use {
+    "TimUntersberger/neogit",
+    requires = { "nvim-lua/plenary.nvim", "sindrets/diffview.nvim" },
+    config = function()
+      require("user._git").neogitSetup()
+    end,
+  }
 
   -- Debug Adapter Protocol
   use "mfussenegger/nvim-dap"

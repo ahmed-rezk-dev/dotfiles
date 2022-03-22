@@ -50,7 +50,8 @@ M.setup = function()
       section_separators = { left = "", right = "" },
       -- theme = "nightfox",
       -- theme = "auto",
-      theme = "tokyonight",
+      -- theme = "tokyonight",
+      globalstatus = true,
     },
     sections = {
       -- these are to remove the defaults
