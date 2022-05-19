@@ -84,7 +84,7 @@ return packer.startup(function(use)
   }
   -- Colorschemes
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-  use "lunarvim/darkplus.nvim"
+  -- use "lunarvim/darkplus.nvim"
   --[[ use({
 		"EdenEast/nightfox.nvim",
 		config = function()
@@ -105,6 +105,13 @@ return packer.startup(function(use)
       require("themes.onedarkPro").setup()
     end,
   }
+  use {
+    "navarasu/onedark.nvim",
+    config = function()
+      -- require("themes.onedark").setup()
+    end,
+  }
+
   --[[ use({
 		"rebelot/kanagawa.nvim",
 		config = function()
@@ -144,7 +151,7 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-cmdline"
   use "saadparwaiz1/cmp_luasnip"
   use "hrsh7th/cmp-nvim-lsp"
-  use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
+  use { "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" }
 
   -- snippets
   use "L3MON4D3/LuaSnip"
@@ -163,6 +170,9 @@ return packer.startup(function(use)
   use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
+  }
+  use {
+    "nvim-treesitter/playground",
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
@@ -187,7 +197,11 @@ return packer.startup(function(use)
   use "mfussenegger/nvim-dap"
   use "rcarriga/nvim-dap-ui"
   use { "nvim-telescope/telescope-dap.nvim" }
-  use { "Pocco81/DAPInstall.nvim" }
+  use { "Pocco81/DAPInstall.nvim", branch = "dev" }
+  use {
+    "Pocco81/DAPInstall.nvim",
+    module = "dap-install",
+  }
   use "theHamsta/nvim-dap-virtual-text"
 
   -- Spell checking
@@ -195,7 +209,7 @@ return packer.startup(function(use)
   use "kamykn/popup-menu.nvim"
 
   use {
-    "chentau/marks.nvim",
+    "chentoast/marks.nvim",
     config = function()
       require("user._marker").setup()
     end,
@@ -237,6 +251,22 @@ return packer.startup(function(use)
 			require("user._navigator").setup()
 		end,
 	}) ]]
+
+  use { "iamcco/markdown-preview.nvim", run = "cd app && npm install" }
+  use "davidgranstrom/nvim-markdown-preview"
+  use { "ellisonleao/glow.nvim", branch = "main" }
+
+  use {
+    "ldelossa/litee.nvim",
+    config = function()
+      require("user._litee").setup()
+    end,
+  }
+  use "ldelossa/litee-filetree.nvim"
+  use "ldelossa/litee-symboltree.nvim"
+  use "ldelossa/litee-calltree.nvim"
+  use "ldelossa/litee-bookmarks.nvim"
+  use "ldelossa/gh.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

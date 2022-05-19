@@ -32,7 +32,7 @@ local options = {
   wrap = true, -- display lines as one long line
   scrolloff = 8, -- is one of my fav
   sidescrolloff = 8,
-  guifont = "Mononoki Nerd Font Mono:h12", -- the font used in graphical neovim applications
+  guifont = "Fira Code:h12", -- the font used in graphical neovim applications
   spelllang = "en",
   -- FOLD
   foldmethod = "indent", -- folding, set to "expr" for treesitter based foloding
@@ -52,3 +52,4 @@ vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]]
 vim.cmd [[set formatoptions-=cro]]
+vim.cmd [[set background=dark]]

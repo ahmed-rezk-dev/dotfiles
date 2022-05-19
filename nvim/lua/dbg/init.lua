@@ -1,49 +1,49 @@
 -- telescope-dap
-require("telescope").load_extension("dap")
+require("telescope").load_extension "dap"
 
 -- nvim-dap-virtual-text. Show virtual text for current frame
 vim.g.dap_virtual_text = true
 
 -- nvim-dap-ui
-require("dapui").setup({
-	icons = { expanded = "▾", collapsed = "▸" },
-	mappings = {
-		-- Use a table to apply multiple mappings
-		expand = { "<CR>", "<2-LeftMouse>" },
-		open = "o",
-		remove = "d",
-		edit = "e",
-		repl = "r",
-	},
-	sidebar = {
-		-- You can change the order of elements in the sidebar
-		elements = {
-			-- Provide as ID strings or tables with "id" and "size" keys
-			{
-				id = "scopes",
-				size = 0.50, -- Can be float or integer > 1
-			},
-			{ id = "breakpoints", size = 0.30 },
-			{ id = "stacks", size = 0.10 },
-			{ id = "watches", size = 00.10 },
-		},
-		size = 60,
-		position = "right", -- Can be "left", "right", "top", "bottom"
-	},
-	tray = {
-		elements = { "repl" },
-		size = 10,
-		position = "bottom", -- Can be "left", "right", "top", "bottom"
-	},
-	floating = {
-		max_height = 60, -- These can be integers or a float between 0 and 1.
-		max_width = 40, -- Floats will be treated as percentage of your screen.
-		mappings = {
-			close = { "q", "<Esc>" },
-		},
-	},
-	windows = { indent = 1 },
-})
+require("dapui").setup {
+  icons = { expanded = "▾", collapsed = "▸" },
+  mappings = {
+    -- Use a table to apply multiple mappings
+    expand = { "<CR>", "<2-LeftMouse>" },
+    open = "o",
+    remove = "d",
+    edit = "e",
+    repl = "r",
+  },
+  sidebar = {
+    -- You can change the order of elements in the sidebar
+    elements = {
+      -- Provide as ID strings or tables with "id" and "size" keys
+      {
+        id = "scopes",
+        size = 0.40, -- Can be float or integer > 1
+      },
+      { id = "watches", size = 00.40 },
+      { id = "stacks", size = 0.10 },
+      { id = "breakpoints", size = 0.10 },
+    },
+    size = 60,
+    position = "right", -- Can be "left", "right", "top", "bottom"
+  },
+  tray = {
+    elements = {  },
+    size = 10,
+    position = "bottom", -- Can be "left", "right", "top", "bottom"
+  },
+  floating = {
+    max_height = 60, -- These can be integers or a float between 0 and 1.
+    max_width = 40, -- Floats will be treated as percentage of your screen.
+    mappings = {
+      close = { "q", "<Esc>" },
+    },
+  },
+  windows = { indent = 1 },
+}
 
 -- local dap_install = require "dap-install"
 -- dap_install.config("chrome", {})
@@ -51,7 +51,7 @@ require("dapui").setup({
 -- languages
 -- require('dbg.python')
 -- require('dbg.node')
-require("dbg.react")
+require "dbg.react"
 
 -- nvim-dap
 vim.fn.sign_define("DapBreakpoint", { text = "●", texthl = "ErrorMsg", linehl = "", numhl = "" })
@@ -60,33 +60,33 @@ vim.fn.sign_define("DapBreakpointCondition", { text = "C", texthl = "", linehl =
 vim.fn.sign_define("DapBreakpointRejected", { text = "●", texthl = "WarningMsg", linehl = "", numhl = "" })
 vim.fn.sign_define("DapLogPoint", { text = "L", texthl = "", linehl = "", numhl = "" })
 
-local dap_install = require("dap-install")
+local dap_install = require "dap-install"
 
-dap_install.setup({
-	installation_path = vim.fn.stdpath("data") .. "/dapinstall/",
-})
+dap_install.setup {
+  installation_path = vim.fn.stdpath "data" .. "/dapinstall/",
+}
 
-require("nvim-dap-virtual-text").setup({
-	enabled = true, -- enable this plugin (the default)
-	enabled_commands = true, -- create commands DapVirtualTextEnable, DapVirtualTextDisable, DapVirtualTextToggle, (DapVirtualTextForceRefresh for refreshing when debug adapter did not notify its termination)
-	highlight_changed_variables = true, -- highlight changed values with NvimDapVirtualTextChanged, else always NvimDapVirtualText
-	highlight_new_as_changed = false, -- highlight new variables in the same way as changed variables (if highlight_changed_variables)
-	show_stop_reason = true, -- show stop reason when stopped for exceptions
-	commented = false, -- prefix virtual text with comment string
-	-- experimental features:
-	virt_text_pos = "eol", -- position of virtual text, see `:h nvim_buf_set_extmark()`
-	all_frames = false, -- show virtual text for all stack frames not only current. Only works for debugpy on my machine.
-	virt_lines = false, -- show virtual lines instead of virtual text (will flicker!)
-	-- virt_text_win_col = nil, -- position the virtual text at a fixed window column (starting from the first text column) ,
-	-- e.g. 80 to position at column 80, see `:h nvim_buf_set_extmark()`
-})
+require("nvim-dap-virtual-text").setup {
+  enabled = true, -- enable this plugin (the default)
+  enabled_commands = true, -- create commands DapVirtualTextEnable, DapVirtualTextDisable, DapVirtualTextToggle, (DapVirtualTextForceRefresh for refreshing when debug adapter did not notify its termination)
+  highlight_changed_variables = true, -- highlight changed values with NvimDapVirtualTextChanged, else always NvimDapVirtualText
+  highlight_new_as_changed = false, -- highlight new variables in the same way as changed variables (if highlight_changed_variables)
+  show_stop_reason = true, -- show stop reason when stopped for exceptions
+  commented = false, -- prefix virtual text with comment string
+  -- experimental features:
+  virt_text_pos = "eol", -- position of virtual text, see `:h nvim_buf_set_extmark()`
+  all_frames = false, -- show virtual text for all stack frames not only current. Only works for debugpy on my machine.
+  virt_lines = false, -- show virtual lines instead of virtual text (will flicker!)
+  -- virt_text_win_col = nil, -- position the virtual text at a fixed window column (starting from the first text column) ,
+  -- e.g. 80 to position at column 80, see `:h nvim_buf_set_extmark()`
+}
 
 local function map(mode, lhs, rhs, opts)
-	local options = { noremap = true }
-	if opts then
-		options = vim.tbl_extend("force", options, opts)
-	end
-	vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+  local options = { noremap = true }
+  if opts then
+    options = vim.tbl_extend("force", options, opts)
+  end
+  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
 -- -- key mappings

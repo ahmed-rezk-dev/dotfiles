@@ -16,14 +16,17 @@ local check_backspace = function()
 end
 
 -- cmp in cmdline is a WIP - I mostly use telescope to navigate anyway
+-- `/` cmdline setup.
 cmp.setup.cmdline("/", {
-  sources = cmp.config.sources {
+  mapping = cmp.mapping.preset.cmdline(),
+  sources = {
     { name = "buffer" },
   },
 })
 
--- Use cmdline & path source for ':'.
+-- `:` cmdline setup.
 cmp.setup.cmdline(":", {
+  mapping = cmp.mapping.preset.cmdline(),
   sources = cmp.config.sources({
     { name = "path" },
   }, {
@@ -152,11 +155,14 @@ cmp.setup {
     behavior = cmp.ConfirmBehavior.Replace,
     select = false,
   },
-  documentation = {
-    border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-  },
+
   experimental = {
     ghost_text = false,
     native_menu = false,
+  },
+
+  window = {
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
   },
 }

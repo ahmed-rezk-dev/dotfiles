@@ -152,6 +152,7 @@ function Cheatsheet._createShortcutBlocks(shortcutList)
 	} }
 	table.insert(vimShorcust, { hotkey = "%s/hello/world/", name = "search and replace" })
 	table.insert(vimShorcust, { hotkey = "y$", name = "Yank entire line without the newline at the end." })
+	table.insert(vimShorcust, { hotkey = "ctrl + alt + arrow key", name = "Increase & Decrease height/width in vim" })
 
 	table.insert(shortcutBlocks, { shortcuts = vimShorcust })
 

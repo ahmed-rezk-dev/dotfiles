@@ -4,12 +4,10 @@ const completionSpec: Fig.Spec = {
   subcommands: [
     {
       name: "git",
-      description: "Example subcommand",
-      insertValue: "`git status --porcelain | sed -ne 's/^ M //p'`",
-      /* subcommands: [{
-      name: "my_nested_subcommand",
-      description: "Nested subcommand, example usage: 'nvim my_subcommand my_nested_subcommand'"
-    }], */
+      description:
+        "Using Git to Open Modified or Changed Files Since Previous Commit",
+      insertValue:
+        "`echo $(git diff --name-only HEAD~ HEAD) $(git status --porcelain | awk '{print $2}')`",
     },
   ],
   options: [

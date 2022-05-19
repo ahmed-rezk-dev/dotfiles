@@ -1,9 +1,5 @@
 # Fig pre block. Keep at the top of this file.
-export PATH="${PATH}:${HOME}/.local/bin"
-eval "$(fig init zsh pre)"
-
-
-
+. "$HOME/.fig/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
 #export ANDROID_HOME=$HOME/Library/Android/sdk
 export ANDROID_HOME=$HOME/Library/Android/sdk
@@ -231,8 +227,5 @@ ln -sf ~/dotfiles/zshrc ~/.zshrc
 ln -sf ~/dotfiles/hammerspoon ~/.hammerspoon
 ln -sf ~/dotfiles/nvim ~/.config/nvim
 
-
-
-
 # Fig post block. Keep at the bottom of this file.
-eval "$(fig init zsh post)"
+. "$HOME/.fig/shell/zshrc.post.zsh"

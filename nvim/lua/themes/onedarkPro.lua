@@ -3,7 +3,6 @@ local M = {}
 function M.setup()
   local onedarkpro = require "onedarkpro"
   onedarkpro.setup {
-    -- Theme can be overwritten with 'onedark' or 'onelight' as a string
     theme = function()
       if vim.o.background == "dark" then
         return "onedark"
@@ -12,6 +11,9 @@ function M.setup()
       end
     end,
     colors = {
+      onelight = {
+        bg = "#f5f5f5", -- green
+      },
       --[[ onedark = {
         color_column = "#61afef",
         cursorline = "#61afef",
@@ -27,6 +29,12 @@ function M.setup()
       VertSplit = {
         fg = "${purple}",
         -- bg = "${red}",
+      },
+      TSProperty = {
+        fg = (vim.o.background == "dark" and "${white}" or "${black}"),
+      },
+      TSTagAttribute = {
+        fg = "${purple}",
       },
       -- LspDiagnosticsDefaultWarning = { fg = "${white}", bg = "${yellow}" },
       --[[ CmpDocumentation = {
@@ -46,21 +54,21 @@ function M.setup()
       treesitter = true,
     },
     styles = {
-      strings = "NONE", -- Style that is applied to strings
-      comments = "NONE", -- Style that is applied to comments
-      keywords = "NONE", -- Style that is applied to keywords
-      functions = "NONE", -- Style that is applied to functions
-      variables = "NONE", -- Style that is applied to variables
+      comments = "italic",
+      keywords = "bold", -- change style of keywords to be bold
+      functions = "italic,bold", -- styles can be a comma separated list
+      strings = "none",
+      variables = "none",
     },
     options = {
-      bold = false, -- Use the themes opinionated bold styles?
-      italic = false, -- Use the themes opinionated italic styles?
-      underline = false, -- Use the themes opinionated underline styles?
-      undercurl = false, -- Use the themes opinionated undercurl styles?
-      cursorline = false, -- Use cursorline highlighting?
+      bold = true, -- Use the themes opinionated bold styles?
+      italic = true, -- Use the themes opinionated italic styles?
+      underline = true, -- Use the themes opinionated underline styles?
+      undercurl = true, -- Use the themes opinionated undercurl styles?
+      cursorline = true, -- Use cursorline highlighting?
       transparency = false, -- Use a transparent background?
-      terminal_colors = false, -- Use the theme's colors for Neovim's :terminal?
-      window_unfocussed_color = false, -- When the window is out of focus, change the normal background?
+      terminal_colors = true, -- Use the theme's colors for Neovim's :terminal?
+      window_unfocussed_color = true, -- When the window is out of focus, change the normal background?
     },
   }
   onedarkpro.load()
