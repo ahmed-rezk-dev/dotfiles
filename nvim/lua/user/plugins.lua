@@ -162,6 +162,13 @@ return packer.startup(function(use)
   use "williamboman/nvim-lsp-installer"
   use "tamago324/nlsp-settings.nvim"
   use "jose-elias-alvarez/null-ls.nvim"
+  use {
+    "christianchiarulli/nvim-gps",
+    branch = "text_hl",
+    config = function()
+      require("user._gps").setup()
+    end,
+  }
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
