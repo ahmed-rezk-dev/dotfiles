@@ -14,12 +14,10 @@ M.setup = function()
   end
 
   local config = {
-    -- disable virtual text
-    virtual_text = false,
     -- show signs
-    signs = {
+    --[[ signs = {
       active = signs,
-    },
+    }, ]]
     update_in_insert = true,
     underline = true,
     severity_sort = true,
@@ -41,6 +39,15 @@ M.setup = function()
 
   vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
     border = "rounded",
+  })
+
+  vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+    -- disable virtual text
+    virtual_text = false,
+    -- Icons are setup by _lspsaga
+    signs = {
+      active = signs,
+    },
   })
 end
 
