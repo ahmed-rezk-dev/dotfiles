@@ -1,0 +1,27 @@
+local M = {}
+
+M.setup = function()
+  require("neorg").setup {
+    load = {
+      ["core.defaults"] = {},
+      ["core.norg.dirman"] = {
+        config = {
+          workspaces = {
+            work = "~/notes/work",
+            home = "~/notes/home",
+          },
+        },
+      },
+      ["core.norg.concealer"] = {},
+      ["core.integrations.nvim-cmp"] = {},
+      ["core.norg.completion"] = {
+        config = {
+          engine = "nvim-cmp",
+        },
+      },
+    },
+    ["external.kanban"] = {},
+  }
+end
+
+return M

@@ -63,6 +63,7 @@ local vmappings = {
 }
 local mappings = {
   ["w"] = { "<cmd>w!<CR>", "Save" },
+  ["n"] = { "<cmd>lua _NOTES_TOGGLE()<cr>", "Notes" },
   ["q"] = { "<cmd>q!<CR>", "Quit" },
   ["/"] = { "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", "Comment" },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
@@ -267,6 +268,7 @@ local mappings = {
     i = { "<cmd>:lua require('goto-preview').goto_preview_implementation()<CR>", "Implementation" },
     c = { "<cmd>:lua require('goto-preview').close_all_win()<CR>", "Close" },
     r = { "<cmd>:lua require('goto-preview').goto_preview_references()<CR>", "References" },
+    z = { "<cmd>:lua require('user.utils.toggle').toggle_window()<CR>", "Test Popup" },
   },
   -- z = { "<cmd>:lua require('user.utils.popup-fun').test()<CR>", "Test Popup" },
   z = { "<cmd>:lua require('user.utils.toggle').toggle_window()<CR>", "Test Popup" },

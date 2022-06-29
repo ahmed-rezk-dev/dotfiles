@@ -1,5 +1,5 @@
 # Fig pre block. Keep at the top of this file.
-. "$HOME/.fig/shell/zshrc.pre.zsh"
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
 #export ANDROID_HOME=$HOME/Library/Android/sdk
 export ANDROID_HOME=$HOME/Library/Android/sdk
@@ -228,4 +228,4 @@ ln -sf ~/dotfiles/hammerspoon ~/.hammerspoon
 ln -sf ~/dotfiles/nvim ~/.config/nvim
 
 # Fig post block. Keep at the bottom of this file.
-. "$HOME/.fig/shell/zshrc.post.zsh"
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"

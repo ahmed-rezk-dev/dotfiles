@@ -15,34 +15,37 @@ require("dapui").setup {
     edit = "e",
     repl = "r",
   },
-  sidebar = {
-    -- You can change the order of elements in the sidebar
-    elements = {
-      -- Provide as ID strings or tables with "id" and "size" keys
-      {
+  layouts = {
+    {
+      elements = {
         id = "scopes",
         size = 0.40, -- Can be float or integer > 1
       },
       { id = "watches", size = 00.40 },
       { id = "stacks", size = 0.10 },
       { id = "breakpoints", size = 0.10 },
+      size = 60,
+      position = "right", -- Can be "left", "right", "top", "bottom"
     },
-    size = 60,
-    position = "right", -- Can be "left", "right", "top", "bottom"
-  },
-  tray = {
-    elements = {  },
-    size = 10,
-    position = "bottom", -- Can be "left", "right", "top", "bottom"
-  },
-  floating = {
-    max_height = 60, -- These can be integers or a float between 0 and 1.
-    max_width = 40, -- Floats will be treated as percentage of your screen.
-    mappings = {
-      close = { "q", "<Esc>" },
+    --[[ {
+      elements = { "tray" },
+      size = 10,
+      position = "bottom", -- Can be "left", "right", "top", "bottom"
     },
+    {
+      elements = { "floating " },
+      max_height = 60, -- These can be integers or a float between 0 and 1.
+      max_width = 40, -- Floats will be treated as percentage of your screen.
+      mappings = {
+        close = { "q", "<Esc>" },
+      },
+    },
+
+    {
+      elements = { "sidebar " },
+      windows = { indent = 1 },
+    }, ]]
   },
-  windows = { indent = 1 },
 }
 
 -- local dap_install = require "dap-install"
@@ -60,11 +63,11 @@ vim.fn.sign_define("DapBreakpointCondition", { text = "C", texthl = "", linehl =
 vim.fn.sign_define("DapBreakpointRejected", { text = "●", texthl = "WarningMsg", linehl = "", numhl = "" })
 vim.fn.sign_define("DapLogPoint", { text = "L", texthl = "", linehl = "", numhl = "" })
 
-local dap_install = require "dap-install"
+--[[ local dap_install = require "dap-install"
 
 dap_install.setup {
   installation_path = vim.fn.stdpath "data" .. "/dapinstall/",
-}
+} ]]
 
 require("nvim-dap-virtual-text").setup {
   enabled = true, -- enable this plugin (the default)

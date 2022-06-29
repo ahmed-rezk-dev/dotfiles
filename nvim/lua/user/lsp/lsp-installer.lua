@@ -33,7 +33,7 @@ lsp_installer.on_server_ready(function(server)
 
   if server.name == "html" then
     local html_opts = require "user.lsp.settings.html"
-    opts = vim.tbl_deep_extend("force",  html_opts, opts)
+    opts = vim.tbl_deep_extend("force", html_opts, opts)
   end
 
   -- This setup() function is exactly the same as lspconfig's setup function.

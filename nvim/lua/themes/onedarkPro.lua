@@ -26,6 +26,13 @@ function M.setup()
       TelescopeBorder = {
         fg = "#61afef",
       },
+      TelescopePromptBorder = {
+        fg = "#61afef",
+      },
+      TelescopePreviewBorder = {
+        fg = "#61afef",
+      },
+
       VertSplit = {
         fg = "${purple}",
         -- bg = "${red}",

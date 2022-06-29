@@ -37,7 +37,7 @@ local options = {
   -- FOLD
   foldmethod = "indent", -- folding, set to "expr" for treesitter based foloding
   foldopen = "mark",
-  foldlevel = 2,
+  foldlevel = 1,
   hidden = true,
   laststatus = 3,
 }

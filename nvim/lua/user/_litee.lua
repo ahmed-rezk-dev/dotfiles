@@ -28,10 +28,10 @@ M.setup = function()
     icon_set = "nerd",
   }
 
-  require("litee.gh").setup {
+  --[[ require("litee.gh").setup {
     icon_set = "nerd",
     map_resize_keys = true,
-  }
+  } ]]
 
   local opts = { silent = true }
   -- litee.lib mappings
