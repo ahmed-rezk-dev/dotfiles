@@ -82,8 +82,8 @@ nnoremap gP <cmd>lua require('goto-preview').close_all_win()<CR>
 nnoremap gpr <cmd>lua require('goto-preview').goto_preview_references()<CR> ]]
 
   local map = vim.api.nvim_buf_set_keymap
-  --[[ map(bufnr, "n", "gr", "<cmd>Lspsaga rename<cr>", opts)
-  map(bufnr, "n", "gx", "<cmd>Lspsaga code_action<cr>", opts)
+  map(bufnr, "n", "gr", "<cmd>Lspsaga rename<cr>", opts)
+  map(bufnr, "n", "ga", "<cmd>Lspsaga code_action<cr>", opts)
   map(bufnr, "x", "gx", ":<c-u>Lspsaga range_code_action<cr>", opts)
   map(bufnr, "n", "<leader>K", "<cmd>Lspsaga hover_doc<cr>", opts)
   map(bufnr, "n", "go", "<cmd>Lspsaga show_line_diagnostics<cr>", opts)
@@ -103,7 +103,7 @@ nnoremap gpr <cmd>lua require('goto-preview').goto_preview_references()<CR> ]]
   vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>D", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
   -- buf_set_keymap("n", "<leader>D", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts) ]]
+  vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
   vim.api.nvim_buf_set_keymap(
     bufnr,
     "n",

@@ -13,7 +13,6 @@ M.setup = function()
         },
       },
       ["core.norg.concealer"] = {},
-      ["core.integrations.nvim-cmp"] = {},
       ["core.norg.completion"] = {
         config = {
           engine = "nvim-cmp",

@@ -1,0 +1,17 @@
+* Update runAutoDesigner 
+  - [x] with optional orientations 
+  - [x] default to ['portrait', 'landscape']
+* Create useSaveSystemDesignMutation
+  - [x] Save orientations values to the API 
+* Create usePanelsOrientationsMutation
+  - [x] run `runAutoDesigner` with the orientations giving option
+  - [x] After run irradiance
+  - [x] After run calculate production
+* On Success
+  - [] run  `usePanelsOrientationsMutation` with the orientations giving option & auroraIds
+  - [] Make sure of all Aurora loading status working correctly
+* On Error
+  - [] Display error with `<PageError message="An Error Occurred" />`
+  - [] Make sure error text from api itself not static 
+
+

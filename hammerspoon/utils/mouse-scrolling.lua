@@ -7,7 +7,7 @@
 local mouseScrollButtonId = 2
 
 -- scroll speed and direction confi
-local scrollSpeedMultiplier = 0.1
+local scrollSpeedMultiplier = -6
 local scrollSpeedSquareAcceleration = true
 local reverseVerticalScrollDirection = false
 local mouseScrollTimerDelay = 0.01

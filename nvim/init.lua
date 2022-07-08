@@ -21,5 +21,4 @@ require "user.autocommands"
 require "user.utils.mappings"
 -- Debug Adapter Protocol
 require "dbg"
-require "user._signature"
 vim.diagnostic.config { virtual_text = false }

@@ -56,6 +56,7 @@ vim.api.nvim_create_autocmd({ "CursorMoved", "BufWinEnter", "BufFilePost" }, {
       "Outline",
       "spectre_panel",
       "toggleterm",
+      "navigator",
     }
 
     if vim.tbl_contains(winbar_filetype_exclude, vim.bo.filetype) then

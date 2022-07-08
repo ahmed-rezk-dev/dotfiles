@@ -153,6 +153,8 @@ return packer.startup(function(use)
   use "saadparwaiz1/cmp_luasnip"
   use "hrsh7th/cmp-nvim-lsp"
   use { "tzachar/cmp-tabnine", run = "./install.sh", requires = "hrsh7th/nvim-cmp" }
+  use { "onsails/lspkind.nvim" }
+  use { "hrsh7th/cmp-nvim-lsp-signature-help" }
 
   -- snippets
   use {
@@ -218,7 +220,12 @@ return packer.startup(function(use)
   use "mfussenegger/nvim-dap"
   use "rcarriga/nvim-dap-ui"
   use { "nvim-telescope/telescope-dap.nvim" }
-  use { "Pocco81/DAPInstall.nvim", branch = "dev", module = "dap-install" }
+  use {
+    "Pocco81/DAPInstall.nvim",
+    -- branch = "dev",
+    -- module = "dap-install",
+    commit = "24923c3819a450a772bb8f675926d530e829665f",
+  }
   use "theHamsta/nvim-dap-virtual-text"
 
   -- Spell checking
@@ -239,35 +246,34 @@ return packer.startup(function(use)
     end,
   }
 
-  --[[ use {
+  use {
     "tami5/lspsaga.nvim",
-    -- "tami5/lspsaga.nvim",
     config = function()
       require("user._lspsaga").setup()
+    end,
+  }
+
+  --[[ use {
+    "ray-x/lsp_signature.nvim",
+    config = function()
+      require("user._signature").setup()
     end,
   } ]]
 
   use {
-    "ray-x/lsp_signature.nvim",
-    --[[ config = function()
-			require("user._signature").setup()
-		end, ]]
-  }
-
-  --[[ use {
     "rmagatti/goto-preview",
     config = function()
       require("user.goto").setup()
     end,
-  } ]]
+  }
 
-  use {
+  --[[ use {
     "ray-x/navigator.lua",
     requires = { "ray-x/guihua.lua", run = "cd lua/fzy && make" },
     config = function()
       require("user._navigator").setup()
     end,
-  }
+  } ]]
 
   use { "iamcco/markdown-preview.nvim", run = "cd app && npm install" }
   use "davidgranstrom/nvim-markdown-preview"
