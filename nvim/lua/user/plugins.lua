@@ -68,6 +68,14 @@ return packer.startup(function(use)
   }
   use "MunifTanjim/nui.nvim"
 
+  -- This is the Neovim implementation of the famous Emacs Hydra package.
+  use {
+    "anuvyklack/hydra.nvim",
+    config = function()
+      require("user._hydra").setup()
+    end,
+  }
+
   -- sessions manager
   use {
     "rmagatti/auto-session",
