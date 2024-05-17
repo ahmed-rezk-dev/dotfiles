@@ -1,0 +1,39 @@
+* Dashboard
+  ~ Heimdall {https://github.com/linuxserver/Heimdall}
+  ~ Homer
+
+* Cloud
+  ~ Nextcloud {https://nextcloud.com/}
+
+* Remote Access
+  ~ Duck DNS
+
+* Services/App/Hosting images
+  ~ Docker, Rancher, Kubernetes {https://www.youtube.com/watch?v=oILc0ywDVTk}
+  ~ Docker with Yacht UI {https://youtu.be/__38-ehaYYs}
+  ~ Clouldron
+
+* System
+  ~ TrueNas {https://www.youtube.com/watch?v=C-UI8Wvl9YU&t=1237s}
+
+* Security {https://youtu.be/f5jNJDaztqk?t=886}
+
+* DNS Filter 
+  ~ PiHole & Unbound
+
+
+* NVIM
+  - Tabnine
+
+
+  How to solave this type in typescript
+
+* remove one of eslint 
+* Set up a good diagnostic. Check disabled plugins before installing other.
+* Autocomplate in command line.
+* Set up NORG server.
+* Fix diffview.
+* Check git pr reviews plugin.
+* Take a look at Glance.nvim.
+* Fix telescope-fzf-native.nvim.
+* Check the session mananger.

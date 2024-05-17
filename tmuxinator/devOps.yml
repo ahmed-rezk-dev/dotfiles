@@ -1,0 +1,11 @@
+# /Users/ahmedrezk/.config/tmuxinator/SimplifiedQuotingReactDotnet.yml
+
+name: devOps
+root: /Users/ahmedrezk/Work/simplified-quoting/dev/devOps/
+
+windows:
+  - editor:
+      - nvim
+      - guard
+  - editor-2:
+  - git:

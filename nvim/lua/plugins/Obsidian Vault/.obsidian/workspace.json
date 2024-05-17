@@ -1,0 +1,164 @@
+{
+  "main": {
+    "id": "4149fa65ef956e09",
+    "type": "split",
+    "children": [
+      {
+        "id": "6c3fb9f7fb1621a6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9a92200d01aa0cf0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "work/Work.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3d2c20f8be00a2af",
+    "type": "split",
+    "children": [
+      {
+        "id": "6bfb6a779190600b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e5057757f74f5b56",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "39a802abeb06df20",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "79ee48ba4773c777",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "9177640c101bbc70",
+    "type": "split",
+    "children": [
+      {
+        "id": "7075ce0a8a0f0aa1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "69bf78b0b01c504b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "work/Work.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "c403d962670e5ca8",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "work/Work.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "5c155fa128fbaf6f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "3c4ea4268f7d0ff9",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "work/Work.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "9a92200d01aa0cf0",
+  "lastOpenFiles": [
+    "personal/2023-08-17.md",
+    "personal/Brain.md",
+    "work/Work.md",
+    "work",
+    "untitled folder",
+    "personal",
+    "Work.md",
+    "Untitled.canvas",
+    "Untitled 1.canvas",
+    "Untitled 2.canvas",
+    "2023-08-17.md",
+    "Brain.md"
+  ]
+}

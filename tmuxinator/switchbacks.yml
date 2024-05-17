@@ -1,0 +1,13 @@
+# /Users/ahmedrezk/.config/tmuxinator/SimplifiedQuotingReactDotnet.yml
+
+name: switchbacks
+root: /Users/ahmedrezk/Work/simplified-quoting/switchbacks/
+
+windows:
+  - editor:
+      - nvim
+      - guard
+  - editor-2:
+  - bakcend: cd Sunnova.SimplifiedQuoting && dotnet run # dotnet runs bakcend & fronted
+  - test: cd && npm run test -u
+  - git:

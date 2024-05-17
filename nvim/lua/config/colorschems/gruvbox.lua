@@ -1,0 +1,13 @@
+vim.o.background = 'light'
+vim.g.gruvbox_bold = 0
+vim.g.gruvbox_italic = 0
+vim.g.gruvbox_italicize_comments = 0
+vim.g.gruvbox_contrast_dark = 'hard'
+vim.g.gruvbox_contrast_light = 'hard'
+vim.g.gruvbox_invert_selection = 0
+vim.g.gruvbox_color_column = 'bg0'
+vim.g.gruvbox_sign_column = 'bg0'
+vim.g.gruvbox_indent_guides = 0
+vim.g.gruvbox_transparent_background = 1
+vim.g.gruvbox_improved_strings = 0
+vim.g.grubvox_termcolors = 256

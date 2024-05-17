@@ -1,0 +1,11 @@
+# /Users/ahmedrezk/.config/tmuxinator/wallside.yml
+
+name: wallside
+root: /Users/ahmedrezk/Development/fusionary/wallside/sales-application
+
+windows:
+  - editor:
+        - nvim
+        - guard
+  - server: yarn start
+  - bakcend: cd ../web-api && yarn start-dev

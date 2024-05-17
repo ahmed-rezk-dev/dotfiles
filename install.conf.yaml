@@ -1,0 +1,20 @@
+- clean: ["~"]
+
+- defaults:
+    link:
+      create: true
+      force: true
+      relink: true
+
+- link:
+    ~/.bashrc: bashrc
+    ~/.gitconfig: gitconfig
+    ~/.zshenv: zshenv
+    ~/.zshrc: zshrc
+    ~/.config/nvim: nvim
+    ~/.config/alacritty: alacritty
+    ~/.config/kitty: kitty
+    ~/.config/skhd: skhd
+    ~/.config/tmuxinator: tmuxinator
+    ~/.config/tmux: tmux
+    ~/.hammerspoon: .hammerspoon

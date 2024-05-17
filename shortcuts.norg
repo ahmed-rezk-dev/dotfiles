@@ -1,0 +1,3 @@
+	"%s/hello/world/", name = "search and replace" 
+	"y$", name = "Yank entire line without the newline at the end."
+	"ctrl + alt + arrow key", name = "Increase & Decrease height/width in vim"

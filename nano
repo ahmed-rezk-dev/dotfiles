@@ -1,0 +1,15 @@
+#work repository
+Host github.com-sunnova
+ HostName github.com
+ User git
+ IdentityFile ~/.ssh/id_rsa_sunnova
+
+#personal repository
+Host github.com
+ HostName github.com
+ User git
+ IdentityFile ~/.ssh/id_rsa
+
+# Fig ssh integration. Keep at the bottom of this file.
+Match all
+  Include ~/.fig/ssh

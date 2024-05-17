@@ -1,0 +1,10 @@
+# /Users/ahmedrezk/.config/tmuxinator/new-fusionary-design.yml
+
+name: new-fusionary-design
+root: /Users/ahmedrezk/Development/fusionary/fusionary.com-2020
+
+windows:
+  - editor:
+        - nvim
+        - guard
+  - server: ./start.sh

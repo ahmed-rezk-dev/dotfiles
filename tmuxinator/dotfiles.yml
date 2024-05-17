@@ -1,0 +1,13 @@
+# /Users/ahmedrezk/.config/tmuxinator/configuration.yml
+
+name: dotfiles
+root: /Users/ahmedrezk/.dotfiles/
+
+windows:
+  # - editor:
+  #     - nvim
+  #     - guard
+  - neovim: cd nvim && nvim
+  - hammerspoon: cd .hammerspoon && nvim
+  - tmuxinator: cd tmuxinator && nvim
+  - git: lazygit

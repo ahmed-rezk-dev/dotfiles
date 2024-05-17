@@ -1,0 +1,12 @@
+# /Users/ahmedrezk/.config/tmuxinator/SimplifiedQuotingReactDotnet.yml
+
+name: DEV-0
+root: /Users/ahmedrezk/Work/simplified-quoting/dev-0/
+
+windows:
+  - editor-dev-0:
+      - nvim
+      - guard
+  - bakcend-dev-0: cd Sunnova.SimplifiedQuoting
+  - test-dev-0: cd && npm run test -u
+  - git-dev-0:

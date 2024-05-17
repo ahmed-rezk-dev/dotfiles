@@ -1,0 +1,11 @@
+name: app-of-apps
+root: /Users/ahmedrezk/Work/principlestudios/app-of-apps/customer-app
+
+windows:
+  - editor:
+        - nvim
+        - guard
+  - metro: npm run start
+  - ios: npm run ios
+  - andriod: npm run android
+  - dotnet-server: cd ../Sunnova.CustomerApp/ && dotnet run 

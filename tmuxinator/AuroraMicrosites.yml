@@ -1,0 +1,10 @@
+# /Users/ahmedrezk/.config/tmuxinator/AuroraMicrosites.yml
+
+name: AuroraMicrosites
+root: /Users/ahmedrezk/Development/principlestudios/AuroraMicrosites/ui
+
+windows:
+  - editor:
+        - nvim
+        - guard
+  - server: npm run start
