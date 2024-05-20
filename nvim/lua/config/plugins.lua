@@ -119,6 +119,11 @@ return {
       "hrsh7th/cmp-nvim-lsp",
     },
     servers = nil,
+    opts = {
+      inlay_hints = {
+        enabled = true,
+      },
+    },
   },
   {
     "williamboman/mason.nvim",
@@ -227,14 +232,6 @@ return {
     },
     config = true, -- run require("template-string").setup()
   },
-  -- TODO: Remove OR keep inline hints/information
-  -- {
-  --   "lvimuser/lsp-inlayhints.nvim",
-  --   branch = "main", -- or "anticonceal"
-  --   config = function()
-  --     require("plugins.inlay-hints")
-  --   end,
-  -- },
   {
     "barrett-ruth/import-cost.nvim",
     build = "sh install.sh yarn",
