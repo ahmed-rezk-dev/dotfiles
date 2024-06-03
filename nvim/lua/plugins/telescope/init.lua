@@ -155,7 +155,7 @@ M.command_history = function()
     }))
 end
 
-local trouble = require("trouble.providers.telescope")
+local trouble = require("trouble.sources.telescope")
 
 local telescope = require("telescope")
 
