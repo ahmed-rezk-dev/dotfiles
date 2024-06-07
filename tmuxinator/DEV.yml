@@ -7,6 +7,6 @@ windows:
   - editor-dev:
       - nvim
       - guard
-  - bakcend-dev: cd Sunnova.SimplifiedQuoting
-  - test-dev: cd && npm run test -u
+  - server-dev: cd ui && npm run start
+  - test-dev: cd ui && DEBUG_PRINT_LIMIT=10000000 npm run test -- --watchAll
   - git-dev:

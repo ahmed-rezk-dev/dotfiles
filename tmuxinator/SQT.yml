@@ -7,8 +7,7 @@ windows:
   - editor:
       - nvim
       - guard
-  - editor-2:
-  - bakcend: cd Sunnova.SimplifiedQuoting && dotnet run # dotnet runs bakcend & fronted
-  - test: cd && npm run test -u
+  - server: cd ui && npm run start
+  - test: cd ui && DEBUG_PRINT_LIMIT=10000000 npm run test -- --watchAll
   - git:
   - notes: cd /Users/ahmedrezk/.dotfiles/ && nvim sqt.norg

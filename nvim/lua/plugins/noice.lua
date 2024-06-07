@@ -12,6 +12,7 @@ require("noice").setup({
     },
     hover = {
       enabled = false,
+      silent = true
     },
   },
   -- you can enable a preset for easier configuration

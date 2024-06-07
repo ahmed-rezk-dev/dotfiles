@@ -153,3 +153,13 @@ require("ufo").setup({
   fold_virt_text_handler = ufo_config_handler,
   close_fold_kinds = { "imports" },
 })
+
+-- vim.notify = function(msg, level, opts)
+--     if mgs == 'No information available' then
+--         return
+--     end
+--
+--     return vim_notify(msg, level, opts)
+--     -- Or with `rcarriga/nvim-notify`
+--     -- return require('notify').notify(msg, level, opts)
+-- end

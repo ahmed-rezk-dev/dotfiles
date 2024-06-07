@@ -1,10 +1,12 @@
-local colorscheme = require("plugins.colorschemes")
-local ai = require("plugins.ai")
-local obsidian = require("plugins.obsidian")
+local colorscheme   = require("plugins.colorschemes")
+local ai            = require("plugins.ai")
+local obsidian      = require("plugins.obsidian")
 local codecompanion = require("plugins.ai.codecompanion")
+local trials        = require("plugins.trials")
 return {
   -- Themes
   colorscheme,
+  trials,
   {
     "folke/tokyonight.nvim",
     lazy = false,
@@ -119,11 +121,7 @@ return {
       "hrsh7th/cmp-nvim-lsp",
     },
     servers = nil,
-    opts = {
-      inlay_hints = {
-        enabled = true,
-      },
-    },
+    commit = "38de86f"
   },
   {
     "williamboman/mason.nvim",
@@ -450,7 +448,7 @@ return {
             return
           end
         end
-        return require("notify")(msg, ...)
+        return require("notify").notify(msg, ...)
       end
     end,
   },
@@ -462,13 +460,14 @@ return {
     end,
   },
   {
-    "iamcco/markdown-preview.nvim",
-    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-    build = "cd app && npm install",
-    init = function()
-      vim.g.mkdp_filetypes = { "markdown" }
+    'MeanderingProgrammer/markdown.nvim',
+    name = 'render-markdown', -- Only needed if you have another plugin named markdown.nvim
+    enabled = true,
+    lazy = false,
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
+    config = function()
+      require('render-markdown').setup({})
     end,
-    ft = { "markdown" },
   },
   {
     "airblade/vim-rooter",
@@ -533,6 +532,7 @@ return {
     "lukas-reineke/indent-blankline.nvim",
     main = "ibl",
     lazy = false,
+    enabled = true,
     opts = {},
     event = "BufReadPre",
     config = function()
@@ -552,6 +552,7 @@ return {
     "folke/noice.nvim",
     cond = EcoVim.plugins.experimental_noice.enabled,
     lazy = false,
+    enabled = true,
     config = function()
       require("plugins.noice")
     end,
@@ -872,4 +873,5 @@ return {
       harpoon:setup()
     end,
   },
+
 }
