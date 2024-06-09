@@ -1,6 +1,6 @@
 [user]
-	name = Ahmed Rezk 
-	email = 111520177+Sunnova-ahmedrezk@users.noreply.github.com
+	name = Ahmed Rezk
+	email = rezk5024@gmail.com
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true

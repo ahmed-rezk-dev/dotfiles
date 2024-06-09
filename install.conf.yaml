@@ -9,7 +9,7 @@
 - link:
     ~/.bashrc: bashrc
     ~/.gitconfig: gitconfig
-    ~/.zshenv: zshenv
+    # ~/.zshenv: zshenv
     ~/.zshrc: zshrc
     ~/.config/nvim: nvim
     ~/.config/alacritty: alacritty
