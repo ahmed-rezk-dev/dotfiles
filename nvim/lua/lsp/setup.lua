@@ -28,7 +28,9 @@ mason_lsp.setup({
     "prismals",
     "tailwindcss",
     "tsserver",
-    "yamlls"
+    "yamlls",
+    "omnisharp",
+    "netcoredbg"
   },
   -- Whether servers that are set up (via lspconfig) should be automatically installed if they're not already installed.
   -- This setting has no relation with the `ensure_installed` setting.
@@ -139,6 +141,15 @@ lspconfig.yamlls.setup({
       }
     }
   }
+})
+
+lspconfig.omnisharp.setup({
+  capabilities = capabilities,
+  enable_roslyn_analysers = true,
+  enable_import_completion = true,
+  organize_imports_on_format = true,
+  enable_decompilation_support = true,
+  filetypes = { 'cs', 'vb', 'csproj', 'sln', 'slnx', 'props', 'csx', 'targets' }
 })
 
 for _, server in ipairs({ "bashls", "emmet_ls", "graphql", "html", "prismals" }) do
