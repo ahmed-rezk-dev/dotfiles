@@ -1,12 +1,16 @@
 local opts = {
   workspaces = {
+    -- {
+    --   name = "personal",
+    --   path = "~/work/personal/notes.md",
+    -- },
+    -- {
+    --   name = "work",
+    --   path = "~/work/personal/work.md",
+    -- },
     {
-      name = "personal",
-      path = "~/work/personal/notes.md",
-    },
-    {
-      name = "work",
-      path = "~/work/personal/work.md",
+      name = "studying",
+      path = "~/Documents/notes/studying",
     },
   },
 }
