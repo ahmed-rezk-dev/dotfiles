@@ -24,6 +24,7 @@ return {
       require("nvim-web-devicons").setup({ default = true })
     end,
   },
+  { 'echasnovski/mini.nvim', version = false },
   {
     "goolord/alpha-nvim",
     lazy = false,
@@ -296,7 +297,7 @@ return {
   },
 
   -- General
-  { "AndrewRadev/switch.vim",      lazy = false },
+  { "AndrewRadev/switch.vim",            lazy = false },
   {
     "Wansmer/treesj",
     lazy = true,
@@ -327,9 +328,9 @@ return {
       require("plugins.toggleterm")
     end,
   },
-  { "tpope/vim-repeat",           lazy = false },
-  { "tpope/vim-speeddating",      lazy = false },
-  { "dhruvasagar/vim-table-mode", ft = { "markdown" } },
+  { "tpope/vim-repeat",            lazy = false },
+  { "tpope/vim-speeddating",       lazy = false },
+  { "dhruvasagar/vim-table-mode",  ft = { "markdown" } },
   {
     "mg979/vim-visual-multi",
     keys = {
