@@ -103,7 +103,7 @@ local normal_mode_mappings = {
 
   ["q"] = { "<cmd>q!<CR>", "Quit" },
   ["A"] = { "<cmd>qa<CR>", "Quit All" },
-  ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
+  ["e"] = { "<cmd>NvimTreeToggle<cr>", "Files Explorer" },
   ["h"] = { '<cmd>let @/=""<CR>', "No Highlight" },
   ["f"] = { "<cmd>Telescope find_files<cr>", "Find files" },
   ["w"] = { "<cmd>Telescope live_grep<cr>", "Find words" },

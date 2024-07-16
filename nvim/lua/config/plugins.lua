@@ -103,7 +103,9 @@ return {
     config = function()
       require("plugins.oil")
     end,
-
+    keys = {
+      { "<C-e>", "<cmd>lua require('oil').open_float('.')<CR>", desc = "Oil Explorer" },
+    },
   },
   {
     "gbprod/stay-in-place.nvim",
