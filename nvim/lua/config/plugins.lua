@@ -401,7 +401,7 @@ return {
     event = "VeryLazy",
     lazy = true,
     config = function()
-      require("plugins.which-key")
+      require("mappings.which-key.init")
     end,
   },
   {
