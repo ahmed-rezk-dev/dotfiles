@@ -151,7 +151,7 @@ require("nvim-tree").setup({
 		width = 60,
 		-- hide_root_folder = false,
 		-- side of the tree, can be one of 'left' | 'right' | 'top' | 'bottom'
-		side = "right",
+		side = "left",
 		number = false,
 		relativenumber = false,
 	},
