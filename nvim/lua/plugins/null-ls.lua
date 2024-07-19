@@ -78,6 +78,7 @@ require("null-ls").setup({
     formatting.prettierd.with({
       disabled_filetypes = { "json" },
     }),
+    formatting.csharpier,
   },
 
   -- on_attach = on_attach,
