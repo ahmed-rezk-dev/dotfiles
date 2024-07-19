@@ -22,6 +22,8 @@ return {
   { "<leader>/c", "<cmd>e $MYVIMRC<CR>", desc = "open config", nowait = true, remap = false },
   { "<leader>/i", "<cmd>Lazy<CR>", desc = "manage plugins", nowait = true, remap = false },
   { "<leader>/u", "<cmd>Lazy update<CR>", desc = "update plugins", nowait = true, remap = false },
+  { "<leader>/m", "<cmd>Mason<CR>", desc = "Mason", nowait = true, remap = false },
+
 
 
   -- Actions
@@ -50,6 +52,7 @@ return {
 
   -- LSP
   { "<leader>c", group = "LSP", nowait = true, remap = false },
+  { "<leader>ci", "<cmd>LspInfo<CR>", desc = "LSP Info", nowait = true, remap = false },
   { "<leader>cD", "<cmd>Telescope diagnostics wrap_results=true<CR>", desc = "workspace diagnostics", nowait = true, remap = false },
   { "<leader>cR", desc = "structural replace", nowait = true, remap = false },
   { "<leader>ca", desc = "code action", nowait = true, remap = false },
