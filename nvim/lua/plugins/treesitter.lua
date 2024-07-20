@@ -1,4 +1,4 @@
-require'nvim-treesitter.configs'.setup {
+require 'nvim-treesitter.configs'.setup {
   ensure_installed = {
     "tsx",
     "typescript",
@@ -17,7 +17,8 @@ require'nvim-treesitter.configs'.setup {
     "markdown_inline",
     "prisma",
     "vim",
-  },          -- one of "all", or a list of languages
+    "sql",
+  },                              -- one of "all", or a list of languages
   sync_install = false,           -- install languages synchronously (only applied to `ensure_installed`)
   ignore_install = { "haskell" }, -- list of parsers to ignore installing
   highlight = {
@@ -40,10 +41,10 @@ require'nvim-treesitter.configs'.setup {
     enable = true
   },
 
- --  rainbow = {
- --    enable = true,
- --    extended_mode = true,
- -- },
+  --  rainbow = {
+  --    enable = true,
+  --    extended_mode = true,
+  -- },
 
   ts_context_commentstring = {
     enable = true,
