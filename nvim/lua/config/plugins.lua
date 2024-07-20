@@ -3,6 +3,7 @@ local ai            = require("plugins.ai")
 local obsidian      = require("plugins.obsidian")
 local codecompanion = require("plugins.ai.codecompanion")
 local trials        = require("plugins.trials")
+local sqlDB         = require("plugins.sql-db")
 return {
   -- Themes
   colorscheme,
@@ -185,6 +186,14 @@ return {
         config = function()
           require("copilot_cmp").setup()
         end,
+      },
+      {
+        "MattiasMTS/cmp-dbee",
+        dependencies = {
+          { "kndndrj/nvim-dbee" }
+        },
+        ft = "sql",   -- optional but good to have
+        opts = {},    -- needed
       },
     },
   },
@@ -876,5 +885,5 @@ return {
       harpoon:setup()
     end,
   },
-
+  sqlDB
 }

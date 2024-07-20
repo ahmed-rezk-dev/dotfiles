@@ -30,7 +30,9 @@ mason_lsp.setup({
     "tsserver",
     "yamlls",
     "omnisharp",
-    "netcoredbg"
+    "sqlls",
+    -- "sql-formatter"
+    -- "netcoredbg"
   },
   -- Whether servers that are set up (via lspconfig) should be automatically installed if they're not already installed.
   -- This setting has no relation with the `ensure_installed` setting.
@@ -151,6 +153,14 @@ lspconfig.omnisharp.setup({
   enable_decompilation_support = true,
   filetypes = { 'cs', 'vb', 'csproj', 'sln', 'slnx', 'props', 'csx', 'targets' }
 })
+
+lspconfig.sqlls.setup {
+  capabilities = capabilities,
+  filetypes = { 'sql' },
+  root_dir = function(_)
+    return vim.loop.cwd()
+  end,
+}
 
 for _, server in ipairs({ "bashls", "emmet_ls", "graphql", "html", "prismals" }) do
   lspconfig[server].setup({

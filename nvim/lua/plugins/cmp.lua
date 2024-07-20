@@ -110,6 +110,7 @@ local source_mapping = {
   path = EcoVim.icons.folderOpen2,
   treesitter = EcoVim.icons.tree,
   zsh = EcoVim.icons.terminal .. "ZSH",
+  ["cmp-dbee"] = EcoVim.icons.database .. "DATABASE",
 }
 
 local buffer_option = {
@@ -257,6 +258,7 @@ cmp.setup({
     { name = "nvim_lua",    priority = 5 },
     { name = "path",        priority = 4 },
     { name = "calc",        priority = 3 },
+    { name = "cmp-dbee",    priority = 6 },
   },
   sorting = {
     comparators = {
