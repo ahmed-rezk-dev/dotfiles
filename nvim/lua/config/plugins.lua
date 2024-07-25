@@ -1,5 +1,6 @@
 local colorscheme   = require("plugins.colorschemes")
 local ai            = require("plugins.ai")
+local cmp_ai        = require("plugins.ai.cmp")
 local obsidian      = require("plugins.obsidian")
 local codecompanion = require("plugins.ai.codecompanion")
 local trials        = require("plugins.trials")
@@ -192,8 +193,8 @@ return {
         dependencies = {
           { "kndndrj/nvim-dbee" }
         },
-        ft = "sql",   -- optional but good to have
-        opts = {},    -- needed
+        ft = "sql", -- optional but good to have
+        opts = {},  -- needed
       },
     },
   },
@@ -885,5 +886,6 @@ return {
       harpoon:setup()
     end,
   },
-  sqlDB
+  sqlDB,
+  cmp_ai
 }

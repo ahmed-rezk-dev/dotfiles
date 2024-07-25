@@ -1,3 +1,6 @@
+-- TODO: 
+-- Remove unnecessary autocompletion sources.
+-- Found out why ollama AI not working with comments.
 local lspkind = require("lspkind")
 local types = require("cmp.types")
 
@@ -111,6 +114,7 @@ local source_mapping = {
   treesitter = EcoVim.icons.tree,
   zsh = EcoVim.icons.terminal .. "ZSH",
   ["cmp-dbee"] = EcoVim.icons.database .. "DATABASE",
+  ["Ollama"] = EcoVim.icons.robot .. "IA",
 }
 
 local buffer_option = {
@@ -259,6 +263,7 @@ cmp.setup({
     { name = "path",        priority = 4 },
     { name = "calc",        priority = 3 },
     { name = "cmp-dbee",    priority = 6 },
+    { name = "cmp_ai",      priority = 10 },
   },
   sorting = {
     comparators = {
