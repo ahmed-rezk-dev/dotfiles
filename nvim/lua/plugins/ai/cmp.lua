@@ -5,6 +5,7 @@ local config = function()
     provider = 'Ollama',
     provider_options = {
       model = 'codellama:7b-code',
+      stream = true,
     },
     notify = false,
     notify_callback = function(msg)

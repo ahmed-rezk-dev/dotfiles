@@ -1,4 +1,4 @@
--- TODO: 
+-- TODO:
 -- Remove unnecessary autocompletion sources.
 -- Found out why ollama AI not working with comments.
 local lspkind = require("lspkind")
@@ -103,8 +103,6 @@ end
 local source_mapping = {
   npm = EcoVim.icons.terminal .. "NPM",
   cmp_tabnine = EcoVim.icons.light,
-  Copilot = EcoVim.icons.copilot,
-  Codeium = EcoVim.icons.codeium,
   nvim_lsp = EcoVim.icons.paragraph .. "LSP",
   buffer = EcoVim.icons.buffer .. "BUF",
   nvim_lua = EcoVim.icons.bomb,
@@ -202,15 +200,20 @@ cmp.setup({
       "i",
       "s",
     }),
+    ["<C-x>"] = cmp.mapping(
+      cmp.mapping.complete({
+        config = {
+          sources = cmp.config.sources({
+            { name = "cmp_ai" },
+          }),
+        },
+      }),
+      { "i" }
+    ),
   }),
   formatting = {
     fields = { "kind", "abbr", "menu" },
     format = function(entry, vim_item)
-      -- Set the highlight group for the Codeium source
-      if entry.source.name == "codeium" then
-        vim_item.kind_hl_group = "CmpItemKindCopilot"
-      end
-
       -- Get the item with kind from the lspkind plugin
       local item_with_kind = require("lspkind").cmp_format({
         mode = "symbol_text",
@@ -253,17 +256,15 @@ cmp.setup({
       -- Limits LSP results to specific types based on line context (FIelds, Methods, Variables)
       entry_filter = limit_lsp_types,
     },
-    { name = "npm",         priority = 9 },
-    { name = "codeium",     priority = 9 },
-    { name = "copilot",     priority = 9 },
-    { name = "cmp_tabnine", priority = 7, max_num_results = 3 },
+    { name = "cmp_ai",      priority = 9 },
+    { name = "cmp_tabnine", priority = 8, max_num_results = 3 },
     { name = "luasnip",     priority = 7, max_item_count = 5 },
-    { name = "buffer",      priority = 7, keyword_length = 5, option = buffer_option, max_item_count = 5 },
+    { name = "buffer",      priority = 6, keyword_length = 5, option = buffer_option, max_item_count = 5 },
     { name = "nvim_lua",    priority = 5 },
     { name = "path",        priority = 4 },
     { name = "calc",        priority = 3 },
-    { name = "cmp-dbee",    priority = 6 },
-    { name = "cmp_ai",      priority = 10 },
+    { name = "npm",         priority = 1 },
+    { name = "cmp-dbee",    priority = 1 },
   },
   sorting = {
     comparators = {
