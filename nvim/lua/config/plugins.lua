@@ -5,6 +5,7 @@ local obsidian      = require("plugins.obsidian")
 local codecompanion = require("plugins.ai.codecompanion")
 local trials        = require("plugins.trials")
 local sqlDB         = require("plugins.sql-db")
+local python_runner = require("plugins.python_runner")
 return {
   -- Themes
   colorscheme,
@@ -887,5 +888,93 @@ return {
     end,
   },
   sqlDB,
-  cmp_ai
+  cmp_ai,
+  {
+    "rachartier/tiny-inline-diagnostic.nvim",
+    event = "VeryLazy",
+    config = function()
+      require('tiny-inline-diagnostic').setup({
+        hi = {
+          error = "DiagnosticError",
+          warn = "DiagnosticWarn",
+          info = "DiagnosticInfo",
+          hint = "DiagnosticHint",
+          arrow = "NonText",
+          background = "None",   -- Can be a highlight or a hexadecimal color (#RRGGBB)
+          mixing_color = "None", -- Can be None or a hexadecimal color (#RRGGBB). Used to blend the background color with the diagnostic background color with another color.
+        },
+        options = {
+          break_line = {
+            enabled = true,
+            after = 80,
+          },
+        }
+      })
+    end
+  },
+  { 'nicholasmata/nvim-dap-cs', dependencies = { 'mfussenegger/nvim-dap' } },
+
+  {
+    "chrisgrieser/nvim-recorder",
+    dependencies = "rcarriga/nvim-notify", -- optional
+    opts = {},                             -- required even with default settings, since it calls `setup()`
+    lazy = false,
+    enabled = true,
+    config = function()
+      -- default values
+      require("recorder").setup {
+        -- Named registers where macros are saved (single lowercase letters only).
+        -- The first register is the default register used as macro-slot after
+        -- startup.
+        slots = { "a", "b" },
+
+        mapping = {
+          startStopRecording = "q",
+          playMacro = "!",
+          switchSlot = "<C-q>",
+          editMacro = "cq",
+          deleteAllMacros = "dq",
+          yankMacro = "yq",
+          -- ⚠️ this should be a string you don't use in insert mode during a macro
+          addBreakPoint = "##",
+        },
+
+        -- Clears all macros-slots on startup.
+        clear = false,
+
+        -- Log level used for non-critical notifications; mostly relevant for nvim-notify.
+        -- (Note that by default, nvim-notify does not show the levels `trace` & `debug`.)
+        logLevel = vim.log.levels.INFO, -- :help vim.log.levels
+
+        -- If enabled, only essential notifications are sent.
+        -- If you do not use a plugin like nvim-notify, set this to `true`
+        -- to remove otherwise annoying messages.
+        lessNotifications = false,
+
+        -- Use nerdfont icons in the status bar components and keymap descriptions
+        useNerdfontIcons = true,
+
+        -- Performance optimzations for macros with high count. When `playMacro` is
+        -- triggered with a count higher than the threshold, nvim-recorder
+        -- temporarily changes changes some settings for the duration of the macro.
+        performanceOpts = {
+          countThreshold = 100,
+          lazyredraw = true,        -- enable lazyredraw (see `:h lazyredraw`)
+          noSystemClipboard = true, -- remove `+`/`*` from clipboard option
+          autocmdEventsIgnore = {   -- temporarily ignore these autocmd events
+            "TextChangedI",
+            "TextChanged",
+            "InsertLeave",
+            "InsertEnter",
+            "InsertCharPre",
+          },
+        },
+
+        -- [experimental] partially share keymaps with nvim-dap.
+        -- (See README for further explanations.)
+        dapSharedKeymaps = false,
+      }
+    end
+  },
+  python_runner
 }
