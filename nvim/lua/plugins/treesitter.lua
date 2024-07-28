@@ -14,10 +14,13 @@ require 'nvim-treesitter.configs'.setup {
     "json5",
     "lua",
     "markdown",
+    "vimdoc",
+    "luadoc",
     "markdown_inline",
     "prisma",
     "vim",
     "sql",
+    "python",
   },                              -- one of "all", or a list of languages
   sync_install = false,           -- install languages synchronously (only applied to `ensure_installed`)
   ignore_install = { "haskell" }, -- list of parsers to ignore installing

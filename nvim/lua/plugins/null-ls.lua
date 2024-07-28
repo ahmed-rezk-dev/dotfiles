@@ -79,6 +79,9 @@ require("null-ls").setup({
       disabled_filetypes = { "json" },
     }),
     formatting.csharpier,
+    -- Python
+    diagnostics.ruff,
+    formatting.black,
   },
 
   -- on_attach = on_attach,

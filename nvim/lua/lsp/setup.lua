@@ -31,8 +31,7 @@ mason_lsp.setup({
     "yamlls",
     "omnisharp",
     "sqlls",
-    -- "sql-formatter"
-    -- "netcoredbg"
+    "pyright"
   },
   -- Whether servers that are set up (via lspconfig) should be automatically installed if they're not already installed.
   -- This setting has no relation with the `ensure_installed` setting.
@@ -46,17 +45,17 @@ mason_lsp.setup({
 
 local lspconfig = require("lspconfig")
 
--- local handlers = {
---   ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
---     silent = true,
---     border = EcoVim.ui.float.border,
---   }),
---   ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = EcoVim.ui.float.border }),
---   ["textDocument/publishDiagnostics"] = vim.lsp.with(
---     vim.lsp.diagnostic.on_publish_diagnostics,
---     { virtual_text = EcoVim.lsp.virtual_text }
---   ),
--- }
+local handlers = {
+  ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+    silent = true,
+    border = EcoVim.ui.float.border,
+  }),
+  ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = EcoVim.ui.float.border }),
+  ["textDocument/publishDiagnostics"] = vim.lsp.with(
+    vim.lsp.diagnostic.on_publish_diagnostics,
+    { virtual_text = EcoVim.lsp.virtual_text }
+  ),
+}
 --
 -- local function on_attach(client, bufnr)
 --   -- set up buffer keymaps, etc.
@@ -147,11 +146,18 @@ lspconfig.yamlls.setup({
 
 lspconfig.omnisharp.setup({
   capabilities = capabilities,
+  handlers = handlers,
   enable_roslyn_analysers = true,
   enable_import_completion = true,
   organize_imports_on_format = true,
   enable_decompilation_support = true,
   filetypes = { 'cs', 'vb', 'csproj', 'sln', 'slnx', 'props', 'csx', 'targets' }
+})
+
+
+lspconfig.pyright.setup({
+  capabilities = capabilities,
+  handlers = handlers,
 })
 
 lspconfig.sqlls.setup {
