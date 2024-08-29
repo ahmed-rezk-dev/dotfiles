@@ -1,7 +1,7 @@
 # /Users/ahmedrezk/.config/tmuxinator/configuration.yml
 
 name: dotfiles
-root: /Users/ahmedrezk/.dotfiles/
+root: /Users/ahmed/dotfiles/
 
 windows:
   # - editor:

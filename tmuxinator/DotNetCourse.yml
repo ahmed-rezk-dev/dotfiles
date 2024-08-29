@@ -1,0 +1,13 @@
+# /Users/ahmedrezk/.config/tmuxinator/configuration.yml
+
+name: DotNetCourse 
+root: /Users/ahmed/work/dotNetMaster2024
+
+windows:
+  # - editor:
+  #     - nvim
+  #     - guard
+  - editor: cd dotNetMaster2024/DotnetAPI && nvim
+  - server: cd dotNetMaster2024/DotnetAPI && dotnet watch run
+  - course: cd DotNetAPICourse && nvim
+  - git: lazygit

@@ -1,10 +1,10 @@
 # /Users/ahmedrezk/.config/tmuxinator/my-portfolio.yml
 
 name: my-portfolio
-root: /Users/ahmedrezk/Development/reacts/my-portfolio
+root: /Users/ahmed/work/my-portfolio
 
 windows:
   - editor:
       - nvim
       - guard
-  - server: yarn start
+  - server: npm run dev
