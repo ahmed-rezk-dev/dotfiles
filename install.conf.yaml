@@ -17,4 +17,5 @@
     ~/.config/skhd: skhd
     ~/.config/tmuxinator: tmuxinator
     ~/.config/tmux: tmux
+    ~/.config/wezterm/: wezterm
     ~/.hammerspoon: .hammerspoon
