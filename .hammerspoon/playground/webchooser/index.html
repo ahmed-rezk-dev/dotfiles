@@ -1,15 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title></title>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/photon/0.1.2-alpha/css/photon.min.css">
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/photon/0.1.2-alpha/css/photon.min.css"
+    />
 
     <style type="text/css">
       .window {
         width: 320px;
       }
+
       .app {
         width: 100%;
       }
@@ -30,8 +41,8 @@
           React.DOM.div(
             { className: "media-body" },
             React.DOM.strong(null, title),
-            React.DOM.p(null, body)
-          )
+            React.DOM.p(null, body),
+          ),
         );
       };
 
@@ -42,16 +53,21 @@
             { className: "list-group-header" },
             React.DOM.input({
               className: "form-control",
-              type: "text"
-            })
+              type: "text",
+            }),
           ),
           [
             ["test", "some text", true],
-            ["test 2", "some other text", false]
-          ].map(([title, body, active]) => ListItem({ title, body, active }))
+            ["test 2", "some other text", false],
+          ].map(([title, body, active]) => ListItem({ title, body, active })),
         );
       };
 
+      try {
+        webkit.messageHandlers.webchooserContent.postMessage(message - object);
+      } catch (err) {
+        console.log("The controller does not exist yet");
+      }
       ReactDOM.render(React.createElement(App), document.querySelector(".app"));
     </script>
   </body>

@@ -49,6 +49,7 @@ local setup = function()
         { app = "Chrome", title = "DevTools", tile = false },
         { app = "Zoom", title = "Zoom", tile = false },
         { app = "Microsoft Teams", title = "Microsoft Teams", tile = false },
+        { app = "Paycast", title = "Paycast", tile = false },
     }
 
     local isMenubarVisible = hs.screen.primaryScreen():frame().y > 0
