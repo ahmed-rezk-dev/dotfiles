@@ -10,9 +10,9 @@ local icons = require("utils.icons")
 
 EcoVim = {
 	-- colorscheme = "onedark_vivid",
-	colorscheme = "onedark_vivid",
+	-- colorscheme = "onedark_vivid",
 	-- colorscheme = "gruvbox",
-	-- colorscheme = "catppuccin",
+	colorscheme = "catppuccin",
 	-- colorscheme = "github_light",
 	ui = {
 		float = {

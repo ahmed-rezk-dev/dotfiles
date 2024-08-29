@@ -9,6 +9,7 @@ local options = {
   foldnestmax    = 0,
   foldlevel      = 99,                      --- Using ufo provider need a large value
   foldlevelstart = 99,                      --- Expand all folds by default
+  -- foldmethod     = "indent",
   ignorecase     = true,                    --- Needed for smartcase
   laststatus     = 3,                       --- Have a global statusline at the bottom instead of one for each window
   -- lazyredraw     = true,                    --- Makes macros faster & prevent errors in complicated mappings

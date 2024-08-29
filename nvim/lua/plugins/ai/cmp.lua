@@ -1,15 +1,21 @@
 local config = function()
+  local notify_msg = nil;
   local cmp_ai = require('cmp_ai.config')
   cmp_ai:setup({
     max_lines = 100,
-    provider = 'Ollama',
-    provider_options = {
-      model = 'codellama:7b-code',
-      stream = true,
-    },
-    notify = false,
+    -- provider = 'Ollama',
+    provider = 'HF',
+    -- provider_options = {
+    --   model = 'codellama',
+    --   stream = true,
+    -- },
+    notify = true,
     notify_callback = function(msg)
-      vim.notify(msg)
+
+      if notify_msg == nil then
+        vim.notify(msg)
+        notify_msg = msg
+      end
     end,
     run_on_every_keystroke = true,
     ignored_file_types = {
@@ -20,9 +26,11 @@ local config = function()
   })
 end
 
-
+-- /Users/ahmed/work/neovim-plugins/cmp-ai
 return {
-  'tzachar/cmp-ai',
+  -- 'tzachar/cmp-ai',
+  dir = '~/work/neovim-plugins/cmp-ai-org',
+  -- 'ahmed-rezk-dev/cmp-ai',
   dependencies = 'nvim-lua/plenary.nvim',
   lazy = false,
   enabled = true,

@@ -11,9 +11,11 @@ require('config.keymappings')
 require('internal.winbar')
 require('internal.cursorword')
 
-require('lsp.config')
 require('lsp.setup')
+require('lsp.config')
 require('lsp.functions')
 
 require('snippets.react')
 require("mappings.normal")
+
+require("config.dev")

@@ -265,6 +265,7 @@ cmp.setup({
     { name = "calc",        priority = 3 },
     { name = "npm",         priority = 1 },
     { name = "cmp-dbee",    priority = 1 },
+    { name = "lazydev",     priority = 9, group_index = 0 },
   },
   sorting = {
     comparators = {

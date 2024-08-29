@@ -6,6 +6,7 @@ local codecompanion = require("plugins.ai.codecompanion")
 local trials        = require("plugins.trials")
 local sqlDB         = require("plugins.sql-db")
 local python_runner = require("plugins.python_runner")
+local lazydev       = require("plugins.lazydev")
 return {
   -- Themes
   colorscheme,
@@ -126,8 +127,8 @@ return {
       "williamboman/mason-lspconfig.nvim",
       "hrsh7th/cmp-nvim-lsp",
     },
-    servers = nil,
-    commit = "38de86f"
+    -- servers = nil,
+    -- commit = "38de86f"
   },
   {
     "williamboman/mason.nvim",
@@ -136,6 +137,7 @@ return {
       { "<leader>cm", "<cmd>Mason<cr>", desc = "Mason" },
     },
   },
+  { 'VonHeikemen/lsp-zero.nvim', enabled = false, lazy = true, branch = 'v3.x' },
 
   -- Formatters
   {
@@ -308,7 +310,7 @@ return {
   },
 
   -- General
-  { "AndrewRadev/switch.vim",            lazy = false },
+  { "AndrewRadev/switch.vim",      lazy = false },
   {
     "Wansmer/treesj",
     lazy = true,
@@ -339,9 +341,9 @@ return {
       require("plugins.toggleterm")
     end,
   },
-  { "tpope/vim-repeat",            lazy = false },
-  { "tpope/vim-speeddating",       lazy = false },
-  { "dhruvasagar/vim-table-mode",  ft = { "markdown" } },
+  { "tpope/vim-repeat",           lazy = false },
+  { "tpope/vim-speeddating",      lazy = false },
+  { "dhruvasagar/vim-table-mode", ft = { "markdown" } },
   {
     "mg979/vim-visual-multi",
     keys = {
@@ -976,5 +978,6 @@ return {
       }
     end
   },
-  python_runner
+  python_runner,
+  lazydev
 }

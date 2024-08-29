@@ -13,20 +13,20 @@ end
 -- │ DAP Virtual Text Setup                                   │
 -- ╰──────────────────────────────────────────────────────────╯
 dap_vt.setup({
-  enabled = true,                       -- enable this plugin (the default)
-  enabled_commands = true,              -- create commands DapVirtualTextEnable, DapVirtualTextDisable, DapVirtualTextToggle, (DapVirtualTextForceRefresh for refreshing when debug adapter did not notify its termination)
-  highlight_changed_variables = true,   -- highlight changed values with NvimDapVirtualTextChanged, else always NvimDapVirtualText
-  highlight_new_as_changed = false,     -- highlight new variables in the same way as changed variables (if highlight_changed_variables)
-  show_stop_reason = true,              -- show stop reason when stopped for exceptions
-  commented = false,                    -- prefix virtual text with comment string
-  only_first_definition = true,         -- only show virtual text at first definition (if there are multiple)
-  all_references = false,               -- show virtual text on all all references of the variable (not only definitions)
+  enabled = true,                        -- enable this plugin (the default)
+  enabled_commands = true,               -- create commands DapVirtualTextEnable, DapVirtualTextDisable, DapVirtualTextToggle, (DapVirtualTextForceRefresh for refreshing when debug adapter did not notify its termination)
+  highlight_changed_variables = true,    -- highlight changed values with NvimDapVirtualTextChanged, else always NvimDapVirtualText
+  highlight_new_as_changed = false,      -- highlight new variables in the same way as changed variables (if highlight_changed_variables)
+  show_stop_reason = true,               -- show stop reason when stopped for exceptions
+  commented = false,                     -- prefix virtual text with comment string
+  only_first_definition = true,          -- only show virtual text at first definition (if there are multiple)
+  all_references = false,                -- show virtual text on all all references of the variable (not only definitions)
   filter_references_pattern = "<module", -- filter references (not definitions) pattern when all_references is activated (Lua gmatch pattern, default filters out Python modules)
   -- Experimental Features:
-  virt_text_pos = "eol",                -- position of virtual text, see `:h nvim_buf_set_extmark()`
-  all_frames = false,                   -- show virtual text for all stack frames not only current. Only works for debugpy on my machine.
-  virt_lines = false,                   -- show virtual lines instead of virtual text (will flicker!)
-  virt_text_win_col = nil,              -- position the virtual text at a fixed window column (starting from the first text column) ,
+  virt_text_pos = "eol",                 -- position of virtual text, see `:h nvim_buf_set_extmark()`
+  all_frames = false,                    -- show virtual text for all stack frames not only current. Only works for debugpy on my machine.
+  virt_lines = false,                    -- show virtual lines instead of virtual text (will flicker!)
+  virt_text_win_col = nil,               -- position the virtual text at a fixed window column (starting from the first text column) ,
 })
 
 -- ╭──────────────────────────────────────────────────────────╮
@@ -75,8 +75,8 @@ dapui.setup({
     },
   },
   floating = {
-    max_height = nil,                           -- These can be integers or a float between 0 and 1.
-    max_width = nil,                            -- Floats will be treated as percentage of your screen.
+    max_height = nil,                             -- These can be integers or a float between 0 and 1.
+    max_width = nil,                              -- Floats will be treated as percentage of your screen.
     border = EcoVim.ui.float.border or "rounded", -- Border style. Can be "single", "double" or "rounded"
     mappings = {
       close = { "q", "<Esc>" },
@@ -164,6 +164,13 @@ require("dap-vscode-js").setup({
   debugger_cmd = { "js-debug-adapter" },
   adapters = { "pwa-node", "pwa-chrome", "pwa-msedge", "node-terminal", "pwa-extensionHost", "firefox" },
 })
+
+-- C#
+dap.adapters.coreclr = {
+  type = 'executable',
+  command = vim.fn.stdpath("data") .. "/mason/packages/netcoredbg/netcoredbg",
+  args = { '--interpreter=vscode' }
+}
 
 -- ╭──────────────────────────────────────────────────────────╮
 -- │ Configurations                                           │
@@ -273,7 +280,7 @@ dap.configurations.typescriptreact = {
     url = "https://localhost:5001/",
   },
 
-    {
+  {
     name = "Attach To Firefox",
     type = "firefox",
     request = "attach",
@@ -287,3 +294,91 @@ dap.configurations.typescriptreact = {
   },
 
 }
+
+--  ╭──────────────────────────────────────────────────────────╮
+--  │ C#                                                       │
+--  ╰──────────────────────────────────────────────────────────╯
+vim.g.dotnet_build_project = function()
+  local default_path = vim.fn.getcwd() .. '/'
+  if vim.g['dotnet_last_proj_path'] ~= nil then
+    default_path = vim.g['dotnet_last_proj_path']
+  end
+  local path = vim.fn.input('Path to your *proj file', default_path, 'file')
+  vim.g['dotnet_last_proj_path'] = path
+  local cmd = 'dotnet build -c Debug ' .. path .. ' > /dev/null'
+  print('')
+  print('Cmd to execute: ' .. cmd)
+  local f = os.execute(cmd)
+  if f == 0 then
+    print('\nBuild: ✅')
+  else
+    print('\nBuild: ❌ (code: ' .. f .. ')')
+  end
+end
+
+vim.g.dotnet_get_dll_path = function()
+  local request = function()
+    return vim.fn.input('Path to dll', vim.fn.getcwd() .. '/bin/Debug/', 'file')
+  end
+
+  if vim.g['dotnet_last_dll_path'] == nil then
+    vim.g['dotnet_last_dll_path'] = request()
+  else
+    if vim.fn.confirm('Do you want to change the path to dll?\n' .. vim.g['dotnet_last_dll_path'], '&yes\n&no', 2) == 1 then
+      vim.g['dotnet_last_dll_path'] = request()
+    end
+  end
+
+  return vim.g['dotnet_last_dll_path']
+end
+
+local config = {
+  {
+    type = "coreclr",
+    name = "launch - netcoredbg",
+    request = "launch",
+    program = function()
+      if vim.fn.confirm('Should I recompile first?', '&yes\n&no', 2) == 1 then
+        vim.g.dotnet_build_project()
+      end
+      return vim.g.dotnet_get_dll_path()
+    end,
+  },
+}
+
+-- dap.configurations.cs = config
+-- dap.configurations.fsharp = config
+
+require('dap-cs').setup({
+  -- Additional dap configurations can be added.
+  -- dap_configurations accepts a list of tables where each entry
+  -- represents a dap configuration. For more details do:
+  -- :help dap-configuration
+  dap_configurations = {
+    {
+      -- Must be "coreclr" or it will be ignored by the plugin
+      type = "coreclr",
+      name = "Attach remote",
+      mode = "remote",
+      request = "attach",
+    },
+  },
+  netcoredbg = {
+    -- the path to the executable netcoredbg which will be used for debugging.
+    -- by default, this is the "netcoredbg" executable on your PATH.
+    path = "netcoredbg"
+  }
+}
+)
+
+
+-- dap.configurations.cs = {
+--   {
+--     type = "coreclr",
+--     name = "launch - netcoredbg",
+--     request = "launch",
+--     program = function()
+--       return vim.fn.input('Path to dll', vim.fn.getcwd() .. '/bin/Debug/net8.0/DotnetAPI.dll', 'file')
+--     end,
+--   },
+-- }

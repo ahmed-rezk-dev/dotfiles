@@ -15,6 +15,7 @@ return {
             -- Can be a table or a function that
             -- returns a table (see below)
             command = { "python3" },
+            format = require("iron.fts.common").bracketed_paste_python
           },
         },
         -- How the repl window will be displayed

@@ -93,3 +93,38 @@ local visual_opts = {
 wk.add(normal_mode_mappings, opts)
 wk.add(visual_mode_mappings, visual_opts)
 
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "NvimTree",
+  callback = function()
+    wk.add({
+      {
+        "<leader>=",
+        "<cmd>NvimTreeResize +5<CR>",
+        desc = "resize +5",
+        silent = true,     -- use `silent` when creating keymaps
+        remap = true,     -- use `noremap` when creating keymaps
+        nowait = true,     -- use `nowait` when creating keymaps
+        mode = "n",        -- NORMAL mode
+      },
+      {
+        "<leader>-",
+        "<cmd>NvimTreeResize -5<CR>",
+        desc = "resize -5",
+        silent = true,     -- use `silent` when creating keymaps
+        remap = true,     -- use `noremap` when creating keymaps
+        nowait = true,     -- use `nowait` when creating keymaps
+        mode = "n",        -- NORMAL mode
+      } })
+  end
+})
+
+-- return {
+--   attach_markdown = attach_markdown,
+--   attach_typescript = attach_typescript,
+--   attach_npm = attach_npm,
+--   attach_zen = attach_zen,
+--   attach_jest = attach_jest,
+--   attach_spectre = attach_spectre,
+--   attach_nvim_tree = attach_nvim_tree,
+-- }
