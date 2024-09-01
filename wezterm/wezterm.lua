@@ -24,7 +24,7 @@ config.window_padding = {
   bottom = 0,
 }
 
-config.initial_rows = 50
+config.initial_rows = 90
 
 -- and finally, return the configuration to wezterm
 return config
