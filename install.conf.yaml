@@ -18,4 +18,5 @@
     ~/.config/tmuxinator: tmuxinator
     ~/.config/tmux: tmux
     ~/.config/wezterm/: wezterm
+    ~/.config/aerospace/: aerospace 
     ~/.hammerspoon: .hammerspoon
