@@ -27,7 +27,7 @@ mason_lsp.setup({
     "lua_ls",
     "prismals",
     "tailwindcss",
-    "tsserver",
+    "ts_ls",
     "yamlls",
     "omnisharp",
     "sqlls",
@@ -70,17 +70,17 @@ capabilities.textDocument.foldingRange = {
 
 -- Order matters
 
--- It enables tsserver automatically so no need to call lspconfig.tsserver.setup
+-- It enables ts_ls automatically so no need to call lspconfig.ts_ls.setup
 if typescript_ok then
   typescript.setup({
     disable_commands = false, -- prevent the plugin from creating Vim commands
     debug = false,            -- enable debug logging for commands
     -- LSP Config options
     server = {
-      capabilities = require("lsp.servers.tsserver").capabilities,
-      handlers = require("lsp.servers.tsserver").handlers,
-      on_attach = require("lsp.servers.tsserver").on_attach,
-      settings = require("lsp.servers.tsserver").settings,
+      capabilities = require("lsp.servers.ts_ls").capabilities,
+      handlers = require("lsp.servers.ts_ls").handlers,
+      on_attach = require("lsp.servers.ts_ls").on_attach,
+      settings = require("lsp.servers.ts_ls").settings,
     },
   })
 end

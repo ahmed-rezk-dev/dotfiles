@@ -41,7 +41,7 @@ capabilities.textDocument.foldingRange = {
 local on_attach = function(client, bufnr)
   -- Modifying a server's capabilities is not recommended and is no longer
   -- necessary thanks to the `vim.lsp.buf.format` API introduced in Neovim
-  -- 0.8. Users with Neovim 0.7 needs to uncomment below lines to make tsserver formatting work (or keep using eslint).
+  -- 0.8. Users with Neovim 0.7 needs to uncomment below lines to make ts_ls formatting work (or keep using eslint).
 
   client.server_capabilities.documentFormattingProvider = false
   client.server_capabilities.documentRangeFormattingProvider = false

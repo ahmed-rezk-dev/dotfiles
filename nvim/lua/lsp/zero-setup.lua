@@ -27,7 +27,7 @@ mason_lsp.setup({
     "lua_ls",
     "prismals",
     "tailwindcss",
-    "tsserver",
+    "ts_ls",
     "yamlls",
     "omnisharp",
     "sqlls",
@@ -68,7 +68,7 @@ lspconfig.prismals.setup({})
 lspconfig.tailwindcss.setup({
   filetypes = require("lsp.servers.tailwindcss").filetypes,
 })
-lspconfig.tsserver.setup({})
+lspconfig.ts_ls.setup({})
 lspconfig.yamlls.setup({
   settings = {
     yaml = {

@@ -455,8 +455,8 @@ return {
     init = function()
       local banned_messages = {
         "No information available",
-        "LSP[tsserver] Inlay Hints request failed. Requires TypeScript 4.4+.",
-        "LSP[tsserver] Inlay Hints request failed. File not opened in the editor.",
+        "LSP[ts_ls] Inlay Hints request failed. Requires TypeScript 4.4+.",
+        "LSP[ts_ls] Inlay Hints request failed. File not opened in the editor.",
       }
       vim.notify = function(msg, ...)
         for _, banned in ipairs(banned_messages) do
