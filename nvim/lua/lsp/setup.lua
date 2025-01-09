@@ -3,6 +3,7 @@ local typescript_ok, typescript = pcall(require, "typescript")
 local mason_ok, mason = pcall(require, "mason")
 local mason_lsp_ok, mason_lsp = pcall(require, "mason-lspconfig")
 local ufo_config_handler = require("plugins.nvim-ufo").handler
+local ltex = require("lsp.servers.ltex")
 
 if not mason_ok or not mason_lsp_ok then
   return
@@ -13,6 +14,13 @@ mason.setup({
     -- The border to use for the UI window. Accepts same border values as |nvim_open_win()|.
     border = EcoVim.ui.float.border or "rounded",
   },
+  ensure_installed = {
+    "eslint_d",
+    "prettierd",
+    "proselint",
+    "write-good",
+    "alex"
+  }
 })
 
 mason_lsp.setup({
@@ -31,7 +39,9 @@ mason_lsp.setup({
     "yamlls",
     "omnisharp",
     "sqlls",
-    "pyright"
+    "pyright",
+    "marksman",
+    "ltex", -- spell checker
   },
   -- Whether servers that are set up (via lspconfig) should be automatically installed if they're not already installed.
   -- This setting has no relation with the `ensure_installed` setting.
@@ -168,7 +178,13 @@ lspconfig.sqlls.setup {
   end,
 }
 
-for _, server in ipairs({ "bashls", "emmet_ls", "graphql", "html", "prismals" }) do
+
+lspconfig.ltex.setup({
+  capabilities = capabilities,
+  settings = ltex.settings
+})
+
+for _, server in ipairs({ "bashls", "emmet_ls", "graphql", "html", "prismals", "marksman" }) do
   lspconfig[server].setup({
     on_attach = on_attach,
     capabilities = capabilities,
