@@ -7,6 +7,7 @@ local trials        = require("plugins.trials")
 local sqlDB         = require("plugins.sql-db")
 local python_runner = require("plugins.python_runner")
 local lazydev       = require("plugins.lazydev")
+local helpview       = require("plugins.helpview")
 return {
   -- Themes
   colorscheme,
@@ -979,5 +980,6 @@ return {
     end
   },
   python_runner,
-  lazydev
+  lazydev,
+  helpview
 }
