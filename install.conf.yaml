@@ -12,3 +12,4 @@
     ~/.config/tmux: tmux
     ~/.config/wezterm/: wezterm
     ~/.config/aerospace/: aerospace 
+    ~/.config/ghostty/: ghostty 
