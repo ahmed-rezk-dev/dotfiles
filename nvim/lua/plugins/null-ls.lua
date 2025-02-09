@@ -73,9 +73,25 @@ require("null-ls").setup({
     --  ╭──────────────────────────────────────────────────────────╮
     --  │     typescript/javascript                                │
     --  ╰──────────────────────────────────────────────────────────╯
-    diagnostics.eslint_d,
-    diagnostics.eslint_d,
-    formatting.prettierd.with({
+    -- diagnostics.eslint_d,
+    -- diagnostics.eslint_d,
+    diagnostics.eslint, -- requires none-ls-extras.nvim
+    -- diagnostics.eslint_d.with({ -- js/ts linter
+    --   -- only enable eslint if root has .eslintrc.js (not in youtube nvim video)
+    --   condition = function(utils)
+    --     return utils.root_has_file(
+    --       {
+    --         ".eslintrc",
+    --         ".eslintrc.js",
+    --         ".eslintrc.cjs",
+    --         ".eslintrc.yaml",
+    --         ".eslintrc.yml",
+    --         ".eslintrc.json",
+    --       }
+    --     ) -- change file extension if you use something else
+    --   end,
+    -- }),
+    formatting.prettier.with({
       disabled_filetypes = { "json" },
     }),
     formatting.csharpier,
@@ -83,6 +99,7 @@ require("null-ls").setup({
     diagnostics.ruff,
     formatting.black,
   },
+  debug = true
 
   -- on_attach = on_attach,
 })

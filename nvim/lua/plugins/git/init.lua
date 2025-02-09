@@ -10,4 +10,5 @@ return {
       "ibhagwan/fzf-lua",              -- optional
     },
     config = true
-  } }
+  }
+}

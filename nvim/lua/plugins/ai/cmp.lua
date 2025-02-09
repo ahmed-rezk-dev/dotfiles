@@ -29,7 +29,7 @@ end
 -- /Users/ahmed/work/neovim-plugins/cmp-ai
 return {
   -- 'tzachar/cmp-ai',
-  dir = '~/work/neovim-plugins/cmp-ai-org',
+  -- dir = '~/work/neovim-plugins/cmp-ai-org',
   -- 'ahmed-rezk-dev/cmp-ai',
   dependencies = 'nvim-lua/plenary.nvim',
   lazy = false,

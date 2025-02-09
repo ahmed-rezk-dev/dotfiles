@@ -138,9 +138,9 @@ return {
   { "<leader>pl", "<cmd>lua require'telescope'.extensions.repo.cached_list{file_ignore_patterns={'/%.cache/', '/%.cargo/', '/%.local/', '/%timeshift/', '/usr/', '/srv/', '/%.oh%-my%-zsh', '/Library/', '/%.cocoapods/'}}<CR>", desc = "list", nowait = true, remap = false },
 
   { "<leader>pr", group = "Search & Replace", nowait = true, remap = false },
-  { "<leader>prf", "<cmd>lua require('spectre').open_file_search()<cr>", desc = "Search current file", nowait = true, remap = false },
+  { "<leader>prf", "<cmd>lua require('grug-far').open({ prefills = { paths = vim.fn.expand('%') } })<cr>", desc = "Search current file", nowait = true, remap = false },
   { "<leader>prs", "<cmd>lua require('spectre').open_visual()<cr>", desc = "Search panel", nowait = true, remap = false },
-  { "<leader>prw", "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", desc = "Search current word", nowait = true, remap = false },
+  { "<leader>prw", "<cmd>lua require('grug-far').open({ prefills = { search = vim.fn.expand('<cword>') } })<cr>", desc = "Search current word", nowait = true, remap = false },
 
   { "<leader>ps", group = "Sessions", nowait = true, remap = false },
   { "<leader>psG", "<cmd>lua require('nvim-possession').update()<cr>", desc = "update", nowait = true, remap = false },

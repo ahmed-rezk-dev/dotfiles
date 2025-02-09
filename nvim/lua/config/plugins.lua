@@ -9,6 +9,8 @@ local python_runner = require("plugins.python_runner")
 local lazydev       = require("plugins.lazydev")
 local helpview      = require("plugins.helpview")
 local cursor        = require("plugins.cursor")
+local grugfar       = require("plugins.grug-far")
+
 return {
   -- Themes
   colorscheme,
@@ -55,16 +57,16 @@ return {
   },
 
   -- Navigating (Telescope/Tree/Refactor)
-  {
-    "nvim-pack/nvim-spectre",
-    config = function()
-      require('spectre').setup({
-        color_devicons = true,
-        open_cmd = 'vnew',
-        live_update = true, -- auto execute search again when you write to any file in vim
-      })
-    end
-  },
+  -- {
+  --   "nvim-pack/nvim-spectre",
+  --   config = function()
+  --     require('spectre').setup({
+  --       color_devicons = true,
+  --       open_cmd = 'vnew',
+  --       live_update = true, -- auto execute search again when you write to any file in vim
+  --     })
+  --   end
+  -- },
   {
     "nvim-telescope/telescope.nvim",
     lazy = false,
@@ -145,7 +147,7 @@ return {
   {
     "nvimtools/none-ls.nvim",
     event = "BufNewFile",
-    dependencies = { "mason.nvim" },
+    dependencies = { "mason.nvim", "nvimtools/none-ls-extras.nvim", },
   },
   {
     "jay-babu/mason-null-ls.nvim",
@@ -983,5 +985,6 @@ return {
   python_runner,
   lazydev,
   helpview,
-  cursor
+  cursor,
+  grugfar
 }
