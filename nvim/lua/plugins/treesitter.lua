@@ -22,7 +22,7 @@ require 'nvim-treesitter.configs'.setup {
     "sql",
     "python",
   },                              -- one of "all", or a list of languages
-  sync_install = false,           -- install languages synchronously (only applied to `ensure_installed`)
+  sync_install = true,           -- install languages synchronously (only applied to `ensure_installed`)
   ignore_install = { "haskell" }, -- list of parsers to ignore installing
   highlight = {
     enable = true,
