@@ -159,9 +159,13 @@ return {
 
       opts.provider = "ollama"
       opts.ollama = {
-        model = "llama3",
+        model = "qwen2.5-coder:14b",
         endpoint = "192.168.50.252:11434",
-        -- temperature = 0,
+        temperature = 0,
+        timeout = 30000,
+        options = {
+          num_ctx = 32768,
+        },
         -- max_tokens = 8192,
       }
 
