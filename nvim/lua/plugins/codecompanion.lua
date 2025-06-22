@@ -86,20 +86,17 @@ return {
         adapter = "ollama",
       },
       prompt_library = PROMPTS.PROMPT_LIBRARY,
-      -- prompt_library = {
-      --   ["Generate documentation in JSDoc"] = {
-      --     strategy = "inline",
-      --     prompts = {
-      --       {
-      --         role = "user",
-      --         content = "Generate documentation in JSDoc format for a complex JavaScript API client",
-      --         opts = {
-      --           auto_submit = true,
-      --         },
-      --       },
-      --     },
-      --   },
-      -- },
+
+      extensions = {
+        mcphub = {
+          callback = "mcphub.extensions.codecompanion",
+          opts = {
+            show_result_in_chat = true, -- Show mcp tool results in chat
+            make_vars = true, -- Convert resources to #variables
+            make_slash_commands = true, -- Add prompts as /slash commands
+          },
+        },
+      },
     },
     keys = {
       { "<leader>a", "", desc = "+ai", mode = { "n", "v" } },
