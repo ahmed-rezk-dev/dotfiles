@@ -1,4 +1,8 @@
 ---@diagnostic disable-next-line: unused-local
+
+local PROMPTS = require("utils.prompts")
+local mapping_key_prefix = vim.g.ai_prefix_key or "<leader>a"
+
 local function generate_slash_commands()
   local commands = {}
   for _, command in ipairs({ "buffer", "file", "help", "symbols" }) do
@@ -36,7 +40,7 @@ return {
             },
             schema = {
               model = {
-                default = "deepseek-r1",
+                default = "qwen2.5-coder:14b", -- 'deepseek-r1' | 'deepseek-r1:14b' | 'qwq:32b' | 'qwen2.5-coder:14b' | 'qwen2.5-coder:7b' | 'codellama:7b-code' | 'codewriter'
               },
               num_ctx = {
                 default = 20000,
@@ -48,9 +52,6 @@ return {
       strategies = {
         chat = {
           adapter = "ollama",
-          opts = {
-            log_level = "DEBUG",
-          },
           roles = {
             llm = "CodeCompanion",
             user = "Me",
@@ -74,49 +75,134 @@ return {
               description = "Stop Request",
             },
           },
+          opts = {
+            log_level = "DEBUG",
+            system_prompt = PROMPTS.SYSTEM_PROMPT,
+          },
+          prompt_library = PROMPTS.PROMPT_LIBRARY,
         },
       },
       inline = {
         adapter = "ollama",
       },
-      prompt_library = {
-        ["Generate documentation in JSDoc"] = {
-          strategy = "inline",
-          prompts = {
-            {
-              role = "user",
-              content = "Generate documentation in JSDoc format for a complex JavaScript API client",
-              opts = {
-                auto_submit = true,
-              },
-            },
-          },
-        },
-      },
+      prompt_library = PROMPTS.PROMPT_LIBRARY,
+      -- prompt_library = {
+      --   ["Generate documentation in JSDoc"] = {
+      --     strategy = "inline",
+      --     prompts = {
+      --       {
+      --         role = "user",
+      --         content = "Generate documentation in JSDoc format for a complex JavaScript API client",
+      --         opts = {
+      --           auto_submit = true,
+      --         },
+      --       },
+      --     },
+      --   },
+      -- },
     },
     keys = {
       { "<leader>a", "", desc = "+ai", mode = { "n", "v" } },
-      { "<leader>aa", "<cmd>CodeCompanionChat Toggle<cr>", mode = { "n", "v" }, desc = "Toggle (CodeCompanion)" },
-      { "<leader>ap", "<cmd>CodeCompanionActions<cr>", mode = { "n", "v" }, desc = "Prompt Actions (CodeCompanion)" },
-      { "<leader>ac", "<cmd>CodeCompanionAdd<cr>", mode = "v", desc = "Add code to CodeCompanion" },
-      { "<leader>ai", "<cmd>'<,'>CodeCompanion<cr>", mode = { "n", "v" }, desc = "Inline prompt (CodeCompanion)" },
-      -- {
-      --   "<leader>ac",
-      --   "<cmd>CodeCompanionChat Toggle<cr>",
-      --   mode = { "n", "v" },
-      --   noremap = true,
-      --   silent = true,
-      --   desc = "CodeCompanion chat",
-      -- },
-      -- {
-      --   "<leader>ad",
-      --   "<cmd>CodeCompanionChat Add<cr>",
-      --   mode = "v",
-      --   noremap = true,
-      --   silent = true,
-      --   desc = "CodeCompanion add to chat",
-      -- },
+      {
+        mapping_key_prefix .. "p",
+        "<cmd>CodeCompanionActions<cr>",
+        desc = "Code Companion - Prompt Actions",
+      },
+      {
+        mapping_key_prefix .. "a",
+        function()
+          vim.cmd("CodeCompanionChat Toggle")
+          vim.cmd("startinsert")
+        end,
+        desc = "Code Companion - Toggle",
+        mode = { "n", "v" },
+      },
+      -- Some common usages with visual mode
+      {
+        mapping_key_prefix .. "e",
+        "<cmd>CodeCompanion /explain<cr>",
+        desc = "Code Companion - Explain code",
+        mode = "v",
+      },
+      {
+        mapping_key_prefix .. "E",
+        "<cmd>CodeCompanion /english<cr>",
+        desc = "Code Companion - English Review",
+        mode = "v",
+      },
+      {
+        mapping_key_prefix .. "f",
+        "<cmd>CodeCompanion /fix<cr>",
+        desc = "Code Companion - Fix code",
+        mode = "v",
+      },
+      {
+        mapping_key_prefix .. "l",
+        "<cmd>CodeCompanion /lsp<cr>",
+        desc = "Code Companion - Explain LSP diagnostic",
+        mode = { "n", "v" },
+      },
+      {
+        mapping_key_prefix .. "t",
+        "<cmd>CodeCompanion /tests<cr>",
+        desc = "Code Companion - Generate unit test",
+        mode = "v",
+      },
+      {
+        mapping_key_prefix .. "m",
+        "<cmd>CodeCompanion /commit<cr>",
+        desc = "Code Companion - Git commit message",
+      },
+      -- Custom prompts
+      {
+        mapping_key_prefix .. "M",
+        "<cmd>CodeCompanion /staged-commit<cr>",
+        desc = "Code Companion - Git commit message (staged)",
+      },
+      {
+        mapping_key_prefix .. "d",
+        "<cmd>CodeCompanion /inline-doc<cr>",
+        desc = "Code Companion - Inline document code",
+        mode = "v",
+      },
+      { mapping_key_prefix .. "D", "<cmd>CodeCompanion /doc<cr>", desc = "Code Companion - Document code", mode = "v" },
+      {
+        mapping_key_prefix .. "r",
+        "<cmd>CodeCompanion /refactor<cr>",
+        desc = "Code Companion - Refactor code",
+        mode = "v",
+      },
+      {
+        mapping_key_prefix .. "R",
+        "<cmd>CodeCompanion /review<cr>",
+        desc = "Code Companion - Review code",
+        mode = "v",
+      },
+      {
+        mapping_key_prefix .. "n",
+        "<cmd>CodeCompanion /naming<cr>",
+        desc = "Code Companion - Better naming",
+        mode = "v",
+      },
+      -- Quick chat
+      {
+        mapping_key_prefix .. "q",
+        function()
+          local input = vim.fn.input("Quick Chat: ")
+          if input ~= "" then
+            vim.cmd("CodeCompanion " .. input)
+          end
+        end,
+        desc = "Code Companion - Quick chat",
+      },
     },
+    config = function(_, opts)
+      local spinner = require("utils.spinner")
+      spinner:init()
+
+      -- Setup the entire opts table
+      require("codecompanion").setup(opts)
+    end,
   },
   {
     "MeanderingProgrammer/render-markdown.nvim",
