@@ -100,8 +100,16 @@ function M:init()
     callback = function(request)
       if request.match == "CodeCompanionRequestStarted" then
         self:start_spinner()
+        vim.notify("󱚟  On it!", "info", {
+          id = "ai_task",
+          title = " Thinking",
+          opts = function(notif)
+            notif.icon = self.spinner_symbols[math.floor(vim.uv.hrtime() / (1e6 * 80)) % #self.spinner_symbols + 1]
+          end,
+        })
       elseif request.match == "CodeCompanionRequestFinished" then
         self:stop_spinner()
+        vim.notify("󱚥  Happy code master!", "info", { id = "ai_task", icon = "", title = "Done" })
       end
     end,
   })
