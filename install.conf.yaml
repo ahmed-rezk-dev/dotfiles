@@ -11,5 +11,6 @@
     ~/.config/tmuxinator: tmuxinator
     ~/.config/tmux: tmux
     ~/.config/wezterm/: wezterm
-    ~/.config/aerospace/: aerospace 
-    ~/.config/ghostty/: ghostty 
+    ~/.config/aerospace/: aerospace
+    ~/.config/ghostty/: ghostty
+    ~/.config/lazygit/: lazygit
