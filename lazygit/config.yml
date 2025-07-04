@@ -3,7 +3,7 @@ customCommands:
     description: Pick AI commit
     command: oco
     # command: |
-    #   aichat "Please suggest 10 commit messages, given the following diff:
+    #   aichat "Please suggest 10 commit messages, given the following diff with emoji:
     #
     #     \`\`\`diff
     #     $(git diff --cached)
@@ -68,7 +68,7 @@ customCommands:
     #
     #     Write your 10 commit messages below in the format shown in Output Template section above." \
     #       | fzf --height 40% --border --ansi --preview "echo {}" --preview-window=up:wrap \
-    #       | xargs -I {} bash -c '
+    #       | xargs -I{} bash -c '
     #           COMMIT_MSG_FILE=$(mktemp)
     #           echo "{}" > "$COMMIT_MSG_FILE"
     #           ${EDITOR:-vim} "$COMMIT_MSG_FILE"
