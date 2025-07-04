@@ -1,0 +1,12 @@
+# /Users/ahmedrezk/.config/tmuxinator/SimplifiedQuotingReactDotnet.yml
+
+name: fisionweb
+root: /Users/ahmed.rezk/hotwire/fisionweb/
+
+windows:
+  - editor:
+      - nvim
+      - guard
+  - frontend: npm run dev
+  - storybook: npm run storybook
+  - test: npm run test:watch
