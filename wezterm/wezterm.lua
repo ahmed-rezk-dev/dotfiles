@@ -145,6 +145,11 @@ config.keys = {
 			args = { "nvim", wezterm.config_file },
 		}),
 	},
+	{
+		key = "R",
+		mods = "SUPER",
+		action = wezterm.action.ReloadConfiguration,
+	},
 
 	{
 		-- I'm used to tmux bindings, so am using the quotes (") key to
