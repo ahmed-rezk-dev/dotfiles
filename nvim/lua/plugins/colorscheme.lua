@@ -34,11 +34,15 @@ return {
       },
     },
   },
+  { "EdenEast/nightfox.nvim" },
+  { "rose-pine/neovim", name = "rose-pine" },
+
   -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight",
+      -- colorscheme = "tokyonight",
+      colorscheme = "rose-pine",
     },
   },
 }
