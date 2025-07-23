@@ -34,7 +34,21 @@ return {
       },
     },
   },
-  { "EdenEast/nightfox.nvim" },
+  {
+    "EdenEast/nightfox.nvim",
+    config = function()
+      require("nightfox").setup({
+        options = {
+          transparent = true,
+          styles = {
+            comments = "italic",
+            keywords = "bold",
+            types = "italic,bold",
+          },
+        },
+      })
+    end,
+  },
   { "rose-pine/neovim", name = "rose-pine" },
 
   -- Configure LazyVim to load gruvbox
@@ -42,7 +56,7 @@ return {
     "LazyVim/LazyVim",
     opts = {
       -- colorscheme = "tokyonight",
-      colorscheme = "rose-pine",
+      colorscheme = "duskfox",
     },
   },
 }

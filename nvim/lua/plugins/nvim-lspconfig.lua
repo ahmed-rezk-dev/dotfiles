@@ -23,6 +23,9 @@
 return {
   "neovim/nvim-lspconfig",
   opts = {
+    diagnostics = {
+      virtual_text = false,
+    },
     servers = {
       tailwindcss = {
         -- exclude a filetype from the default_config
