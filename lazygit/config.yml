@@ -2,6 +2,7 @@ customCommands:
   - key: "C"
     description: Pick AI commit
     command: oco
+
     # command: |
     #   aichat "Please suggest 10 commit messages, given the following diff with emoji:
     #
@@ -81,3 +82,10 @@ customCommands:
     context: "files"
     loadingText: "opening commitizen commit tool"
     output: terminal
+
+git:
+  paging:
+    colorArg: always
+    pager: delta --dark --paging=never --side-by-side
+gui:
+  showIcons: true
