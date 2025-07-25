@@ -1,0 +1,39 @@
+{
+  "nativeMCPServers": [],
+  "mcpServers": {
+    "git": {
+      "command": "uvx",
+      "disabled": false,
+      "args": ["mcp-server-git", "--repository", "."]
+    },
+    "github": {
+      "command": "docker",
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+      },
+      "disabled": true,
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "ghcr.io/github/github-mcp-server"
+      ]
+    },
+    "time": {
+      "command": "uvx",
+      "disabled": true,
+      "args": ["mcp-server-time"]
+    }
+  },
+  "inputs": [
+    {
+      "id": "github_token",
+      "type": "promptString",
+      "password": true,
+      "description": "GitHub Personal Access Token"
+    }
+  ]
+}
+
