@@ -1,4 +1,11 @@
-local log = require("logger")
+local services = require("config.ask.services")
+local service = services.getService()
+local streamingRequest = require("config.ask.streaming_curl").streamingRequest
+
+local headers = {
+	["Authorization"] = "Bearer " .. service.api_key,
+	["Content-Type"] = "application/json",
+}
 
 local geminiApiKey = "Gemini API Key"
 hs.hotkey.bind({ "ctrl", "alt" }, "G", function()
@@ -39,6 +46,7 @@ Sentence: "]] .. input .. [["
 		hs.http.asyncPost(url, jsonBody, {
 			["Content-Type"] = "application/json",
 		}, function(status, body)
+			myTask = streamingRequest(service.url, "POST", headers, body, streamingCallback, completeCallback)
 			log.i(body)
 			if status ~= 200 then
 				hs.alert.show("❌ Gemini API error: " .. tostring(status))
