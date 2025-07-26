@@ -45,7 +45,7 @@ Sentence: "]] .. input .. [["
 		-- 🚀 Send Request to Gemini
 		hs.http.asyncPost(url, jsonBody, {
 			["Content-Type"] = "application/json",
-		}, function(status, body)
+		}, function(sttus, body)
 			myTask = streamingRequest(service.url, "POST", headers, body, streamingCallback, completeCallback)
 			log.i(body)
 			if status ~= 200 then
