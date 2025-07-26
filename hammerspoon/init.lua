@@ -1,6 +1,3 @@
-spoon = spoon
-hs = hs
-
 Settings = require("settings")
 log = require("logger")
 require("ext")

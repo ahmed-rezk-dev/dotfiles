@@ -1,7 +1,9 @@
 {
   "$schema": "https://raw.githubusercontent.com/sumneko/vscode-lua/master/setting/schema.json",
   "diagnostics.globals": ["log", "services", "service", "Settings",
-        "bindings"],
+        "bindings",
+        "spoon",
+        "hs"],
   "workspace": {
     "checkThirdParty": true
   }
