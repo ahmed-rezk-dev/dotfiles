@@ -8,15 +8,37 @@ local projects = require("projects")
 config.set_environment_variables = {
 	PATH = "/opt/homebrew/bin:" .. os.getenv("PATH"),
 }
+------------------------------------------------------------------------------
+-- Theme: Tokyo Night
+--
+-- Description:
+-- The Tokyo Night theme is a color scheme inspired by the aesthetic of neon
+-- lights in Tokyo. It provides high contrast and visually appealing colors
+-- for coding environments.
+------------------------------------------------------------------------------
+-- if appearance.is_dark() then
+-- 	config.color_scheme = "onedarkpro_vaporwave"
+-- else
+-- 	config.color_scheme = "Tokyo Night"
+-- end
 
 if appearance.is_dark() then
-	config.color_scheme = "Tokyo Night"
+	config.color_scheme = "onedarkpro_vaporwave"
 else
-	config.color_scheme = "Tokyo Night Day"
+	config.color_scheme = "onedarkpro_onelight"
 end
+config.color_scheme_dirs = { wezterm.home_dir .. "/.cache/nvim/onedarkpro_dotfiles/extras/wezterm" }
 
-config.font = wezterm.font("JetBrainsMono Nerd Font")
+-- config.font = wezterm.font("JetBrainsMono Nerd Font")
+-- config.font_size = 13
+
+config.font = wezterm.font("Operator-Caska", {
+	stretch = "Normal",
+	weight = "Medium",
+})
 config.font_size = 13
+
+config.line_height = 1.6
 
 -- Slightly transparent and blurred background
 config.window_background_opacity = 0.9
@@ -33,6 +55,15 @@ config.window_frame = {
 	-- serif font here instead of monospace for a nicer look?
 	font = wezterm.font({ family = "JetBrainsMono Nerd Font", weight = "Bold" }),
 	font_size = 11,
+}
+
+-- Configure window padding settings
+-- The values represent the number of spaces added around the content within a window.
+config.window_padding = {
+	left = 5, -- Padding on the left side of the window
+	right = 5, -- Padding on the right side of the window
+	top = 0, -- Padding at the top of the window
+	bottom = 0, -- Padding at the bottom of the window
 }
 
 config.enable_tab_bar = false
@@ -218,5 +249,10 @@ config.key_tables = {
 		resize_pane("l", "Right"),
 	},
 }
+
+-- Graphics config
+config.front_end = "WebGpu"
+config.cursor_blink_ease_in = "Constant"
+config.cursor_blink_ease_out = "Constant"
 
 return config
