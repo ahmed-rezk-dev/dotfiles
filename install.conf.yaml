@@ -16,4 +16,5 @@
     ~/.config/lazygit/: lazygit
     ~/.config/aichat/: aichat
     ~/.hammerspoon/: hammerspoon
-    ~/.config/mcphub/: mcphub
+    ~/.config/mcphub: mcphub
+    ~/.config/opencode: opencode

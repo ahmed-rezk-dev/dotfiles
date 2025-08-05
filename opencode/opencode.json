@@ -1,0 +1,21 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "http://localhost:11434/v1"
+      },
+      "models": {
+        "qwen3:latest-16k": {
+          "tool_call": true,
+          "reasoning": true
+        },
+        "qwen3:latest": {
+          "tool_call": true,
+          "reasoning": true
+        }
+      }
+    }
+  }
+}
