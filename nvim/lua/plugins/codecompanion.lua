@@ -40,7 +40,7 @@ return {
             },
             schema = {
               model = {
-                default = "qwen2.5-coder:14b", -- 'deepseek-r1' | 'deepseek-r1:14b' | 'qwq:32b' | 'qwen2.5-coder:14b' | 'qwen2.5-coder:7b' | 'codellama:7b-code' | 'codewriter'
+                default = "'qwen3:latest-16k", -- 'deepseek-r1' | 'deepseek-r1:14b' | 'qwq:32b' | 'qwen2.5-coder:14b' | 'qwen2.5-coder:7b' | 'codellama:7b-code' | 'codewriter'
               },
               num_ctx = {
                 default = 20000,
