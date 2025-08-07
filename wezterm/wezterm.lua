@@ -31,12 +31,11 @@ config.color_scheme_dirs = { wezterm.home_dir .. "/.cache/nvim/onedarkpro_dotfil
 
 -- config.font = wezterm.font("JetBrainsMono Nerd Font")
 -- config.font_size = 13
-
-config.font = wezterm.font("Operator-Caska", {
-	stretch = "Normal",
-	weight = "Medium",
-})
-config.font_size = 13
+-- Operator
+-- ComicShannsMono
+--SauceCodePro Nerd Font
+config.font = wezterm.font("SauceCodePro Nerd Font")
+config.font_size = 13.5
 
 config.line_height = 1.6
 
