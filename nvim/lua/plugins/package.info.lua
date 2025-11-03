@@ -18,37 +18,37 @@ return {
 
     {
       mapping_key_prefix .. "nh",
-      "<cmd>lua require('package-info').hide<CR>",
+      "<cmd>lua require('package-info').hide()<CR>",
       desc = "Hide dependency versions",
     },
 
     {
       mapping_key_prefix .. "nt",
-      "<cmd>lua require('package-info').toggle<CR>",
+      "<cmd>lua require('package-info').toggle()<CR>",
       desc = "Toggle dependency versions",
     },
 
     {
       mapping_key_prefix .. "nu",
-      "<cmd>lua require('package-info').update<CR>",
+      "<cmd>lua require('package-info').update()<CR>",
       desc = "Update dependency on the line",
     },
 
     {
       mapping_key_prefix .. "nd",
-      "<cmd>lua require('package-info').delete<CR>",
+      "<cmd>lua require('package-info').delete()<CR>",
       desc = "Delete dependency on the line",
     },
 
     {
       mapping_key_prefix .. "ni",
-      "<cmd>lua require('package-info').install<CR>",
+      "<cmd>lua require('package-info').install()<CR>",
       desc = "Install a new dependency",
     },
 
     {
       mapping_key_prefix .. "nc",
-      "<cmd>lua require('package-info').change_version<CR>",
+      "<cmd>lua require('package-info').change_version()<CR>",
       desc = "Install a different dependency version",
     },
   },
