@@ -18,8 +18,8 @@
 2. **Module Federation.** Module Federation, a powerful technique introduced in webpack 5, enables dynamic loading and sharing of JavaScript modules between micro frontends at runtime. This approach allows developers to build independently deployable micro frontends that can seamlessly integrate. By dynamically importing remote modules, Module Federation fosters a modular architecture where micro frontends can evolve and scale independently, without sacrificing interoperability. ![](https://miro.medium.com/v2/resize:fit:700/1*tADx4bViUt3MKjfmYkDNSg.png)
 3. **iFrames and Web Components.** While not strictly considered micro frontend techniques, iFrames and Web Components offer alternative approaches to achieve frontend modularity and encapsulation. iFrames enable developers to embed isolated HTML documents within a parent document, allowing for independent rendering and execution. Web Components, on the other hand, provide a standardized way to encapsulate and reuse UI components across different web applications. While these approaches come with their own set of trade-offs and considerations, they can be valuable tools in certain scenarios.
 
-    **Key Concepts and Benefits** 2. **Decentralized Architecture -** Module Federation promotes a decentralized architecture, where each micro frontend is responsible for its own set of features and dependencies. This decentralization allows teams to work autonomously, independently deploying and scaling their micro frontends without impacting other parts of the application. 3. **Dynamic Module Loading -** One of the hallmark features of Module Federation is its support for dynamic module loading. By dynamically importing remote modules at runtime, micro frontends can fetch and integrate functionality on-demand, reducing initial loading times and improving performance. 4. **Shared Dependencies -** Module Federation facilitates the sharing of dependencies between micro frontends, minimizing duplication and optimizing resource utilization. Shared dependencies are loaded once and cached across micro frontends, ensuring consistency and reducing overhead.
-    **Different impmlamtion** 1. Local Interfaces. 2. Remote Interface. 3. Federation controlling Federation. 4. Delegate Modules. 5. Component Level Ownership, & Federation + CLO.
+   **Key Concepts and Benefits** 2. **Decentralized Architecture -** Module Federation promotes a decentralized architecture, where each micro frontend is responsible for its own set of features and dependencies. This decentralization allows teams to work autonomously, independently deploying and scaling their micro frontends without impacting other parts of the application. 3. **Dynamic Module Loading -** One of the hallmark features of Module Federation is its support for dynamic module loading. By dynamically importing remote modules at runtime, micro frontends can fetch and integrate functionality on-demand, reducing initial loading times and improving performance. 4. **Shared Dependencies -** Module Federation facilitates the sharing of dependencies between micro frontends, minimizing duplication and optimizing resource utilization. Shared dependencies are loaded once and cached across micro frontends, ensuring consistency and reducing overhead.
+   **Different impmlamtion** 1. Local Interfaces. 2. Remote Interface. 3. Federation controlling Federation. 4. Delegate Modules. 5. Component Level Ownership, & Federation + CLO.
 
 ### Asynchronous Loading
 
@@ -56,25 +56,25 @@ Exposing State from a Remote Micro-Frontend
 ```javascript
 // webpack.config.js (Remote App)
 new ModuleFederationPlugin({
-    name: 'remoteApp',
-    filename: 'remoteEntry.js',
-    exposes: {
-        './store': './src/store', // Expose store for sharing
-    },
-    shared: ['react', 'zustand'],
-})
+  name: "remoteApp",
+  filename: "remoteEntry.js",
+  exposes: {
+    "./store": "./src/store", // Expose store for sharing
+  },
+  shared: ["react", "zustand"],
+});
 ```
 
     Consuming the Shared Store in a Host
 
 ```javascript
 // Import store from remote
-import useStore from 'remoteApp/store'
+import useStore from "remoteApp/store";
 
 const Counter = () => {
-    const count = useStore((state) => state.count)
-    return <div>Counter: {count}</div>
-}
+  const count = useStore((state) => state.count);
+  return <div>Counter: {count}</div>;
+};
 ```
 
 **2. Using Custom Events for Communication**
@@ -85,16 +85,16 @@ Publishing a Custom Event
 
 ```javascript
 const updateUser = (user) => {
-    window.dispatchEvent(new CustomEvent('USER_UPDATED', { detail: { user } }))
-}
+  window.dispatchEvent(new CustomEvent("USER_UPDATED", { detail: { user } }));
+};
 ```
 
     Listening for the Event in Another Micro-Frontend
 
 ```javascript
-window.addEventListener('USER_UPDATED', (event) => {
-    console.log('User Updated:', event.detail.user)
-})
+window.addEventListener("USER_UPDATED", (event) => {
+  console.log("User Updated:", event.detail.user);
+});
 ```
 
 **3. Using an Event Bus for Decoupled Communication**
@@ -125,19 +125,19 @@ Creating a Simple Event Bus
     Publishing an Event
 
 ```javascript
-import eventBus from './eventBus'
+import eventBus from "./eventBus";
 
-eventBus.publish('USER_LOGIN', { username: 'JohnDoe' })
+eventBus.publish("USER_LOGIN", { username: "JohnDoe" });
 ```
 
     Subscribing to an Event
 
 ```javascript
-import eventBus from './eventBus'
+import eventBus from "./eventBus";
 
-eventBus.subscribe('USER_LOGIN', (data) => {
-    console.log('User Logged In:', data.username)
-})
+eventBus.subscribe("USER_LOGIN", (data) => {
+  console.log("User Logged In:", data.username);
+});
 ```
 
 **4. Using LocalStorage or SessionStorage**
@@ -147,14 +147,14 @@ For simple data persistence, micro-frontends can use the browser’s **LocalStor
 Storing Data
 
 ```javascript
-localStorage.setItem('theme', 'dark')
+localStorage.setItem("theme", "dark");
 ```
 
     Retrieving Data
 
 ```javascript
-const theme = localStorage.getItem('theme')
-console.log('Theme:', theme)
+const theme = localStorage.getItem("theme");
+console.log("Theme:", theme);
 ```
 
 **5. Using React Context API for React-Based Micro-Frontends**
@@ -164,24 +164,24 @@ React’s **Context API** can be exposed as a federated module and consumed by o
 Exposing a Context Provider
 
 ```javascript
-export const ThemeContext = React.createContext('light')
+export const ThemeContext = React.createContext("light");
 
 export const ThemeProvider = ({ children }) => {
-    const [theme, setTheme] = React.useState('light')
-    return (
-        <ThemeContext.Provider value={{ theme, setTheme }}>
-            {children}
-        </ThemeContext.Provider>
-    )
-}
+  const [theme, setTheme] = React.useState("light");
+  return (
+    <ThemeContext.Provider value={{ theme, setTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  );
+};
 ```
 
     Consuming Context in Another Micro-Frontend
 
 ```javascript
-import { ThemeContext } from 'remoteApp/ThemeProvider'
+import { ThemeContext } from "remoteApp/ThemeProvider";
 
-const { theme } = useContext(ThemeContext)
+const { theme } = useContext(ThemeContext);
 ```
 
 **Conclusion**
@@ -225,4 +225,17 @@ const { theme } = useContext(ThemeContext)
 ### Styling
 
 - [Building a Multi Brand Design System with Tailwind: Tips, Tricks and Tradeoffs](https://www.thinkmill.com.au/blog/building-a-multi-brand-design-system-with-tailwind-tips-tricks-and-tradeoffs)
+- [Unlocking Power of Design Tokens: Practical Steps for Your Next Project](https://dev.to/annwebdotdev/syncing-design-tokens-with-tailwind-css-theme-4d4d)
+- [How We Created Our Design System with TailwindCSS and Figma Tokens at AirMDR](https://medium.com/@himanshuchavda46/how-we-created-our-design-system-with-tailwindcss-and-figma-tokens-at-airmdr-029ea52a3efd)
 
+- Tools
+  - `Husky` Leverages Git hooks to enforce code quality standards and run tests before commits and pushes, ensuring that only quality code is added to the repository.
+  - `eslint` Statically analyzes your code to quickly find problems during coding.
+  - `prettier` is an opinionated tool that encourages programmers to follow its formatting rules. It also parses the code and reprints it uniformly.
+  - Enforcing changelog usage with one of blow options
+    - semantic-release
+      - `git-cz` combined with `commmitlint` to set rules for commit messages.
+      - `commitizen` a standard way of committing
+      - `cz-conventional-changelog` Like commitizen, you specify the configuration of cz-conventional-changelog through the package.json's config.commitizen key.
+    - changesets `@changesets/cli`
+    - <https://brianschiller.com/blog/2023/09/18/changesets-vs-semantic-release/>
