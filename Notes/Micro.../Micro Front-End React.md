@@ -1,3 +1,19 @@
+<!--toc:start-->
+
+- [9 Patterns Every Developer Should Know](#9-patterns-every-developer-should-know)
+- [Micro Frontend Techniques](#micro-frontend-techniques)
+  - [Asynchronous Loading](#asynchronous-loading)
+  - [Error Handling](#error-handling)
+  - [SafeComponent](#safecomponent)
+- [Sharing Functions and States](#sharing-functions-and-states)
+  - [Sharing Functions](#sharing-functions)
+  - [Sharing State (Nomenclature)](#sharing-state-nomenclature)
+  - [Cons](#cons)
+- [sources](#sources)
+  - [Vite](#vite)
+  - [Styling](#styling)
+  <!--toc:end-->
+
 ![](https://miro.medium.com/v2/resize:fit:2880/1*ObN91fjDtJd2_F7NENlj6g.jpeg)
 
 ## 9 Patterns Every Developer Should Know
@@ -51,7 +67,6 @@ If micro-frontends use a common state management solution like **Redux, Zustand,
 **Pros**: Ensures a single source of truth across micro-frontends.
 **Cons**: Tight coupling between micro-frontends.
 **Exposing State from a Remote Micro-Frontend**
-Exposing State from a Remote Micro-Frontend
 
 ```javascript
 // webpack.config.js (Remote App)
@@ -208,25 +223,48 @@ const { theme } = useContext(ThemeContext);
 
 ## sources
 
+1. [Micro-Frontends Course - Beginner to Expert](https://www.youtube.com/live/lKKsjpH09dU)
+1. [Micro Frontends - Cam Jackson](https://martinfowler.com/articles/micro-frontends.html)
+1. [https://micro-frontends.org/](https://micro-frontends.org/)
 1. [ZackJackson - Module Federation, With Next.js and SSR](https://www.youtube.com/watch?v=yU7ARATZoUU)
-2. [Micro-Frontends Course - Beginner to Expert](https://www.youtube.com/live/lKKsjpH09dU)
-3. [A Deep Dive into Micro Frontend Architecture with React.js](https://medium.com/@isuruariyarathna2k00/a-deep-dive-into-micro-frontend-architecture-with-react-js-264ca6edca6b)
-4. <https://softjourn.com/insights/micro-frontend-architecture>
-5. [Introduction to Micro Frontend Architecture: Scaling Frontend for Digital Innovation.](https://www.xcubelabs.com/blog/introduction-to-micro-frontend-architecture-scaling-frontend-for-digital-innovation/#:~:text=E-commerce%20Platforms%20and%20Multi-Tenant%20Architecture&text=Each%20tenant%20can%20have%20its,easier%20maintenance%2C%20and%20improved%20scalability)
-6. [Mastering Micro Frontends: 9 Patterns Every Developer Should Know](https://medium.com/bitsrc/mastering-microfrontends-9-patterns-every-developer-should-know-397081673770)
-7. [# Micro-Frontends Course - Beginner to Expert](https://www.youtube.com/live/lKKsjpH09dU)
-8. **NextJS Specific**
-9. [Micro-frontends with Next.js and Module Federation](https://alibek.dev/micro-frontends-with-nextjs-and-module-federation)
+1. [A Deep Dive into Micro Frontend Architecture with React.js](https://medium.com/@isuruariyarathna2k00/a-deep-dive-into-micro-frontend-architecture-with-react-js-264ca6edca6b)
+1. <https://softjourn.com/insights/micro-frontend-architecture>
+1. [Introduction to Micro Frontend Architecture: Scaling Frontend for Digital Innovation.](https://www.xcubelabs.com/blog/introduction-to-micro-frontend-architecture-scaling-frontend-for-digital-innovation/#:~:text=E-commerce%20Platforms%20and%20Multi-Tenant%20Architecture&text=Each%20tenant%20can%20have%20its,easier%20maintenance%2C%20and%20improved%20scalability)
+1. [Mastering Micro Frontends: 9 Patterns Every Developer Should Know](https://medium.com/bitsrc/mastering-microfrontends-9-patterns-every-developer-should-know-397081673770)
+1. [# Micro-Frontends Course - Beginner to Expert](https://www.youtube.com/live/lKKsjpH09dU)
+1. **NextJS Specific**
+1. [Micro-frontends with Next.js and Module Federation](https://alibek.dev/micro-frontends-with-nextjs-and-module-federation)
+1. [Micro-frontend — 10+ Ways for State Management in Module Federation in Vite](https://amberfung.medium.com/micro-frontend-10-ways-for-state-management-in-module-federation-in-vite-7dbd3434bd5e)
+
+## Watch Later
+
+1. <https://www.youtube.com/watch?v=njXeMeAu4Sg>
+2. <https://www.youtube.com/watch?v=uRKUxZQ74os>
+3. <https://blog.nonstopio.com/a-deep-dive-into-module-federation-in-front-end-with-react-vite-37d17dd253a1>
+4. <https://github.com/jherr/vite-mod-fed/blob/main/remote/vite.config.js>
+5. <https://medium.com/@jyh.herng/typescript-react-micro-frontend-proof-of-concept-using-webpack-module-federation-93a70a41ac1>
+6. <https://paria-heidari.medium.com/implementing-react-micro-frontend-a-step-by-step-guide-021488ec69c9>
+7. <https://blog.bitsrc.io/micro-frontends-a-practical-step-by-step-guide-df10edf0e8d0>
+
+### Typescript
+
+1. [Typescript React Micro-frontend Proof Of Concept Using Webpack Module Federation](https://medium.com/@jyh.herng/typescript-react-micro-frontend-proof-of-concept-using-webpack-module-federation-93a70a41ac1)
 
 ### Vite
 
 - [Build a Remote Micro Frontend with Vite, React, and TypeScript](https://freedium.cfd/https://levelup.gitconnected.com/remote-micro-frontend-8c84585ebf69)
+- [How to Build Micro Frontends in React with Vite and Module Federation](https://www.freecodecamp.org/news/how-to-build-micro-frontends-in-react-with-vite-and-module-federation/)
+- [A Deep Dive into Module Federation in Front-End with React + Vite](https://blog.nonstopio.com/a-deep-dive-into-module-federation-in-front-end-with-react-vite-37d17dd253a1)
+- [Example Repo](https://github.com/jherr/vite-mod-fed/blob/main/remote/package.json)
+- [Dev Mode Issue](https://github.com/originjs/vite-plugin-federation/issues/410)
 
 ### Styling
 
 - [Building a Multi Brand Design System with Tailwind: Tips, Tricks and Tradeoffs](https://www.thinkmill.com.au/blog/building-a-multi-brand-design-system-with-tailwind-tips-tricks-and-tradeoffs)
 - [Unlocking Power of Design Tokens: Practical Steps for Your Next Project](https://dev.to/annwebdotdev/syncing-design-tokens-with-tailwind-css-theme-4d4d)
 - [How We Created Our Design System with TailwindCSS and Figma Tokens at AirMDR](https://medium.com/@himanshuchavda46/how-we-created-our-design-system-with-tailwindcss-and-figma-tokens-at-airmdr-029ea52a3efd)
+- [Runtime made custom themes - dynamic tailwind.config.js #8949](https://github.com/tailwindlabs/tailwindcss/discussions/8949)
+- [Efficient Theming with Tailwind CSS in React Application](https://medium.com/@mahamdaudahmed/efficient-theming-with-tailwind-css-in-react-application-f0f8f87accd1)
 
 - Tools
   - `Husky` Leverages Git hooks to enforce code quality standards and run tests before commits and pushes, ensuring that only quality code is added to the repository.
