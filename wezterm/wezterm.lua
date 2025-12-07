@@ -35,6 +35,7 @@ config.font = wezterm.font("JetBrainsMono Nerd Font")
 -- ComicShannsMono
 --SauceCodePro Nerd Font
 -- config.font = wezterm.font("SauceCodePro Nerd Font")
+config.font = wezterm.font("FiraCode Nerd Font")
 config.font_size = 13.5
 
 config.line_height = 1.6
@@ -52,7 +53,7 @@ config.window_decorations = "RESIZE"
 config.window_frame = {
 	-- Berkeley Mono for me again, though an idea could be to try a
 	-- serif font here instead of monospace for a nicer look?
-	font = wezterm.font({ family = "JetBrainsMono Nerd Font", weight = "Bold" }),
+	-- font = wezterm.font({ family = "JetBrainsMono Nerd Font", weight = "Bold" }),
 	font_size = 11,
 }
 
