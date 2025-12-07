@@ -35,12 +35,12 @@ return {
         ollama = function()
           return require("codecompanion.adapters").extend("ollama", {
             env = {
-              url = "http://192.168.50.252:11434",
-              endpoint = "http://192.168.50.252:11434",
+              url = "http://localhost:11434",
+              endpoint = "http://localhost:11434",
             },
             schema = {
               model = {
-                default = "qwen3:latest-16k", -- 'deepseek-r1' | 'deepseek-r1:14b' | 'qwq:32b' | 'qwen2.5-coder:14b' | 'qwen2.5-coder:7b' | 'codellama:7b-code' | 'codewriter'
+                default = "qwen3:8b", -- 'deepseek-r1' | 'deepseek-r1:14b' | 'qwq:32b' | 'qwen2.5-coder:14b' | 'qwen2.5-coder:7b' | 'codellama:7b-code' | 'codewriter'
               },
               num_ctx = {
                 default = 20000,
