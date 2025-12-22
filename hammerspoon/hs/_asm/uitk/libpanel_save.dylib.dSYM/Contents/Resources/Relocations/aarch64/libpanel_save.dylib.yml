@@ -1,0 +1,78 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     'obj_arm64/libpanel_save.dylib'
+relocations:
+  - { offset: 0x27, size: 0x8, addend: 0x0, symName: _oneOfOurElementObjects, symObjAddr: 0x0, symBinAddr: 0xD48, symSize: 0x15C }
+  - { offset: 0x58, size: 0x8, addend: 0x0, symName: _refTable, symObjAddr: 0x6E78, symBinAddr: 0x10C30, symSize: 0x0 }
+  - { offset: 0x80, size: 0x8, addend: 0x0, symName: _moduleLib, symObjAddr: 0x6F40, symBinAddr: 0x10CF8, symSize: 0x0 }
+  - { offset: 0xCDE, size: 0x8, addend: 0x0, symName: _userdata_metaLib, symObjAddr: 0x7C10, symBinAddr: 0xC040, symSize: 0x0 }
+  - { offset: 0xD2C, size: 0x8, addend: 0x0, symName: _openModuleLib, symObjAddr: 0x6F60, symBinAddr: 0x10D18, symSize: 0x0 }
+  - { offset: 0xD42, size: 0x8, addend: 0x0, symName: _ud_open_metaLib, symObjAddr: 0x7DC0, symBinAddr: 0xC1F0, symSize: 0x0 }
+  - { offset: 0x4DFC, size: 0x8, addend: 0x0, symName: _oneOfOurElementObjects, symObjAddr: 0x0, symBinAddr: 0xD48, symSize: 0x15C }
+  - { offset: 0x4E24, size: 0x8, addend: 0x0, symName: '-[HSUITKPanelSave initSavePanel]', symObjAddr: 0x15C, symBinAddr: 0xEA4, symSize: 0x140 }
+  - { offset: 0x4E5A, size: 0x8, addend: 0x0, symName: '-[HSUITKPanelSave callbackHamster:]', symObjAddr: 0x29C, symBinAddr: 0xFE4, symSize: 0x3B4 }
+  - { offset: 0x4F10, size: 0x8, addend: 0x0, symName: '-[HSUITKPanelSave selfRefCount]', symObjAddr: 0x650, symBinAddr: 0x1398, symSize: 0x1C }
+  - { offset: 0x4F46, size: 0x8, addend: 0x0, symName: '-[HSUITKPanelSave setSelfRefCount:]', symObjAddr: 0x66C, symBinAddr: 0x13B4, symSize: 0x24 }
+  - { offset: 0x4F84, size: 0x8, addend: 0x0, symName: '-[HSUITKPanelSave refTable]', symObjAddr: 0x690, symBinAddr: 0x13D8, symSize: 0x1C }
+  - { offset: 0x4FBA, size: 0x8, addend: 0x0, symName: '-[HSUITKPanelSave callbackRef]', symObjAddr: 0x6AC, symBinAddr: 0x13F4, symSize: 0x1C }
+  - { offset: 0x4FF0, size: 0x8, addend: 0x0, symName: '-[HSUITKPanelSave setCallbackRef:]', symObjAddr: 0x6C8, symBinAddr: 0x1410, symSize: 0x24 }
+  - { offset: 0x502E, size: 0x8, addend: 0x0, symName: '-[HSUITKPanelSave panel]', symObjAddr: 0x6EC, symBinAddr: 0x1434, symSize: 0x28 }
+  - { offset: 0x5064, size: 0x8, addend: 0x0, symName: '-[HSUITKPanelSave setPanel:]', symObjAddr: 0x714, symBinAddr: 0x145C, symSize: 0x38 }
+  - { offset: 0x50A2, size: 0x8, addend: 0x0, symName: '-[HSUITKPanelSave accessory]', symObjAddr: 0x74C, symBinAddr: 0x1494, symSize: 0x28 }
+  - { offset: 0x50D8, size: 0x8, addend: 0x0, symName: '-[HSUITKPanelSave setAccessory:]', symObjAddr: 0x774, symBinAddr: 0x14BC, symSize: 0x38 }
+  - { offset: 0x5116, size: 0x8, addend: 0x0, symName: '-[HSUITKPanelSave .cxx_destruct]', symObjAddr: 0x7AC, symBinAddr: 0x14F4, symSize: 0x48 }
+  - { offset: 0x5148, size: 0x8, addend: 0x0, symName: '-[HSUITKPanelOpen initOpenPanel]', symObjAddr: 0x7F4, symBinAddr: 0x153C, symSize: 0x120 }
+  - { offset: 0x517E, size: 0x8, addend: 0x0, symName: '-[HSUITKPanelOpen callbackHamster:]', symObjAddr: 0x914, symBinAddr: 0x165C, symSize: 0x3B4 }
+  - { offset: 0x5234, size: 0x8, addend: 0x0, symName: '-[HSUITKPanelOpen selfRefCount]', symObjAddr: 0xCC8, symBinAddr: 0x1A10, symSize: 0x1C }
+  - { offset: 0x526A, size: 0x8, addend: 0x0, symName: '-[HSUITKPanelOpen setSelfRefCount:]', symObjAddr: 0xCE4, symBinAddr: 0x1A2C, symSize: 0x24 }
+  - { offset: 0x52A8, size: 0x8, addend: 0x0, symName: '-[HSUITKPanelOpen refTable]', symObjAddr: 0xD08, symBinAddr: 0x1A50, symSize: 0x1C }
+  - { offset: 0x52DE, size: 0x8, addend: 0x0, symName: '-[HSUITKPanelOpen callbackRef]', symObjAddr: 0xD24, symBinAddr: 0x1A6C, symSize: 0x1C }
+  - { offset: 0x5314, size: 0x8, addend: 0x0, symName: '-[HSUITKPanelOpen setCallbackRef:]', symObjAddr: 0xD40, symBinAddr: 0x1A88, symSize: 0x24 }
+  - { offset: 0x5352, size: 0x8, addend: 0x0, symName: '-[HSUITKPanelOpen panel]', symObjAddr: 0xD64, symBinAddr: 0x1AAC, symSize: 0x28 }
+  - { offset: 0x5388, size: 0x8, addend: 0x0, symName: '-[HSUITKPanelOpen setPanel:]', symObjAddr: 0xD8C, symBinAddr: 0x1AD4, symSize: 0x38 }
+  - { offset: 0x53C6, size: 0x8, addend: 0x0, symName: '-[HSUITKPanelOpen accessory]', symObjAddr: 0xDC4, symBinAddr: 0x1B0C, symSize: 0x28 }
+  - { offset: 0x53FC, size: 0x8, addend: 0x0, symName: '-[HSUITKPanelOpen setAccessory:]', symObjAddr: 0xDEC, symBinAddr: 0x1B34, symSize: 0x38 }
+  - { offset: 0x543A, size: 0x8, addend: 0x0, symName: '-[HSUITKPanelOpen .cxx_destruct]', symObjAddr: 0xE24, symBinAddr: 0x1B6C, symSize: 0x48 }
+  - { offset: 0x546C, size: 0x8, addend: 0x0, symName: _luaopen_hs__asm_uitk_libpanel_save, symObjAddr: 0xE6C, symBinAddr: 0x1BB4, symSize: 0x434 }
+  - { offset: 0x54A7, size: 0x8, addend: 0x0, symName: _pushHSUITKPanelSave, symObjAddr: 0x12A0, symBinAddr: 0x1FE8, symSize: 0xE8 }
+  - { offset: 0x54FE, size: 0x8, addend: 0x0, symName: _toHSUITKPanelSave, symObjAddr: 0x1388, symBinAddr: 0x20D0, symSize: 0x154 }
+  - { offset: 0x5555, size: 0x8, addend: 0x0, symName: _pushHSUITKPanelOpen, symObjAddr: 0x14DC, symBinAddr: 0x2224, symSize: 0xE8 }
+  - { offset: 0x55AC, size: 0x8, addend: 0x0, symName: _toHSUITKPanelOpen, symObjAddr: 0x15C4, symBinAddr: 0x230C, symSize: 0x154 }
+  - { offset: 0x5603, size: 0x8, addend: 0x0, symName: _save_new, symObjAddr: 0x1718, symBinAddr: 0x2460, symSize: 0xAC }
+  - { offset: 0x5647, size: 0x8, addend: 0x0, symName: _saveOpen_canCreateDirectories, symObjAddr: 0x17C4, symBinAddr: 0x250C, symSize: 0x1E4 }
+  - { offset: 0x568B, size: 0x8, addend: 0x0, symName: _saveOpen_showsHiddenFiles, symObjAddr: 0x19A8, symBinAddr: 0x26F0, symSize: 0x1E4 }
+  - { offset: 0x56D3, size: 0x8, addend: 0x0, symName: _saveOpen_treatsFilePackagesAsDirectories, symObjAddr: 0x1B8C, symBinAddr: 0x28D4, symSize: 0x1E4 }
+  - { offset: 0x571B, size: 0x8, addend: 0x0, symName: _saveOpen_message, symObjAddr: 0x1D70, symBinAddr: 0x2AB8, symSize: 0x218 }
+  - { offset: 0x5763, size: 0x8, addend: 0x0, symName: _saveOpen_title, symObjAddr: 0x1F88, symBinAddr: 0x2CD0, symSize: 0x218 }
+  - { offset: 0x57AB, size: 0x8, addend: 0x0, symName: _saveOpen_prompt, symObjAddr: 0x21A0, symBinAddr: 0x2EE8, symSize: 0x218 }
+  - { offset: 0x57F3, size: 0x8, addend: 0x0, symName: _saveOpen_accessoryView, symObjAddr: 0x23B8, symBinAddr: 0x3100, symSize: 0x4FC }
+  - { offset: 0x5858, size: 0x8, addend: 0x0, symName: _saveOpen_allowedContentTypes, symObjAddr: 0x28B4, symBinAddr: 0x35FC, symSize: 0xA4C }
+  - { offset: 0x5975, size: 0x8, addend: 0x0, symName: _saveOpen_directoryURL, symObjAddr: 0x3300, symBinAddr: 0x4048, symSize: 0x364 }
+  - { offset: 0x5A0E, size: 0x8, addend: 0x0, symName: _saveOpen_callback, symObjAddr: 0x3664, symBinAddr: 0x43AC, symSize: 0x254 }
+  - { offset: 0x5A56, size: 0x8, addend: 0x0, symName: _save_allowsOtherFileTypes, symObjAddr: 0x38B8, symBinAddr: 0x4600, symSize: 0x164 }
+  - { offset: 0x5A9E, size: 0x8, addend: 0x0, symName: _save_canSelectHiddenExtension, symObjAddr: 0x3A1C, symBinAddr: 0x4764, symSize: 0x164 }
+  - { offset: 0x5AE6, size: 0x8, addend: 0x0, symName: _save_extensionHidden, symObjAddr: 0x3B80, symBinAddr: 0x48C8, symSize: 0x164 }
+  - { offset: 0x5B2E, size: 0x8, addend: 0x0, symName: _save_nameFieldLabel, symObjAddr: 0x3CE4, symBinAddr: 0x4A2C, symSize: 0x198 }
+  - { offset: 0x5B76, size: 0x8, addend: 0x0, symName: _save_nameFieldStringValue, symObjAddr: 0x3E7C, symBinAddr: 0x4BC4, symSize: 0x198 }
+  - { offset: 0x5BBE, size: 0x8, addend: 0x0, symName: _save_showsTagField, symObjAddr: 0x4014, symBinAddr: 0x4D5C, symSize: 0x164 }
+  - { offset: 0x5C06, size: 0x8, addend: 0x0, symName: _save_tagNames, symObjAddr: 0x4178, symBinAddr: 0x4EC0, symSize: 0x31C }
+  - { offset: 0x5C89, size: 0x8, addend: 0x0, symName: _save_isExpanded, symObjAddr: 0x4494, symBinAddr: 0x51DC, symSize: 0x100 }
+  - { offset: 0x5CD1, size: 0x8, addend: 0x0, symName: _saveOpen_cancel, symObjAddr: 0x4594, symBinAddr: 0x52DC, symSize: 0x168 }
+  - { offset: 0x5D19, size: 0x8, addend: 0x0, symName: _saveOpen_isVisible, symObjAddr: 0x46FC, symBinAddr: 0x5444, symSize: 0x168 }
+  - { offset: 0x5D5D, size: 0x8, addend: 0x0, symName: _saveOpen_validateVisibleColumns, symObjAddr: 0x4864, symBinAddr: 0x55AC, symSize: 0x164 }
+  - { offset: 0x5DA5, size: 0x8, addend: 0x0, symName: _saveOpen_url, symObjAddr: 0x49C8, symBinAddr: 0x5710, symSize: 0x438 }
+  - { offset: 0x5E42, size: 0x8, addend: 0x0, symName: _saveOpen_presentDialog, symObjAddr: 0x4E00, symBinAddr: 0x5B48, symSize: 0x394 }
+  - { offset: 0x5EA8, size: 0x8, addend: 0x0, symName: _userdata_tostring, symObjAddr: 0x5194, symBinAddr: 0x5EDC, symSize: 0x188 }
+  - { offset: 0x5EF0, size: 0x8, addend: 0x0, symName: _userdata_eq, symObjAddr: 0x531C, symBinAddr: 0x6064, symSize: 0x120 }
+  - { offset: 0x5F4D, size: 0x8, addend: 0x0, symName: _userdata_gc, symObjAddr: 0x543C, symBinAddr: 0x6184, symSize: 0x1CC }
+  - { offset: 0x5F9B, size: 0x8, addend: 0x0, symName: ___saveOpen_presentDialog_block_invoke, symObjAddr: 0x5608, symBinAddr: 0x6350, symSize: 0x11C }
+  - { offset: 0x6015, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s40s, symObjAddr: 0x5724, symBinAddr: 0x646C, symSize: 0x58 }
+  - { offset: 0x6039, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32s40s, symObjAddr: 0x577C, symBinAddr: 0x64C4, symSize: 0x44 }
+  - { offset: 0x6055, size: 0x8, addend: 0x0, symName: ___saveOpen_presentDialog_block_invoke.217, symObjAddr: 0x57C0, symBinAddr: 0x6508, symSize: 0x11C }
+  - { offset: 0x60CF, size: 0x8, addend: 0x0, symName: _open_new, symObjAddr: 0x58DC, symBinAddr: 0x6624, symSize: 0xAC }
+  - { offset: 0x6113, size: 0x8, addend: 0x0, symName: _open_allowsMultipleSelection, symObjAddr: 0x5988, symBinAddr: 0x66D0, symSize: 0x158 }
+  - { offset: 0x615B, size: 0x8, addend: 0x0, symName: _open_canChooseDirectories, symObjAddr: 0x5AE0, symBinAddr: 0x6828, symSize: 0x158 }
+  - { offset: 0x61A3, size: 0x8, addend: 0x0, symName: _open_canChooseFiles, symObjAddr: 0x5C38, symBinAddr: 0x6980, symSize: 0x158 }
+  - { offset: 0x61EB, size: 0x8, addend: 0x0, symName: _open_resolvesAliases, symObjAddr: 0x5D90, symBinAddr: 0x6AD8, symSize: 0x158 }
+  - { offset: 0x6233, size: 0x8, addend: 0x0, symName: _open_accessoryViewDisclosed, symObjAddr: 0x5EE8, symBinAddr: 0x6C30, symSize: 0x158 }
+...

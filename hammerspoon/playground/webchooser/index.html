@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>React App</title>
+    <!-- Load React libraries -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+    ></script>
+
+    <!-- Include TailwindCSS for styling -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <style type="text/css">
+      .window {
+        @apply w-80;
+      }
+
+      .app {
+        @apply w-full;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-100">
+    <!-- Main container for the React app -->
+    <div class="window mx-auto mt-4 bg-white shadow-md rounded p-4">
+      <div id="root"></div>
+    </div>
+
+    <script type="text/javascript">
+      // Define a reusable ListItem component
+      const ListItem = ({ title, body, active }) => {
+        return (
+          <li className={`flex items-center justify-between px-3 py-2 text-sm ${active ? "bg-gray-100" : ""}`}>
+            <div>
+              <strong>{title}</strong>
+              <p className="text-gray-700 mt-1">{body}</p>
+            </div>
+          </li>
+        );
+      };
+
+      // Define the main App component
+      const App = () => {
+        return "Hello"
+        // Sample data fop list items
+        const items = [
+          { title: "test", body: "some text", active: true },
+          { title: "test 2", body: "some other text", false }
+        ];
+
+        return (
+          <div className="bg-white rounded shadow-md overflow-hidden">
+            {/* List header */}
+            <div className="border-b px-3 py-2 flex items-center">
+              <input className="flex-1 border rounded px-3 py-2 mr-2" type="text" />
+              {/* Add other list header controls here if needed */}
+            </div>
+            {/* Map data to list items */}
+            <ul role="list" aria-label="List" className="divide-y divide-gray-200">
+              {items.map((item, index) => (
+                <ListItem key={index} title={item.title} body={item.body} active={item.active} />
+              ))}
+            </ul>
+          </div>
+        );
+      };
+
+      try {
+        // Ensure the messageObject is defined before posting
+        const messageObject = { /* your message content here */ };
+        webkit.messageHandlers.webchooserContent.postMessage(messageObject);
+      } catch (err) {
+        console.log("The controller does not exist yet");
+      }
+
+      // Render the App component into the root element
+      ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     'obj_arm64/libmenu_item.dylib'
+relocations:
+  - { offset: 0x27, size: 0x8, addend: 0x0, symName: '+[NSMenuItem(HammerspoonAdditions) newWithTitle:]', symObjAddr: 0x0, symBinAddr: 0xB38, symSize: 0x160 }
+  - { offset: 0x58, size: 0x8, addend: 0x0, symName: _MENU_ITEM_STATES, symObjAddr: 0x17B38, symBinAddr: 0xC500, symSize: 0x0 }
+  - { offset: 0xCB, size: 0x8, addend: 0x0, symName: _refTable, symObjAddr: 0x5B58, symBinAddr: 0xC4C0, symSize: 0x0 }
+  - { offset: 0xF2, size: 0x8, addend: 0x0, symName: _CALLBACKREF_KEY, symObjAddr: 0x5B60, symBinAddr: 0xC4C8, symSize: 0x0 }
+  - { offset: 0x108, size: 0x8, addend: 0x0, symName: _VALIDATEREF_KEY, symObjAddr: 0x5B68, symBinAddr: 0xC4D0, symSize: 0x0 }
+  - { offset: 0x11D, size: 0x8, addend: 0x0, symName: _SELFREFCOUNT_KEY, symObjAddr: 0x5B70, symBinAddr: 0xC4D8, symSize: 0x0 }
+  - { offset: 0x133, size: 0x8, addend: 0x0, symName: _moduleLib, symObjAddr: 0x5B78, symBinAddr: 0xC4E0, symSize: 0x0 }
+  - { offset: 0xD89, size: 0x8, addend: 0x0, symName: _userdata_metaLib, symObjAddr: 0x5E98, symBinAddr: 0x8028, symSize: 0x0 }
+  - { offset: 0x4A68, size: 0x8, addend: 0x0, symName: '+[NSMenuItem(HammerspoonAdditions) newWithTitle:]', symObjAddr: 0x0, symBinAddr: 0xB38, symSize: 0x160 }
+  - { offset: 0x4ABA, size: 0x8, addend: 0x0, symName: '-[NSMenuItem(HammerspoonAdditions) copyWithState:]', symObjAddr: 0x160, symBinAddr: 0xC98, symSize: 0x1D8 }
+  - { offset: 0x4B20, size: 0x8, addend: 0x0, symName: '-[NSMenuItem(HammerspoonAdditions) setCallbackRef:]', symObjAddr: 0x338, symBinAddr: 0xE70, symSize: 0x70 }
+  - { offset: 0x4B6E, size: 0x8, addend: 0x0, symName: '-[NSMenuItem(HammerspoonAdditions) callbackRef]', symObjAddr: 0x3A8, symBinAddr: 0xEE0, symSize: 0xD0 }
+  - { offset: 0x4BB2, size: 0x8, addend: 0x0, symName: '-[NSMenuItem(HammerspoonAdditions) setValidateCallback:]', symObjAddr: 0x478, symBinAddr: 0xFB0, symSize: 0x70 }
+  - { offset: 0x4C00, size: 0x8, addend: 0x0, symName: '-[NSMenuItem(HammerspoonAdditions) validateCallback]', symObjAddr: 0x4E8, symBinAddr: 0x1020, symSize: 0xD0 }
+  - { offset: 0x4C44, size: 0x8, addend: 0x0, symName: '-[NSMenuItem(HammerspoonAdditions) setSelfRefCount:]', symObjAddr: 0x5B8, symBinAddr: 0x10F0, symSize: 0x70 }
+  - { offset: 0x4C92, size: 0x8, addend: 0x0, symName: '-[NSMenuItem(HammerspoonAdditions) selfRefCount]', symObjAddr: 0x628, symBinAddr: 0x1160, symSize: 0xC0 }
+  - { offset: 0x4CD6, size: 0x8, addend: 0x0, symName: '-[NSMenuItem(HammerspoonAdditions) validateMenuItem:]', symObjAddr: 0x6E8, symBinAddr: 0x1220, symSize: 0x26C }
+  - { offset: 0x4D52, size: 0x8, addend: 0x0, symName: '-[NSMenuItem(HammerspoonAdditions) itemSelected:]', symObjAddr: 0x954, symBinAddr: 0x148C, symSize: 0x5C }
+  - { offset: 0x4D92, size: 0x8, addend: 0x0, symName: '-[NSMenuItem(HammerspoonAdditions) performCallbackWith:]', symObjAddr: 0x9B0, symBinAddr: 0x14E8, symSize: 0x508 }
+  - { offset: 0x4E66, size: 0x8, addend: 0x0, symName: _luaopen_hs__asm_uitk_libmenu_item, symObjAddr: 0xEB8, symBinAddr: 0x19F0, symSize: 0x278 }
+  - { offset: 0x4EA1, size: 0x8, addend: 0x0, symName: _defineInternalDictionaries, symObjAddr: 0x1130, symBinAddr: 0x1C68, symSize: 0x158 }
+  - { offset: 0x4EB6, size: 0x8, addend: 0x0, symName: _pushNSMenuItem, symObjAddr: 0x1288, symBinAddr: 0x1DC0, symSize: 0xE8 }
+  - { offset: 0x4F0D, size: 0x8, addend: 0x0, symName: _toNSMenuItem, symObjAddr: 0x1370, symBinAddr: 0x1EA8, symSize: 0x154 }
+  - { offset: 0x4F64, size: 0x8, addend: 0x0, symName: _pushSpecialCharacters, symObjAddr: 0x14C4, symBinAddr: 0x1FFC, symSize: 0xE48 }
+  - { offset: 0x4FAC, size: 0x8, addend: 0x0, symName: _menuitem_new, symObjAddr: 0x230C, symBinAddr: 0x2E44, symSize: 0x200 }
+  - { offset: 0x500C, size: 0x8, addend: 0x0, symName: _menuitem_state, symObjAddr: 0x250C, symBinAddr: 0x3044, symSize: 0x380 }
+  - { offset: 0x50B4, size: 0x8, addend: 0x0, symName: _menuitem_indentationLevel, symObjAddr: 0x288C, symBinAddr: 0x33C4, symSize: 0x164 }
+  - { offset: 0x5119, size: 0x8, addend: 0x0, symName: _menuitem_toolTip, symObjAddr: 0x29F0, symBinAddr: 0x3528, symSize: 0x17C }
+  - { offset: 0x5161, size: 0x8, addend: 0x0, symName: _menuitem_image, symObjAddr: 0x2B6C, symBinAddr: 0x36A4, symSize: 0x1B8 }
+  - { offset: 0x51A9, size: 0x8, addend: 0x0, symName: _menuitem_mixedStateImage, symObjAddr: 0x2D24, symBinAddr: 0x385C, symSize: 0x1B8 }
+  - { offset: 0x51F1, size: 0x8, addend: 0x0, symName: _menuitem_offStateImage, symObjAddr: 0x2EDC, symBinAddr: 0x3A14, symSize: 0x1B8 }
+  - { offset: 0x5239, size: 0x8, addend: 0x0, symName: _menuitem_onStateImage, symObjAddr: 0x3094, symBinAddr: 0x3BCC, symSize: 0x1B8 }
+  - { offset: 0x5281, size: 0x8, addend: 0x0, symName: _menuitem_title, symObjAddr: 0x324C, symBinAddr: 0x3D84, symSize: 0x3BC }
+  - { offset: 0x52DE, size: 0x8, addend: 0x0, symName: _menuitem_enabled, symObjAddr: 0x3608, symBinAddr: 0x4140, symSize: 0x1FC }
+  - { offset: 0x5326, size: 0x8, addend: 0x0, symName: _menuitem_hidden, symObjAddr: 0x3804, symBinAddr: 0x433C, symSize: 0x114 }
+  - { offset: 0x536E, size: 0x8, addend: 0x0, symName: _menuitem_submenu, symObjAddr: 0x3918, symBinAddr: 0x4450, symSize: 0x4D0 }
+  - { offset: 0x53D4, size: 0x8, addend: 0x0, symName: _menuitem_callback, symObjAddr: 0x3DE8, symBinAddr: 0x4920, symSize: 0x1BC }
+  - { offset: 0x541C, size: 0x8, addend: 0x0, symName: _menuitem_tag, symObjAddr: 0x3FA4, symBinAddr: 0x4ADC, symSize: 0x114 }
+  - { offset: 0x5464, size: 0x8, addend: 0x0, symName: _menuitem_representedObject, symObjAddr: 0x40B8, symBinAddr: 0x4BF0, symSize: 0x17C }
+  - { offset: 0x54AC, size: 0x8, addend: 0x0, symName: _menuitem_allowsKeyEquivalentWhenHidden, symObjAddr: 0x4234, symBinAddr: 0x4D6C, symSize: 0x114 }
+  - { offset: 0x54F4, size: 0x8, addend: 0x0, symName: _menuitem_alternate, symObjAddr: 0x4348, symBinAddr: 0x4E80, symSize: 0x114 }
+  - { offset: 0x553C, size: 0x8, addend: 0x0, symName: _menuitem_keyEquivalent, symObjAddr: 0x445C, symBinAddr: 0x4F94, symSize: 0x180 }
+  - { offset: 0x5584, size: 0x8, addend: 0x0, symName: _menuitem_keyEquivalentModifierMask, symObjAddr: 0x45DC, symBinAddr: 0x5114, symSize: 0x2E8 }
+  - { offset: 0x5606, size: 0x8, addend: 0x0, symName: _menuitem_menu, symObjAddr: 0x48C4, symBinAddr: 0x53FC, symSize: 0x124 }
+  - { offset: 0x564E, size: 0x8, addend: 0x0, symName: _menuitem_parentItem, symObjAddr: 0x49E8, symBinAddr: 0x5520, symSize: 0x124 }
+  - { offset: 0x5696, size: 0x8, addend: 0x0, symName: _menuitem_hiddenOrHasHiddenAncestor, symObjAddr: 0x4B0C, symBinAddr: 0x5644, symSize: 0xD4 }
+  - { offset: 0x56DE, size: 0x8, addend: 0x0, symName: _menuitem_highlighted, symObjAddr: 0x4BE0, symBinAddr: 0x5718, symSize: 0xD4 }
+  - { offset: 0x5726, size: 0x8, addend: 0x0, symName: _userdata_tostring, symObjAddr: 0x4CB4, symBinAddr: 0x57EC, symSize: 0x144 }
+  - { offset: 0x577D, size: 0x8, addend: 0x0, symName: _userdata_eq, symObjAddr: 0x4DF8, symBinAddr: 0x5930, symSize: 0x138 }
+  - { offset: 0x57DA, size: 0x8, addend: 0x0, symName: _userdata_gc, symObjAddr: 0x4F30, symBinAddr: 0x5A68, symSize: 0x25C }
+...

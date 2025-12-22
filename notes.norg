@@ -37,3 +37,14 @@
 * Take a look at Glance.nvim.
 * Fix telescope-fzf-native.nvim.
 * Check the session mananger.
+*
+
+LIVEKIT_URL=wss://projectlab-7w44hdyn.livekit.cloud
+LIVEKIT_API_KEY=APIoxqaF2WE5JbY
+LIVEKIT_API_SECRET=k8jsgMQeEIoxc1i6faTtTeIKzxEUf5dTYRWjBHS4Yz5C
+
+AIzaSyDfyJemiuNEj38byVHV96DFhanAVXp2iBA
+
+
+lk app create \
+	--sandbox stateless-matrix-fl8s75

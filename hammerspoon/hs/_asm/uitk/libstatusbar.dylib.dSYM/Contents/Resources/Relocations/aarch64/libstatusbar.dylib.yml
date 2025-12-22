@@ -1,0 +1,68 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     'obj_arm64/libstatusbar.dylib'
+relocations:
+  - { offset: 0x27, size: 0x8, addend: 0x0, symName: '-[HSStatusItemWrapper initWithLength:withState:]', symObjAddr: 0x0, symBinAddr: 0xCE0, symSize: 0x2B0 }
+  - { offset: 0x58, size: 0x8, addend: 0x0, symName: _IMAGE_POSITIONS, symObjAddr: 0x1AB78, symBinAddr: 0x10E80, symSize: 0x0 }
+  - { offset: 0xCB, size: 0x8, addend: 0x0, symName: _IMAGE_SCALING_TYPES, symObjAddr: 0x1AB80, symBinAddr: 0x10E88, symSize: 0x0 }
+  - { offset: 0xE0, size: 0x8, addend: 0x0, symName: _myKVOContext, symObjAddr: 0x68B8, symBinAddr: 0x10D30, symSize: 0x0 }
+  - { offset: 0xF6, size: 0x8, addend: 0x0, symName: _refTable, symObjAddr: 0x68C0, symBinAddr: 0x10D38, symSize: 0x0 }
+  - { offset: 0x11E, size: 0x8, addend: 0x0, symName: _moduleLib, symObjAddr: 0x69E8, symBinAddr: 0x10E60, symSize: 0x0 }
+  - { offset: 0xDAE, size: 0x8, addend: 0x0, symName: _userdata_metaLib, symObjAddr: 0x82A0, symBinAddr: 0xC030, symSize: 0x0 }
+  - { offset: 0x4E40, size: 0x8, addend: 0x0, symName: '-[HSStatusItemWrapper initWithLength:withState:]', symObjAddr: 0x0, symBinAddr: 0xCE0, symSize: 0x2B0 }
+  - { offset: 0x4E92, size: 0x8, addend: 0x0, symName: '-[HSStatusItemWrapper removeFromStatusBarWithState:]', symObjAddr: 0x2B0, symBinAddr: 0xF90, symSize: 0xC0 }
+  - { offset: 0x4ED2, size: 0x8, addend: 0x0, symName: '-[HSStatusItemWrapper restoreAutosavePosition:]', symObjAddr: 0x370, symBinAddr: 0x1050, symSize: 0x1B8 }
+  - { offset: 0x4F42, size: 0x8, addend: 0x0, symName: '-[HSStatusItemWrapper storeAutosavePosition:]', symObjAddr: 0x528, symBinAddr: 0x1208, symSize: 0x1B8 }
+  - { offset: 0x4FB2, size: 0x8, addend: 0x0, symName: '-[HSStatusItemWrapper restoreAutosaveVisibility:]', symObjAddr: 0x6E0, symBinAddr: 0x13C0, symSize: 0x1B8 }
+  - { offset: 0x5022, size: 0x8, addend: 0x0, symName: '-[HSStatusItemWrapper storeAutosaveVisibility:]', symObjAddr: 0x898, symBinAddr: 0x1578, symSize: 0x1B8 }
+  - { offset: 0x5092, size: 0x8, addend: 0x0, symName: '-[HSStatusItemWrapper restoreAutosaveData:]', symObjAddr: 0xA50, symBinAddr: 0x1730, symSize: 0x6C }
+  - { offset: 0x50D2, size: 0x8, addend: 0x0, symName: '-[HSStatusItemWrapper storeAutosaveData:]', symObjAddr: 0xABC, symBinAddr: 0x179C, symSize: 0x6C }
+  - { offset: 0x5112, size: 0x8, addend: 0x0, symName: '-[HSStatusItemWrapper singleCallback:]', symObjAddr: 0xB28, symBinAddr: 0x1808, symSize: 0x64 }
+  - { offset: 0x5152, size: 0x8, addend: 0x0, symName: '-[HSStatusItemWrapper performCallbackMessage:with:]', symObjAddr: 0xB8C, symBinAddr: 0x186C, symSize: 0x1D0 }
+  - { offset: 0x51D0, size: 0x8, addend: 0x0, symName: '-[HSStatusItemWrapper observeValueForKeyPath:ofObject:change:context:]', symObjAddr: 0xD5C, symBinAddr: 0x1A3C, symSize: 0x190 }
+  - { offset: 0x524E, size: 0x8, addend: 0x0, symName: '-[HSStatusItemWrapper draggingCallback:with:]', symObjAddr: 0xEEC, symBinAddr: 0x1BCC, symSize: 0x5E4 }
+  - { offset: 0x5304, size: 0x8, addend: 0x0, symName: '-[HSStatusItemWrapper wantsPeriodicDraggingUpdates]', symObjAddr: 0x14D0, symBinAddr: 0x21B0, symSize: 0x1C }
+  - { offset: 0x533B, size: 0x8, addend: 0x0, symName: '-[HSStatusItemWrapper prepareForDragOperation:]', symObjAddr: 0x14EC, symBinAddr: 0x21CC, symSize: 0x54 }
+  - { offset: 0x5381, size: 0x8, addend: 0x0, symName: '-[HSStatusItemWrapper draggingEntered:]', symObjAddr: 0x1540, symBinAddr: 0x2220, symSize: 0x80 }
+  - { offset: 0x53C7, size: 0x8, addend: 0x0, symName: '-[HSStatusItemWrapper draggingExited:]', symObjAddr: 0x15C0, symBinAddr: 0x22A0, symSize: 0x64 }
+  - { offset: 0x5409, size: 0x8, addend: 0x0, symName: '-[HSStatusItemWrapper performDragOperation:]', symObjAddr: 0x1624, symBinAddr: 0x2304, symSize: 0x70 }
+  - { offset: 0x544F, size: 0x8, addend: 0x0, symName: '-[HSStatusItemWrapper item]', symObjAddr: 0x1694, symBinAddr: 0x2374, symSize: 0x28 }
+  - { offset: 0x5485, size: 0x8, addend: 0x0, symName: '-[HSStatusItemWrapper setItem:]', symObjAddr: 0x16BC, symBinAddr: 0x239C, symSize: 0x38 }
+  - { offset: 0x54C3, size: 0x8, addend: 0x0, symName: '-[HSStatusItemWrapper selfRefCount]', symObjAddr: 0x16F4, symBinAddr: 0x23D4, symSize: 0x1C }
+  - { offset: 0x54F9, size: 0x8, addend: 0x0, symName: '-[HSStatusItemWrapper setSelfRefCount:]', symObjAddr: 0x1710, symBinAddr: 0x23F0, symSize: 0x24 }
+  - { offset: 0x5537, size: 0x8, addend: 0x0, symName: '-[HSStatusItemWrapper callbackRef]', symObjAddr: 0x1734, symBinAddr: 0x2414, symSize: 0x1C }
+  - { offset: 0x556D, size: 0x8, addend: 0x0, symName: '-[HSStatusItemWrapper setCallbackRef:]', symObjAddr: 0x1750, symBinAddr: 0x2430, symSize: 0x24 }
+  - { offset: 0x55AB, size: 0x8, addend: 0x0, symName: '-[HSStatusItemWrapper draggingCallbackRef]', symObjAddr: 0x1774, symBinAddr: 0x2454, symSize: 0x1C }
+  - { offset: 0x55E1, size: 0x8, addend: 0x0, symName: '-[HSStatusItemWrapper setDraggingCallbackRef:]', symObjAddr: 0x1790, symBinAddr: 0x2470, symSize: 0x24 }
+  - { offset: 0x561F, size: 0x8, addend: 0x0, symName: '-[HSStatusItemWrapper trackingVisibility]', symObjAddr: 0x17B4, symBinAddr: 0x2494, symSize: 0x20 }
+  - { offset: 0x5655, size: 0x8, addend: 0x0, symName: '-[HSStatusItemWrapper setTrackingVisibility:]', symObjAddr: 0x17D4, symBinAddr: 0x24B4, symSize: 0x24 }
+  - { offset: 0x5693, size: 0x8, addend: 0x0, symName: '-[HSStatusItemWrapper .cxx_destruct]', symObjAddr: 0x17F8, symBinAddr: 0x24D8, symSize: 0x30 }
+  - { offset: 0x56C5, size: 0x8, addend: 0x0, symName: _luaopen_hs__asm_uitk_libstatusbar, symObjAddr: 0x1828, symBinAddr: 0x2508, symSize: 0x23C }
+  - { offset: 0x5700, size: 0x8, addend: 0x0, symName: _defineInternalDictionaries, symObjAddr: 0x1A64, symBinAddr: 0x2744, symSize: 0x448 }
+  - { offset: 0x5715, size: 0x8, addend: 0x0, symName: _pushHSStatusItemWrapper, symObjAddr: 0x1EAC, symBinAddr: 0x2B8C, symSize: 0xE8 }
+  - { offset: 0x576C, size: 0x8, addend: 0x0, symName: _toHSStatusItemWrapper, symObjAddr: 0x1F94, symBinAddr: 0x2C74, symSize: 0x154 }
+  - { offset: 0x57C3, size: 0x8, addend: 0x0, symName: _statusbar_new, symObjAddr: 0x20E8, symBinAddr: 0x2DC8, symSize: 0x140 }
+  - { offset: 0x581A, size: 0x8, addend: 0x0, symName: _statusbar_allowRemoval, symObjAddr: 0x2228, symBinAddr: 0x2F08, symSize: 0x178 }
+  - { offset: 0x5871, size: 0x8, addend: 0x0, symName: _statusbar_menu, symObjAddr: 0x23A0, symBinAddr: 0x3080, symSize: 0x334 }
+  - { offset: 0x58C8, size: 0x8, addend: 0x0, symName: _statusbar_visible, symObjAddr: 0x26D4, symBinAddr: 0x33B4, symSize: 0x220 }
+  - { offset: 0x593C, size: 0x8, addend: 0x0, symName: _statusbar_length, symObjAddr: 0x28F4, symBinAddr: 0x35D4, symSize: 0x1B4 }
+  - { offset: 0x59B0, size: 0x8, addend: 0x0, symName: _statusbar_autosaveName, symObjAddr: 0x2AA8, symBinAddr: 0x3788, symSize: 0x1B8 }
+  - { offset: 0x5A24, size: 0x8, addend: 0x0, symName: _statusbar_title, symObjAddr: 0x2C60, symBinAddr: 0x3940, symSize: 0x3A8 }
+  - { offset: 0x5A8A, size: 0x8, addend: 0x0, symName: _statusbar_image, symObjAddr: 0x3008, symBinAddr: 0x3CE8, symSize: 0x200 }
+  - { offset: 0x5AF0, size: 0x8, addend: 0x0, symName: _statusbar_imagePosition, symObjAddr: 0x3208, symBinAddr: 0x3EE8, symSize: 0x3D0 }
+  - { offset: 0x5BBA, size: 0x8, addend: 0x0, symName: _statusbar_imageScaling, symObjAddr: 0x35D8, symBinAddr: 0x42B8, symSize: 0x3D0 }
+  - { offset: 0x5C84, size: 0x8, addend: 0x0, symName: _statusbar_enabled, symObjAddr: 0x39A8, symBinAddr: 0x4688, symSize: 0x15C }
+  - { offset: 0x5CEA, size: 0x8, addend: 0x0, symName: _statusbar_toolTip, symObjAddr: 0x3B04, symBinAddr: 0x47E4, symSize: 0x1C8 }
+  - { offset: 0x5D50, size: 0x8, addend: 0x0, symName: _statusbar_callback, symObjAddr: 0x3CCC, symBinAddr: 0x49AC, symSize: 0x1BC }
+  - { offset: 0x5D98, size: 0x8, addend: 0x0, symName: _statusbar_draggingCallback, symObjAddr: 0x3E88, symBinAddr: 0x4B68, symSize: 0x32C }
+  - { offset: 0x5DE0, size: 0x8, addend: 0x0, symName: _statusbar_trackVisibility, symObjAddr: 0x41B4, symBinAddr: 0x4E94, symSize: 0x114 }
+  - { offset: 0x5E28, size: 0x8, addend: 0x0, symName: _menubar_alternateTitle, symObjAddr: 0x42C8, symBinAddr: 0x4FA8, symSize: 0x3B8 }
+  - { offset: 0x5E8E, size: 0x8, addend: 0x0, symName: _menubar_alternateImage, symObjAddr: 0x4680, symBinAddr: 0x5360, symSize: 0x210 }
+  - { offset: 0x5EF4, size: 0x8, addend: 0x0, symName: _statusbar_frame, symObjAddr: 0x4890, symBinAddr: 0x5570, symSize: 0x11C }
+  - { offset: 0x5F4B, size: 0x8, addend: 0x0, symName: _statusbar_delete, symObjAddr: 0x49AC, symBinAddr: 0x568C, symSize: 0xCC }
+  - { offset: 0x5F93, size: 0x8, addend: 0x0, symName: _userdata_tostring, symObjAddr: 0x4A78, symBinAddr: 0x5758, symSize: 0x18C }
+  - { offset: 0x5FEA, size: 0x8, addend: 0x0, symName: _userdata_eq, symObjAddr: 0x4C04, symBinAddr: 0x58E4, symSize: 0x138 }
+  - { offset: 0x6047, size: 0x8, addend: 0x0, symName: _userdata_gc, symObjAddr: 0x4D3C, symBinAddr: 0x5A1C, symSize: 0x2F0 }
+  - { offset: 0x6095, size: 0x8, addend: 0x0, symName: _statusItemFrame, symObjAddr: 0x502C, symBinAddr: 0x5D0C, symSize: 0x144 }
+  - { offset: 0x612C, size: 0x8, addend: 0x0, symName: _RectWithFlippedYCoordinate, symObjAddr: 0x5170, symBinAddr: 0x5E50, symSize: 0x120 }
+...

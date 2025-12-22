@@ -1,0 +1,130 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     'obj_arm64/libwindow.dylib'
+relocations:
+  - { offset: 0x27, size: 0x8, addend: 0x0, symName: _oneOfOurElementObjects, symObjAddr: 0x0, symBinAddr: 0xDD0, symSize: 0x15C }
+  - { offset: 0x58, size: 0x8, addend: 0x0, symName: _windowNotifications, symObjAddr: 0x236A0, symBinAddr: 0x14FD8, symSize: 0x0 }
+  - { offset: 0xCB, size: 0x8, addend: 0x0, symName: _TOOLBAR_STYLES, symObjAddr: 0x236A8, symBinAddr: 0x14FE0, symSize: 0x0 }
+  - { offset: 0x102, size: 0x8, addend: 0x0, symName: _WINDOW_APPEARANCES, symObjAddr: 0x236B0, symBinAddr: 0x14FE8, symSize: 0x0 }
+  - { offset: 0x117, size: 0x8, addend: 0x0, symName: _ANIMATION_BEHAVIORS, symObjAddr: 0x236B8, symBinAddr: 0x14FF0, symSize: 0x0 }
+  - { offset: 0x12C, size: 0x8, addend: 0x0, symName: _NSNormalWindowLevel, symObjAddr: 0xACB8, symBinAddr: 0xDB30, symSize: 0x0 }
+  - { offset: 0x163, size: 0x8, addend: 0x0, symName: _refTable, symObjAddr: 0xACE0, symBinAddr: 0x14EB8, symSize: 0x0 }
+  - { offset: 0x18B, size: 0x8, addend: 0x0, symName: _moduleLib, symObjAddr: 0xADA8, symBinAddr: 0x14F80, symSize: 0x0 }
+  - { offset: 0xDDB, size: 0x8, addend: 0x0, symName: _defaultWindowMask, symObjAddr: 0xADF8, symBinAddr: 0x14FD0, symSize: 0x0 }
+  - { offset: 0xE5F, size: 0x8, addend: 0x0, symName: _userdata_metaLib, symObjAddr: 0xAE60, symBinAddr: 0x100F0, symSize: 0x0 }
+  - { offset: 0x4BC1, size: 0x8, addend: 0x0, symName: _oneOfOurElementObjects, symObjAddr: 0x0, symBinAddr: 0xDD0, symSize: 0x15C }
+  - { offset: 0x4C31, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow initWithContentRect:styleMask:]', symObjAddr: 0x15C, symBinAddr: 0xF2C, symSize: 0x800 }
+  - { offset: 0x4E33, size: 0x8, addend: 0x0, symName: _RectWithFlippedYCoordinate, symObjAddr: 0x95C, symBinAddr: 0x172C, symSize: 0x120 }
+  - { offset: 0x4E99, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow performPassthroughCallback:]', symObjAddr: 0xA7C, symBinAddr: 0x184C, symSize: 0x1BC }
+  - { offset: 0x4F0F, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow animationResizeTime:]', symObjAddr: 0xC38, symBinAddr: 0x1A08, symSize: 0xA8 }
+  - { offset: 0x4F53, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow canBecomeKeyWindow]', symObjAddr: 0xCE0, symBinAddr: 0x1AB0, symSize: 0x2C }
+  - { offset: 0x4F89, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow canBecomeMainWindow]', symObjAddr: 0xD0C, symBinAddr: 0x1ADC, symSize: 0x2C }
+  - { offset: 0x4FBF, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow fadeIn:]', symObjAddr: 0xD38, symBinAddr: 0x1B08, symSize: 0xE4 }
+  - { offset: 0x500D, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow fadeOut:andClose:]', symObjAddr: 0xE1C, symBinAddr: 0x1BEC, symSize: 0x20C }
+  - { offset: 0x5077, size: 0x8, addend: 0x0, symName: '___33-[HSUITKWindow fadeOut:andClose:]_block_invoke', symObjAddr: 0x1028, symBinAddr: 0x1DF8, symSize: 0x9C }
+  - { offset: 0x50EE, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32w, symObjAddr: 0x10C4, symBinAddr: 0x1E94, symSize: 0x34 }
+  - { offset: 0x5112, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32w, symObjAddr: 0x10F8, symBinAddr: 0x1EC8, symSize: 0x28 }
+  - { offset: 0x512E, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow cancelOperation:]', symObjAddr: 0x1120, symBinAddr: 0x1EF0, symSize: 0x88 }
+  - { offset: 0x516E, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow windowShouldClose:]', symObjAddr: 0x11A8, symBinAddr: 0x1F78, symSize: 0x94 }
+  - { offset: 0x51CA, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow performNotificationCallbackFor:with:]', symObjAddr: 0x123C, symBinAddr: 0x200C, symSize: 0x1A4 }
+  - { offset: 0x522C, size: 0x8, addend: 0x0, symName: '___52-[HSUITKWindow performNotificationCallbackFor:with:]_block_invoke', symObjAddr: 0x13E0, symBinAddr: 0x21B0, symSize: 0x210 }
+  - { offset: 0x52B3, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s40s48s, symObjAddr: 0x15F0, symBinAddr: 0x23C0, symSize: 0x70 }
+  - { offset: 0x52D7, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32s40s48s, symObjAddr: 0x1660, symBinAddr: 0x2430, symSize: 0x54 }
+  - { offset: 0x52F3, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow windowDidBecomeKey:]', symObjAddr: 0x16B4, symBinAddr: 0x2484, symSize: 0xC0 }
+  - { offset: 0x5344, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow windowDidBecomeMain:]', symObjAddr: 0x1774, symBinAddr: 0x2544, symSize: 0x64 }
+  - { offset: 0x5386, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow windowDidChangeBackingProperties:]', symObjAddr: 0x17D8, symBinAddr: 0x25A8, symSize: 0x64 }
+  - { offset: 0x53C8, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow windowDidChangeOcclusionState:]', symObjAddr: 0x183C, symBinAddr: 0x260C, symSize: 0x64 }
+  - { offset: 0x540A, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow windowDidChangeScreen:]', symObjAddr: 0x18A0, symBinAddr: 0x2670, symSize: 0x64 }
+  - { offset: 0x544C, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow windowDidChangeScreenProfile:]', symObjAddr: 0x1904, symBinAddr: 0x26D4, symSize: 0x64 }
+  - { offset: 0x548E, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow windowDidDeminiaturize:]', symObjAddr: 0x1968, symBinAddr: 0x2738, symSize: 0x64 }
+  - { offset: 0x54D0, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow windowDidEndLiveResize:]', symObjAddr: 0x19CC, symBinAddr: 0x279C, symSize: 0x64 }
+  - { offset: 0x5512, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow windowDidEndSheet:]', symObjAddr: 0x1A30, symBinAddr: 0x2800, symSize: 0x64 }
+  - { offset: 0x5554, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow windowDidEnterFullScreen:]', symObjAddr: 0x1A94, symBinAddr: 0x2864, symSize: 0x64 }
+  - { offset: 0x5596, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow windowDidEnterVersionBrowser:]', symObjAddr: 0x1AF8, symBinAddr: 0x28C8, symSize: 0x64 }
+  - { offset: 0x55D8, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow windowDidExitFullScreen:]', symObjAddr: 0x1B5C, symBinAddr: 0x292C, symSize: 0x64 }
+  - { offset: 0x561A, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow windowDidExitVersionBrowser:]', symObjAddr: 0x1BC0, symBinAddr: 0x2990, symSize: 0x64 }
+  - { offset: 0x565C, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow windowDidExpose:]', symObjAddr: 0x1C24, symBinAddr: 0x29F4, symSize: 0x64 }
+  - { offset: 0x569E, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow windowDidMiniaturize:]', symObjAddr: 0x1C88, symBinAddr: 0x2A58, symSize: 0x64 }
+  - { offset: 0x56E0, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow windowDidMove:]', symObjAddr: 0x1CEC, symBinAddr: 0x2ABC, symSize: 0x64 }
+  - { offset: 0x5722, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow windowDidResignKey:]', symObjAddr: 0x1D50, symBinAddr: 0x2B20, symSize: 0xB4 }
+  - { offset: 0x5764, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow windowDidResignMain:]', symObjAddr: 0x1E04, symBinAddr: 0x2BD4, symSize: 0x64 }
+  - { offset: 0x57A6, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow windowDidResize:]', symObjAddr: 0x1E68, symBinAddr: 0x2C38, symSize: 0x64 }
+  - { offset: 0x57E8, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow windowDidUpdate:]', symObjAddr: 0x1ECC, symBinAddr: 0x2C9C, symSize: 0x64 }
+  - { offset: 0x582A, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow windowWillBeginSheet:]', symObjAddr: 0x1F30, symBinAddr: 0x2D00, symSize: 0x64 }
+  - { offset: 0x586C, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow windowWillClose:]', symObjAddr: 0x1F94, symBinAddr: 0x2D64, symSize: 0x64 }
+  - { offset: 0x58AE, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow windowWillEnterFullScreen:]', symObjAddr: 0x1FF8, symBinAddr: 0x2DC8, symSize: 0x64 }
+  - { offset: 0x58F0, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow windowWillEnterVersionBrowser:]', symObjAddr: 0x205C, symBinAddr: 0x2E2C, symSize: 0x64 }
+  - { offset: 0x5932, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow windowWillExitFullScreen:]', symObjAddr: 0x20C0, symBinAddr: 0x2E90, symSize: 0x64 }
+  - { offset: 0x5974, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow windowWillExitVersionBrowser:]', symObjAddr: 0x2124, symBinAddr: 0x2EF4, symSize: 0x64 }
+  - { offset: 0x59B6, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow windowWillMiniaturize:]', symObjAddr: 0x2188, symBinAddr: 0x2F58, symSize: 0x64 }
+  - { offset: 0x59F8, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow windowWillMove:]', symObjAddr: 0x21EC, symBinAddr: 0x2FBC, symSize: 0x64 }
+  - { offset: 0x5A3A, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow windowWillStartLiveResize:]', symObjAddr: 0x2250, symBinAddr: 0x3020, symSize: 0x64 }
+  - { offset: 0x5A7C, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow windowDidFailToEnterFullScreen:]', symObjAddr: 0x22B4, symBinAddr: 0x3084, symSize: 0xA4 }
+  - { offset: 0x5ABE, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow windowDidFailToExitFullScreen:]', symObjAddr: 0x2358, symBinAddr: 0x3128, symSize: 0xA4 }
+  - { offset: 0x5B00, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow selfRefCount]', symObjAddr: 0x23FC, symBinAddr: 0x31CC, symSize: 0x24 }
+  - { offset: 0x5B36, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow setSelfRefCount:]', symObjAddr: 0x2420, symBinAddr: 0x31F0, symSize: 0x2C }
+  - { offset: 0x5B74, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow allowKeyboardEntry]', symObjAddr: 0x244C, symBinAddr: 0x321C, symSize: 0x2C }
+  - { offset: 0x5BAA, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow setAllowKeyboardEntry:]', symObjAddr: 0x2478, symBinAddr: 0x3248, symSize: 0x30 }
+  - { offset: 0x5BE8, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow closeOnEscape]', symObjAddr: 0x24A8, symBinAddr: 0x3278, symSize: 0x2C }
+  - { offset: 0x5C1E, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow setCloseOnEscape:]', symObjAddr: 0x24D4, symBinAddr: 0x32A4, symSize: 0x30 }
+  - { offset: 0x5C5C, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow passthroughCallbackRef]', symObjAddr: 0x2504, symBinAddr: 0x32D4, symSize: 0x24 }
+  - { offset: 0x5C92, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow setPassthroughCallbackRef:]', symObjAddr: 0x2528, symBinAddr: 0x32F8, symSize: 0x2C }
+  - { offset: 0x5CD0, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow notificationCallback]', symObjAddr: 0x2554, symBinAddr: 0x3324, symSize: 0x24 }
+  - { offset: 0x5D06, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow setNotificationCallback:]', symObjAddr: 0x2578, symBinAddr: 0x3348, symSize: 0x2C }
+  - { offset: 0x5D44, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow animationTime]', symObjAddr: 0x25A4, symBinAddr: 0x3374, symSize: 0x2C }
+  - { offset: 0x5D7A, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow setAnimationTime:]', symObjAddr: 0x25D0, symBinAddr: 0x33A0, symSize: 0x3C }
+  - { offset: 0x5DB8, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow notifyFor]', symObjAddr: 0x260C, symBinAddr: 0x33DC, symSize: 0x2C }
+  - { offset: 0x5DEE, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow setNotifyFor:]', symObjAddr: 0x2638, symBinAddr: 0x3408, symSize: 0x3C }
+  - { offset: 0x5E2C, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow lastFirstResponder]', symObjAddr: 0x2674, symBinAddr: 0x3444, symSize: 0x34 }
+  - { offset: 0x5E62, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow setLastFirstResponder:]', symObjAddr: 0x26A8, symBinAddr: 0x3478, symSize: 0x3C }
+  - { offset: 0x5EA0, size: 0x8, addend: 0x0, symName: '-[HSUITKWindow .cxx_destruct]', symObjAddr: 0x26E4, symBinAddr: 0x34B4, symSize: 0x6C }
+  - { offset: 0x5ED2, size: 0x8, addend: 0x0, symName: _luaopen_hs__asm_uitk_libwindow, symObjAddr: 0x2750, symBinAddr: 0x3520, symSize: 0x32C }
+  - { offset: 0x5F0D, size: 0x8, addend: 0x0, symName: _defineInternalDictionaries, symObjAddr: 0x2A7C, symBinAddr: 0x384C, symSize: 0x4C0 }
+  - { offset: 0x5F22, size: 0x8, addend: 0x0, symName: _pushHSUITKWindow, symObjAddr: 0x2F3C, symBinAddr: 0x3D0C, symSize: 0xE8 }
+  - { offset: 0x5F79, size: 0x8, addend: 0x0, symName: _toHSUITKWindow, symObjAddr: 0x3024, symBinAddr: 0x3DF4, symSize: 0x154 }
+  - { offset: 0x5FD0, size: 0x8, addend: 0x0, symName: _window_collectionTypeTable, symObjAddr: 0x3178, symBinAddr: 0x3F48, symSize: 0x1D4 }
+  - { offset: 0x5FFA, size: 0x8, addend: 0x0, symName: _window_windowLevels, symObjAddr: 0x334C, symBinAddr: 0x411C, symSize: 0x460 }
+  - { offset: 0x6024, size: 0x8, addend: 0x0, symName: _window_windowMasksTable, symObjAddr: 0x37AC, symBinAddr: 0x457C, symSize: 0x1D4 }
+  - { offset: 0x604E, size: 0x8, addend: 0x0, symName: _window_notifications, symObjAddr: 0x3980, symBinAddr: 0x4750, symSize: 0x250 }
+  - { offset: 0x6087, size: 0x8, addend: 0x0, symName: _window_minFrameWidthWithTitle, symObjAddr: 0x3BD0, symBinAddr: 0x49A0, symSize: 0x114 }
+  - { offset: 0x60DE, size: 0x8, addend: 0x0, symName: _window_contentRectForFrameRect, symObjAddr: 0x3CE4, symBinAddr: 0x4AB4, symSize: 0x138 }
+  - { offset: 0x6135, size: 0x8, addend: 0x0, symName: _window_frameRectForContentRect, symObjAddr: 0x3E1C, symBinAddr: 0x4BEC, symSize: 0x138 }
+  - { offset: 0x618C, size: 0x8, addend: 0x0, symName: _window_new, symObjAddr: 0x3F54, symBinAddr: 0x4D24, symSize: 0x140 }
+  - { offset: 0x61E3, size: 0x8, addend: 0x0, symName: _appearanceCustomization_appearance, symObjAddr: 0x4094, symBinAddr: 0x4E64, symSize: 0x36C }
+  - { offset: 0x628B, size: 0x8, addend: 0x0, symName: _window_allowTextEntry, symObjAddr: 0x4400, symBinAddr: 0x51D0, symSize: 0x114 }
+  - { offset: 0x62D3, size: 0x8, addend: 0x0, symName: _window_closeOnEscape, symObjAddr: 0x4514, symBinAddr: 0x52E4, symSize: 0x114 }
+  - { offset: 0x631B, size: 0x8, addend: 0x0, symName: _window_animationDuration, symObjAddr: 0x4628, symBinAddr: 0x53F8, symSize: 0x17C }
+  - { offset: 0x6363, size: 0x8, addend: 0x0, symName: _window_hide, symObjAddr: 0x47A4, symBinAddr: 0x5574, symSize: 0x114 }
+  - { offset: 0x63AB, size: 0x8, addend: 0x0, symName: _window_show, symObjAddr: 0x48B8, symBinAddr: 0x5688, symSize: 0x10C }
+  - { offset: 0x63F3, size: 0x8, addend: 0x0, symName: _window_toggleToolbarShown, symObjAddr: 0x49C4, symBinAddr: 0x5794, symSize: 0xD0 }
+  - { offset: 0x643B, size: 0x8, addend: 0x0, symName: _window_alphaValue, symObjAddr: 0x4A94, symBinAddr: 0x5864, symSize: 0x164 }
+  - { offset: 0x64A0, size: 0x8, addend: 0x0, symName: _window_animationBehavior, symObjAddr: 0x4BF8, symBinAddr: 0x59C8, symSize: 0x38C }
+  - { offset: 0x6529, size: 0x8, addend: 0x0, symName: _window_backgroundColor, symObjAddr: 0x4F84, symBinAddr: 0x5D54, symSize: 0x158 }
+  - { offset: 0x6571, size: 0x8, addend: 0x0, symName: _window_collectionBehavior, symObjAddr: 0x50DC, symBinAddr: 0x5EAC, symSize: 0x288 }
+  - { offset: 0x65DD, size: 0x8, addend: 0x0, symName: _window_frame, symObjAddr: 0x5364, symBinAddr: 0x6134, symSize: 0x24C }
+  - { offset: 0x6662, size: 0x8, addend: 0x0, symName: _window_hasShadow, symObjAddr: 0x55B0, symBinAddr: 0x6380, symSize: 0x114 }
+  - { offset: 0x66AA, size: 0x8, addend: 0x0, symName: _window_ignoresMouseEvents, symObjAddr: 0x56C4, symBinAddr: 0x6494, symSize: 0x114 }
+  - { offset: 0x66F2, size: 0x8, addend: 0x0, symName: _window_level, symObjAddr: 0x57D8, symBinAddr: 0x65A8, symSize: 0x198 }
+  - { offset: 0x6775, size: 0x8, addend: 0x0, symName: _window_opaque, symObjAddr: 0x5970, symBinAddr: 0x6740, symSize: 0x114 }
+  - { offset: 0x67BD, size: 0x8, addend: 0x0, symName: _window_orderAbove, symObjAddr: 0x5A84, symBinAddr: 0x6854, symSize: 0x28 }
+  - { offset: 0x67E7, size: 0x8, addend: 0x0, symName: _window_orderBelow, symObjAddr: 0x5AAC, symBinAddr: 0x687C, symSize: 0x28 }
+  - { offset: 0x6811, size: 0x8, addend: 0x0, symName: _window_size, symObjAddr: 0x5AD4, symBinAddr: 0x68A4, symSize: 0x238 }
+  - { offset: 0x68EA, size: 0x8, addend: 0x0, symName: _window_styleMask, symObjAddr: 0x5D0C, symBinAddr: 0x6ADC, symSize: 0x34C }
+  - { offset: 0x697C, size: 0x8, addend: 0x0, symName: _window_title, symObjAddr: 0x6058, symBinAddr: 0x6E28, symSize: 0x150 }
+  - { offset: 0x69C4, size: 0x8, addend: 0x0, symName: _window_titlebarAppearsTransparent, symObjAddr: 0x61A8, symBinAddr: 0x6F78, symSize: 0x114 }
+  - { offset: 0x6A0C, size: 0x8, addend: 0x0, symName: _window_titleVisibility, symObjAddr: 0x62BC, symBinAddr: 0x708C, symSize: 0x11C }
+  - { offset: 0x6A54, size: 0x8, addend: 0x0, symName: _window_topLeft, symObjAddr: 0x63D8, symBinAddr: 0x71A8, symSize: 0x270 }
+  - { offset: 0x6B2D, size: 0x8, addend: 0x0, symName: _window_isOccluded, symObjAddr: 0x6648, symBinAddr: 0x7418, symSize: 0xE0 }
+  - { offset: 0x6B75, size: 0x8, addend: 0x0, symName: _window_isShowing, symObjAddr: 0x6728, symBinAddr: 0x74F8, symSize: 0xD4 }
+  - { offset: 0x6BBD, size: 0x8, addend: 0x0, symName: _window_notificationCallback, symObjAddr: 0x67FC, symBinAddr: 0x75CC, symSize: 0x1BC }
+  - { offset: 0x6C05, size: 0x8, addend: 0x0, symName: _window_notificationWatchFor, symObjAddr: 0x69B8, symBinAddr: 0x7788, symSize: 0x7F8 }
+  - { offset: 0x6CE8, size: 0x8, addend: 0x0, symName: _window_passthroughCallback, symObjAddr: 0x71B0, symBinAddr: 0x7F80, symSize: 0x1BC }
+  - { offset: 0x6D30, size: 0x8, addend: 0x0, symName: _window_contentView, symObjAddr: 0x736C, symBinAddr: 0x813C, symSize: 0x408 }
+  - { offset: 0x6D96, size: 0x8, addend: 0x0, symName: _window_firstResponder, symObjAddr: 0x7774, symBinAddr: 0x8544, symSize: 0x2E8 }
+  - { offset: 0x6E10, size: 0x8, addend: 0x0, symName: _window_toolbar, symObjAddr: 0x7A5C, symBinAddr: 0x882C, symSize: 0x2FC }
+  - { offset: 0x6E75, size: 0x8, addend: 0x0, symName: _window_toolbarStyle, symObjAddr: 0x7D58, symBinAddr: 0x8B28, symSize: 0x3DC }
+  - { offset: 0x6F15, size: 0x8, addend: 0x0, symName: _userdata_tostring, symObjAddr: 0x8134, symBinAddr: 0x8F04, symSize: 0x1BC }
+  - { offset: 0x6F6C, size: 0x8, addend: 0x0, symName: _userdata_eq, symObjAddr: 0x82F0, symBinAddr: 0x90C0, symSize: 0x138 }
+  - { offset: 0x6FC9, size: 0x8, addend: 0x0, symName: _userdata_gc, symObjAddr: 0x8428, symBinAddr: 0x91F8, symSize: 0x248 }
+  - { offset: 0x7017, size: 0x8, addend: 0x0, symName: _window_orderHelper, symObjAddr: 0x8670, symBinAddr: 0x9440, symSize: 0x1B0 }
+...

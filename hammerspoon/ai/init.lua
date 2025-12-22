@@ -5,17 +5,46 @@ require("ai.tasks")
 
 local prompt = require("playground/prompter").prompt
 local webChooser = require("playground.webchooser").run
-hs.hotkey.bind(Settings.keys.ULTRA, "k", function()
-  log.d("inininin")
-  -- local frame = hs.screen.mainScreen():fullFrame()
-  -- frame {
-  --   x = frame.x + frame.w * 0.15 / 2,
-  --   y = frame.y + frame.h * 0.25 / 2,
-  --   w = frame.w * 0.85,
-  --   h = frame.h * 0.75,
-  --
-  -- }
+hs.hotkey.bind(Settings.keys.HYPER, "p", function()
+  local uitk = require("hs._asm.uitk")
+  local image = require("hs.image")
 
-  -- webChooser()
-  -- prompt("sfsfsfsdsfsf")
+  w1 = uitk.window({ x = 100, y = 100, h = 500, w = 500 }):show():styleMask(1 | 2 | 4 | 8)
+  tbd = uitk.toolbar.dictionary("sample")
+
+  tbd:addItem("one", {
+    type = "group",
+  })
+  tbd:addItem("two", {
+    label = "two",
+    image = image.imageFromName(image.systemImageNames.StatusAvailable),
+  })
+  tbd:addItem("three", {
+    label = "three",
+    image = image.imageFromName(image.systemImageNames.StatusUnavailable),
+  })
+  tbd:addItem("four", {
+    label = "four",
+    image = image.imageFromName(image.systemImageNames.StatusPartiallyAvailable),
+  })
+
+  local groupMembers = {}
+  for i = 1, 10, 1 do
+    tbd:addItem("g" .. tostring(i), {
+      label = "g" .. tostring(i),
+      image = image.imageFromName(image.systemImageNames.StatusNone),
+    })
+    table.insert(groupMembers, "g" .. tostring(i))
+  end
+
+  tbd:modifyItem("one", {
+    groupMembers = groupMembers,
+  })
+
+  tbd:allowedItems({ "one", "two", "three", "four" })
+  tbd:defaultItems({ "one", "two" })
+
+  tb1 = uitk.toolbar("sample"):canCustomize(true):callback(_cbinspect("sample")):displayMode("both")
+
+  w1:toolbar(tb1)
 end)

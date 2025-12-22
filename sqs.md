@@ -63,5 +63,64 @@ graph TD
 - **Integration with Lambda**: Automatically triggers Lambda functions on new messages.
 - **Monitoring**: Use CloudWatch metrics for queue depth, message throughput, and error rates.
 
+## SQS Dead-Letter Queue (DLQ)
+A DLQ is a separate SQS queue that stores messages that fail processing after a maximum number of receive attempts (MaxReceiveCount). This prevents poison messages from blocking the main queue and allows inspection/debugging.
+
+### How DLQ Works:
+1. Configure a redrive policy on the source queue, specifying the DLQ ARN and MaxReceiveCount (e.g., 5).
+2. If a consumer fails to delete a message after MaxReceiveCount, SQS moves it to the DLQ.
+3. Monitor DLQ for failed messages and reprocess manually.
+
+### Benefits:
+- Isolates failed messages.
+- Prevents infinite retries.
+- Enables debugging without affecting live processing.
+
+### Example Configuration (AWS Console/CLI):
+- Set redrive policy: `{"deadLetterTargetArn": "arn:aws:sqs:region:account:dlq-queue", "maxReceiveCount": 5}`
+
+In the current architecture, use DLQ for workers failing on SQS tasks (e.g., S3 write errors) to ensure reliability.
+
 This file will be expanded with more explanations, code examples, and comparisons as needed.
+
+## SQS in the Current Microservices Architecture
+SQS acts as the queuing layer for decoupling Next.js API from background workers, enabling async processing of hot/cold data flows.
+
+### Integration Points
+- **API Layer**: Next.js API sends messages to SQS for tasks like order processing or data archival.
+- **Worker Layer**: Microservices poll SQS for jobs, process (e.g., update Redis hot data, save to cold S3), and delete messages.
+- **Data Flow**: POST requests queue tasks; workers handle persistence without blocking API responses.
+
+### Example Flow with Hot/Cold Data
+1. Client POST → Next.js API sets hot status in Redis, sends task to SQS.
+2. Worker polls SQS, processes (e.g., charges card, saves to DB), updates Redis for status.
+3. Client polls status from Redis; worker archives to cold if needed.
+
+### Benefits in Architecture
+- **Scalability**: Workers scale independently via SQS.
+- **Reliability**: Messages persist; dead-letter queues handle failures.
+- **Cost**: Pay for messages processed, fits serverless Next.js.
+
+### Code Example (API Sending to SQS)
+```typescript
+import { SQSClient, SendMessageCommand } from '@aws-sdk/client-sqs';
+const sqs = new SQSClient({ region: 'us-east-1' });
+
+await sqs.send(new SendMessageCommand({
+  QueueUrl: process.env.SQS_QUEUE_URL,
+  MessageBody: JSON.stringify({ action: 'processOrder', data })
+}));
+```
+
+### Code Example (Worker Consuming SQS)
+```typescript
+const { Messages } = await sqs.send(new ReceiveMessageCommand({ QueueUrl }));
+if (Messages) {
+  const task = JSON.parse(Messages[0].Body);
+  // Process task
+  await sqs.send(new DeleteMessageCommand({ QueueUrl, ReceiptHandle }));
+}
+```
+
+SQS ensures async, reliable task distribution in the architecture, complementing Redis for hot data and S3 for cold.
 

@@ -1,0 +1,20 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     'obj_arm64/libutil_matrix.dylib'
+relocations:
+  - { offset: 0x27, size: 0x8, addend: 0x0, symName: _luaopen_hs__asm_uitk_libutil_matrix, symObjAddr: 0x0, symBinAddr: 0x8A8, symSize: 0x108 }
+  - { offset: 0x59, size: 0x8, addend: 0x0, symName: _moduleLib, symObjAddr: 0x1738, symBinAddr: 0x8168, symSize: 0x0 }
+  - { offset: 0xCBD, size: 0x8, addend: 0x0, symName: _refTable, symObjAddr: 0x17D8, symBinAddr: 0x8208, symSize: 0x0 }
+  - { offset: 0xD80, size: 0x8, addend: 0x0, symName: _luaopen_hs__asm_uitk_libutil_matrix, symObjAddr: 0x0, symBinAddr: 0x8A8, symSize: 0x108 }
+  - { offset: 0xDB9, size: 0x8, addend: 0x0, symName: _pushNSAffineTransform, symObjAddr: 0x108, symBinAddr: 0x9B0, symSize: 0x27C }
+  - { offset: 0xE1B, size: 0x8, addend: 0x0, symName: _toNSAffineTransform, symObjAddr: 0x384, symBinAddr: 0xC2C, symSize: 0x408 }
+  - { offset: 0xE82, size: 0x8, addend: 0x0, symName: _matrix_identity, symObjAddr: 0x78C, symBinAddr: 0x1034, symSize: 0xB8 }
+  - { offset: 0xEB8, size: 0x8, addend: 0x0, symName: _matrix_rotate, symObjAddr: 0x844, symBinAddr: 0x10EC, symSize: 0x170 }
+  - { offset: 0xF0A, size: 0x8, addend: 0x0, symName: _matrix_translate, symObjAddr: 0x9B4, symBinAddr: 0x125C, symSize: 0x1D0 }
+  - { offset: 0xF78, size: 0x8, addend: 0x0, symName: _matrix_scale, symObjAddr: 0xB84, symBinAddr: 0x142C, symSize: 0x1D0 }
+  - { offset: 0xFE6, size: 0x8, addend: 0x0, symName: _matrix_shear, symObjAddr: 0xD54, symBinAddr: 0x15FC, symSize: 0x278 }
+  - { offset: 0x1072, size: 0x8, addend: 0x0, symName: _matrix_append, symObjAddr: 0xFCC, symBinAddr: 0x1874, symSize: 0x110 }
+  - { offset: 0x10C4, size: 0x8, addend: 0x0, symName: _matrix_prepend, symObjAddr: 0x10DC, symBinAddr: 0x1984, symSize: 0x110 }
+  - { offset: 0x1116, size: 0x8, addend: 0x0, symName: _matrix_invert, symObjAddr: 0x11EC, symBinAddr: 0x1A94, symSize: 0xCC }
+  - { offset: 0x115A, size: 0x8, addend: 0x0, symName: _userdata_eq, symObjAddr: 0x12B8, symBinAddr: 0x1B60, symSize: 0x224 }
+...

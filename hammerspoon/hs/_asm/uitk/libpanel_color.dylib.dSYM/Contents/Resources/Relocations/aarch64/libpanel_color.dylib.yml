@@ -1,0 +1,36 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     'obj_arm64/libpanel_color.dylib'
+relocations:
+  - { offset: 0x27, size: 0x8, addend: 0x0, symName: _oneOfOurElementObjects, symObjAddr: 0x0, symBinAddr: 0xC28, symSize: 0x15C }
+  - { offset: 0x58, size: 0x8, addend: 0x0, symName: _colorPanel, symObjAddr: 0x11040, symBinAddr: 0x8498, symSize: 0x0 }
+  - { offset: 0x3E9C, size: 0x8, addend: 0x0, symName: _COLORPANEL_MODES, symObjAddr: 0x11050, symBinAddr: 0x84A8, symSize: 0x0 }
+  - { offset: 0x3EB1, size: 0x8, addend: 0x0, symName: _colorReceiver, symObjAddr: 0x11048, symBinAddr: 0x84A0, symSize: 0x0 }
+  - { offset: 0x3EF5, size: 0x8, addend: 0x0, symName: _refTable, symObjAddr: 0x2018, symBinAddr: 0x83D0, symSize: 0x0 }
+  - { offset: 0x3F16, size: 0x8, addend: 0x0, symName: _moduleLib, symObjAddr: 0x2020, symBinAddr: 0x83D8, symSize: 0x0 }
+  - { offset: 0x4B3B, size: 0x8, addend: 0x0, symName: _module_metaLib, symObjAddr: 0x2110, symBinAddr: 0x4078, symSize: 0x0 }
+  - { offset: 0x4B55, size: 0x8, addend: 0x0, symName: _oneOfOurElementObjects, symObjAddr: 0x0, symBinAddr: 0xC28, symSize: 0x15C }
+  - { offset: 0x4B7D, size: 0x8, addend: 0x0, symName: '-[HSUITKPanelColor init]', symObjAddr: 0x15C, symBinAddr: 0xD84, symSize: 0x134 }
+  - { offset: 0x4BCB, size: 0x8, addend: 0x0, symName: '-[HSUITKPanelColor performCallbackForClose:]', symObjAddr: 0x290, symBinAddr: 0xEB8, symSize: 0xE8 }
+  - { offset: 0x4C1F, size: 0x8, addend: 0x0, symName: '___44-[HSUITKPanelColor performCallbackForClose:]_block_invoke', symObjAddr: 0x378, symBinAddr: 0xFA0, symSize: 0x1B0 }
+  - { offset: 0x4C9D, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s, symObjAddr: 0x528, symBinAddr: 0x1150, symSize: 0x38 }
+  - { offset: 0x4CC1, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32s, symObjAddr: 0x560, symBinAddr: 0x1188, symSize: 0x2C }
+  - { offset: 0x4CDD, size: 0x8, addend: 0x0, symName: '-[HSUITKPanelColor colorClose:]', symObjAddr: 0x58C, symBinAddr: 0x11B4, symSize: 0x60 }
+  - { offset: 0x4D1D, size: 0x8, addend: 0x0, symName: '-[HSUITKPanelColor colorCallback:]', symObjAddr: 0x5EC, symBinAddr: 0x1214, symSize: 0x60 }
+  - { offset: 0x4D5D, size: 0x8, addend: 0x0, symName: '-[HSUITKPanelColor callbackRef]', symObjAddr: 0x64C, symBinAddr: 0x1274, symSize: 0x1C }
+  - { offset: 0x4D93, size: 0x8, addend: 0x0, symName: '-[HSUITKPanelColor setCallbackRef:]', symObjAddr: 0x668, symBinAddr: 0x1290, symSize: 0x24 }
+  - { offset: 0x4DD1, size: 0x8, addend: 0x0, symName: _luaopen_hs__asm_uitk_libpanel_color, symObjAddr: 0x68C, symBinAddr: 0x12B4, symSize: 0xF4 }
+  - { offset: 0x4E0A, size: 0x8, addend: 0x0, symName: _defineInternalDictionaries, symObjAddr: 0x780, symBinAddr: 0x13A8, symSize: 0x2A0 }
+  - { offset: 0x4E1F, size: 0x8, addend: 0x0, symName: _color_mode, symObjAddr: 0xA20, symBinAddr: 0x1648, symSize: 0x330 }
+  - { offset: 0x4EA2, size: 0x8, addend: 0x0, symName: _color_color, symObjAddr: 0xD50, symBinAddr: 0x1978, symSize: 0x114 }
+  - { offset: 0x4EEC, size: 0x8, addend: 0x0, symName: _color_continuous, symObjAddr: 0xE64, symBinAddr: 0x1A8C, symSize: 0xD0 }
+  - { offset: 0x4F22, size: 0x8, addend: 0x0, symName: _color_showsAlpha, symObjAddr: 0xF34, symBinAddr: 0x1B5C, symSize: 0xD0 }
+  - { offset: 0x4F58, size: 0x8, addend: 0x0, symName: _color_alpha, symObjAddr: 0x1004, symBinAddr: 0x1C2C, symSize: 0x144 }
+  - { offset: 0x4FA2, size: 0x8, addend: 0x0, symName: _color_show, symObjAddr: 0x1148, symBinAddr: 0x1D70, symSize: 0x7C }
+  - { offset: 0x4FD8, size: 0x8, addend: 0x0, symName: _color_hide, symObjAddr: 0x11C4, symBinAddr: 0x1DEC, symSize: 0x70 }
+  - { offset: 0x5011, size: 0x8, addend: 0x0, symName: _color_accessoryView, symObjAddr: 0x1234, symBinAddr: 0x1E5C, symSize: 0x398 }
+  - { offset: 0x5067, size: 0x8, addend: 0x0, symName: _color_callback, symObjAddr: 0x15CC, symBinAddr: 0x21F4, symSize: 0x17C }
+  - { offset: 0x50A0, size: 0x8, addend: 0x0, symName: _color_attachColorList, symObjAddr: 0x1748, symBinAddr: 0x2370, symSize: 0xC8 }
+  - { offset: 0x50E8, size: 0x8, addend: 0x0, symName: _color_detachColorList, symObjAddr: 0x1810, symBinAddr: 0x2438, symSize: 0xC8 }
+  - { offset: 0x5130, size: 0x8, addend: 0x0, symName: _meta_gc, symObjAddr: 0x18D8, symBinAddr: 0x2500, symSize: 0x1D4 }
+...

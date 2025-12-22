@@ -1,0 +1,9 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     'obj_arm64/libpanel_font.dylib'
+relocations:
+  - { offset: 0x27, size: 0x8, addend: 0x0, symName: _luaopen_hs__asm_uitk_libpanel_font, symObjAddr: 0x0, symBinAddr: 0x838, symSize: 0x80 }
+  - { offset: 0x58, size: 0x8, addend: 0x0, symName: _moduleLib, symObjAddr: 0x23F0, symBinAddr: 0x8038, symSize: 0x0 }
+  - { offset: 0xCBC, size: 0x8, addend: 0x0, symName: _refTable, symObjAddr: 0xA0, symBinAddr: 0x8030, symSize: 0x0 }
+  - { offset: 0xCD0, size: 0x8, addend: 0x0, symName: _luaopen_hs__asm_uitk_libpanel_font, symObjAddr: 0x0, symBinAddr: 0x838, symSize: 0x80 }
+...

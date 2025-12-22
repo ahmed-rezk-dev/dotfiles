@@ -1,8 +1,8 @@
 Settings = require("settings")
 log = require("logger")
-require("ext")
-require("ai.init")
 bindings = require("bindings")
+require("ext")
+require("ai")
 
 hs.loadSpoon("ReloadConfiguration")
 spoon.ReloadConfiguration:start()

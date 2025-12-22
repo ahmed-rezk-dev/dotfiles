@@ -38,11 +38,18 @@ return {
     },
     setup = {
       tailwindcss = function(_, opts)
-        local tw = LazyVim.lsp.get_raw_config("tailwindcss")
         opts.filetypes = opts.filetypes or {}
 
         -- Add default filetypes
-        vim.list_extend(opts.filetypes, tw.default_config.filetypes)
+        local default_filetypes = {
+          "aspnetcorerazor", "astro", "astro-markdown", "blade", "clojure", "django-html", "htmldjango",
+          "edge", "eelixir", "elixir", "ejs", "erb", "eruby", "gohtml", "haml", "handlebars", "hbs",
+          "html", "html-eex", "heex", "jade", "leaf", "liquid", "markdown", "mdx", "mustache", "njk",
+          "nunjucks", "php", "razor", "slim", "twig", "templ", "css", "less", "postcss", "sass", "scss",
+          "stylus", "sugarss", "javascript", "javascriptreact", "reason", "rescript", "typescript",
+          "typescriptreact", "vue", "svelte"
+        }
+        vim.list_extend(opts.filetypes, default_filetypes)
 
         -- Remove excluded filetypes
         --- @param ft string

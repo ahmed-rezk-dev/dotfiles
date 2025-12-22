@@ -1,0 +1,86 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     'obj_arm64/libutil_gesture.dylib'
+relocations:
+  - { offset: 0x27, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGestureClick init]', symObjAddr: 0x0, symBinAddr: 0xC78, symSize: 0x100 }
+  - { offset: 0x58, size: 0x8, addend: 0x0, symName: _RECOGNIZER_STATE, symObjAddr: 0x1B238, symBinAddr: 0x10F18, symSize: 0x0 }
+  - { offset: 0xCB, size: 0x8, addend: 0x0, symName: _refTable, symObjAddr: 0x6B78, symBinAddr: 0x10DF0, symSize: 0x0 }
+  - { offset: 0xF3, size: 0x8, addend: 0x0, symName: _moduleLib, symObjAddr: 0x6C40, symBinAddr: 0x10EB8, symSize: 0x0 }
+  - { offset: 0xD4A, size: 0x8, addend: 0x0, symName: _ud_click_metaLib, symObjAddr: 0x7CF0, symBinAddr: 0xC030, symSize: 0x0 }
+  - { offset: 0xD71, size: 0x8, addend: 0x0, symName: _ud_magnification_metaLib, symObjAddr: 0x7DB0, symBinAddr: 0xC0F0, symSize: 0x0 }
+  - { offset: 0xD93, size: 0x8, addend: 0x0, symName: _ud_pan_metaLib, symObjAddr: 0x7E50, symBinAddr: 0xC190, symSize: 0x0 }
+  - { offset: 0xDB5, size: 0x8, addend: 0x0, symName: _ud_press_metaLib, symObjAddr: 0x7F20, symBinAddr: 0xC260, symSize: 0x0 }
+  - { offset: 0xDCB, size: 0x8, addend: 0x0, symName: _ud_rotation_metaLib, symObjAddr: 0x7FF0, symBinAddr: 0xC330, symSize: 0x0 }
+  - { offset: 0x4E11, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGestureClick init]', symObjAddr: 0x0, symBinAddr: 0xC78, symSize: 0x100 }
+  - { offset: 0x4E47, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGestureClick handleGesture:]', symObjAddr: 0x100, symBinAddr: 0xD78, symSize: 0x1F4 }
+  - { offset: 0x4E95, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGestureClick callbackHamster:]', symObjAddr: 0x2F4, symBinAddr: 0xF6C, symSize: 0x39C }
+  - { offset: 0x4F4B, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGestureClick gestureRecognizer:shouldRequireFailureOfGestureRecognizer:]', symObjAddr: 0x690, symBinAddr: 0x1308, symSize: 0x1C4 }
+  - { offset: 0x4FBF, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGestureClick selfRefCount]', symObjAddr: 0x854, symBinAddr: 0x14CC, symSize: 0x24 }
+  - { offset: 0x4FF5, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGestureClick setSelfRefCount:]', symObjAddr: 0x878, symBinAddr: 0x14F0, symSize: 0x2C }
+  - { offset: 0x5033, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGestureClick callbackRef]', symObjAddr: 0x8A4, symBinAddr: 0x151C, symSize: 0x24 }
+  - { offset: 0x5069, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGestureClick setCallbackRef:]', symObjAddr: 0x8C8, symBinAddr: 0x1540, symSize: 0x2C }
+  - { offset: 0x50A7, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGestureMagnification init]', symObjAddr: 0x8F4, symBinAddr: 0x156C, symSize: 0x100 }
+  - { offset: 0x50DD, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGestureMagnification handleGesture:]', symObjAddr: 0x9F4, symBinAddr: 0x166C, symSize: 0x1F4 }
+  - { offset: 0x512B, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGestureMagnification callbackHamster:]', symObjAddr: 0xBE8, symBinAddr: 0x1860, symSize: 0x39C }
+  - { offset: 0x51E1, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGestureMagnification selfRefCount]', symObjAddr: 0xF84, symBinAddr: 0x1BFC, symSize: 0x24 }
+  - { offset: 0x5217, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGestureMagnification setSelfRefCount:]', symObjAddr: 0xFA8, symBinAddr: 0x1C20, symSize: 0x2C }
+  - { offset: 0x5255, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGestureMagnification callbackRef]', symObjAddr: 0xFD4, symBinAddr: 0x1C4C, symSize: 0x24 }
+  - { offset: 0x528B, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGestureMagnification setCallbackRef:]', symObjAddr: 0xFF8, symBinAddr: 0x1C70, symSize: 0x2C }
+  - { offset: 0x52C9, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGesturePan init]', symObjAddr: 0x1024, symBinAddr: 0x1C9C, symSize: 0x100 }
+  - { offset: 0x52FF, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGesturePan handleGesture:]', symObjAddr: 0x1124, symBinAddr: 0x1D9C, symSize: 0x1F4 }
+  - { offset: 0x534D, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGesturePan callbackHamster:]', symObjAddr: 0x1318, symBinAddr: 0x1F90, symSize: 0x39C }
+  - { offset: 0x5403, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGesturePan selfRefCount]', symObjAddr: 0x16B4, symBinAddr: 0x232C, symSize: 0x24 }
+  - { offset: 0x5439, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGesturePan setSelfRefCount:]', symObjAddr: 0x16D8, symBinAddr: 0x2350, symSize: 0x2C }
+  - { offset: 0x5477, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGesturePan callbackRef]', symObjAddr: 0x1704, symBinAddr: 0x237C, symSize: 0x24 }
+  - { offset: 0x54AD, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGesturePan setCallbackRef:]', symObjAddr: 0x1728, symBinAddr: 0x23A0, symSize: 0x2C }
+  - { offset: 0x54EB, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGesturePress init]', symObjAddr: 0x1754, symBinAddr: 0x23CC, symSize: 0x100 }
+  - { offset: 0x5521, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGesturePress handleGesture:]', symObjAddr: 0x1854, symBinAddr: 0x24CC, symSize: 0x1F4 }
+  - { offset: 0x556F, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGesturePress callbackHamster:]', symObjAddr: 0x1A48, symBinAddr: 0x26C0, symSize: 0x39C }
+  - { offset: 0x562C, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGesturePress gestureRecognizer:shouldRequireFailureOfGestureRecognizer:]', symObjAddr: 0x1DE4, symBinAddr: 0x2A5C, symSize: 0x1C4 }
+  - { offset: 0x56A5, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGesturePress selfRefCount]', symObjAddr: 0x1FA8, symBinAddr: 0x2C20, symSize: 0x24 }
+  - { offset: 0x56DB, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGesturePress setSelfRefCount:]', symObjAddr: 0x1FCC, symBinAddr: 0x2C44, symSize: 0x2C }
+  - { offset: 0x5719, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGesturePress callbackRef]', symObjAddr: 0x1FF8, symBinAddr: 0x2C70, symSize: 0x24 }
+  - { offset: 0x574F, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGesturePress setCallbackRef:]', symObjAddr: 0x201C, symBinAddr: 0x2C94, symSize: 0x2C }
+  - { offset: 0x578D, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGestureRotation init]', symObjAddr: 0x2048, symBinAddr: 0x2CC0, symSize: 0x100 }
+  - { offset: 0x57C4, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGestureRotation handleGesture:]', symObjAddr: 0x2148, symBinAddr: 0x2DC0, symSize: 0x1F4 }
+  - { offset: 0x5815, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGestureRotation callbackHamster:]', symObjAddr: 0x233C, symBinAddr: 0x2FB4, symSize: 0x39C }
+  - { offset: 0x58D2, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGestureRotation selfRefCount]', symObjAddr: 0x26D8, symBinAddr: 0x3350, symSize: 0x24 }
+  - { offset: 0x5908, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGestureRotation setSelfRefCount:]', symObjAddr: 0x26FC, symBinAddr: 0x3374, symSize: 0x2C }
+  - { offset: 0x5946, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGestureRotation callbackRef]', symObjAddr: 0x2728, symBinAddr: 0x33A0, symSize: 0x24 }
+  - { offset: 0x597C, size: 0x8, addend: 0x0, symName: '-[HSUITKUtilGestureRotation setCallbackRef:]', symObjAddr: 0x274C, symBinAddr: 0x33C4, symSize: 0x2C }
+  - { offset: 0x59BA, size: 0x8, addend: 0x0, symName: _luaopen_hs__asm_uitk_libutil_gesture, symObjAddr: 0x2778, symBinAddr: 0x33F0, symSize: 0x5C0 }
+  - { offset: 0x59F5, size: 0x8, addend: 0x0, symName: _defineInternalDictionaries, symObjAddr: 0x2D38, symBinAddr: 0x39B0, symSize: 0x218 }
+  - { offset: 0x5A0A, size: 0x8, addend: 0x0, symName: _pushHSUITKUtilGestureClick, symObjAddr: 0x2F50, symBinAddr: 0x3BC8, symSize: 0xE8 }
+  - { offset: 0x5A61, size: 0x8, addend: 0x0, symName: _toHSUITKUtilGestureClick, symObjAddr: 0x3038, symBinAddr: 0x3CB0, symSize: 0x154 }
+  - { offset: 0x5AB8, size: 0x8, addend: 0x0, symName: _pushHSUITKUtilGestureMagnification, symObjAddr: 0x318C, symBinAddr: 0x3E04, symSize: 0xE8 }
+  - { offset: 0x5B0F, size: 0x8, addend: 0x0, symName: _toHSUITKUtilGestureMagnification, symObjAddr: 0x3274, symBinAddr: 0x3EEC, symSize: 0x154 }
+  - { offset: 0x5B66, size: 0x8, addend: 0x0, symName: _pushHSUITKUtilGesturePan, symObjAddr: 0x33C8, symBinAddr: 0x4040, symSize: 0xE8 }
+  - { offset: 0x5BBD, size: 0x8, addend: 0x0, symName: _toHSUITKUtilGesturePan, symObjAddr: 0x34B0, symBinAddr: 0x4128, symSize: 0x154 }
+  - { offset: 0x5C14, size: 0x8, addend: 0x0, symName: _pushHSUITKUtilGesturePress, symObjAddr: 0x3604, symBinAddr: 0x427C, symSize: 0xE8 }
+  - { offset: 0x5C6B, size: 0x8, addend: 0x0, symName: _toHSUITKUtilGesturePress, symObjAddr: 0x36EC, symBinAddr: 0x4364, symSize: 0x154 }
+  - { offset: 0x5CC2, size: 0x8, addend: 0x0, symName: _pushHSUITKUtilGestureRotation, symObjAddr: 0x3840, symBinAddr: 0x44B8, symSize: 0xE8 }
+  - { offset: 0x5D19, size: 0x8, addend: 0x0, symName: _toHSUITKUtilGestureRotation, symObjAddr: 0x3928, symBinAddr: 0x45A0, symSize: 0x154 }
+  - { offset: 0x5D70, size: 0x8, addend: 0x0, symName: _gesture_newClick, symObjAddr: 0x3A7C, symBinAddr: 0x46F4, symSize: 0xA4 }
+  - { offset: 0x5DB8, size: 0x8, addend: 0x0, symName: _gesture_newMagnification, symObjAddr: 0x3B20, symBinAddr: 0x4798, symSize: 0xA4 }
+  - { offset: 0x5E00, size: 0x8, addend: 0x0, symName: _gesture_newPan, symObjAddr: 0x3BC4, symBinAddr: 0x483C, symSize: 0xA4 }
+  - { offset: 0x5E48, size: 0x8, addend: 0x0, symName: _gesture_newPress, symObjAddr: 0x3C68, symBinAddr: 0x48E0, symSize: 0xA4 }
+  - { offset: 0x5E90, size: 0x8, addend: 0x0, symName: _gesture_newRotation, symObjAddr: 0x3D0C, symBinAddr: 0x4984, symSize: 0xA4 }
+  - { offset: 0x5ED8, size: 0x8, addend: 0x0, symName: _gesture_shared_numberOfTouchesRequired, symObjAddr: 0x3DB0, symBinAddr: 0x4A28, symSize: 0x284 }
+  - { offset: 0x5F3D, size: 0x8, addend: 0x0, symName: _gesture_shared_buttonMask, symObjAddr: 0x4034, symBinAddr: 0x4CAC, symSize: 0x4A8 }
+  - { offset: 0x5FDD, size: 0x8, addend: 0x0, symName: _gesture_click_numberOfClicksRequired, symObjAddr: 0x44DC, symBinAddr: 0x5154, symSize: 0x15C }
+  - { offset: 0x6042, size: 0x8, addend: 0x0, symName: _gesture_callback, symObjAddr: 0x4638, symBinAddr: 0x52B0, symSize: 0x290 }
+  - { offset: 0x608A, size: 0x8, addend: 0x0, symName: _gesture_enabled, symObjAddr: 0x48C8, symBinAddr: 0x5540, symSize: 0x1E8 }
+  - { offset: 0x60D2, size: 0x8, addend: 0x0, symName: _gesture_state, symObjAddr: 0x4AB0, symBinAddr: 0x5728, symSize: 0x2AC }
+  - { offset: 0x6129, size: 0x8, addend: 0x0, symName: _gesture_view, symObjAddr: 0x4D5C, symBinAddr: 0x59D4, symSize: 0x1B4 }
+  - { offset: 0x6180, size: 0x8, addend: 0x0, symName: _gesture_locationInView, symObjAddr: 0x4F10, symBinAddr: 0x5B88, symSize: 0x23C }
+  - { offset: 0x61F5, size: 0x8, addend: 0x0, symName: _userdata_tostring, symObjAddr: 0x514C, symBinAddr: 0x5DC4, symSize: 0x338 }
+  - { offset: 0x624C, size: 0x8, addend: 0x0, symName: _userdata_eq, symObjAddr: 0x5484, symBinAddr: 0x60FC, symSize: 0x120 }
+  - { offset: 0x62A9, size: 0x8, addend: 0x0, symName: _userdata_gc, symObjAddr: 0x55A4, symBinAddr: 0x621C, symSize: 0x130 }
+  - { offset: 0x62F7, size: 0x8, addend: 0x0, symName: _oneOfOurGestureObjects, symObjAddr: 0x56D4, symBinAddr: 0x634C, symSize: 0x12C }
+  - { offset: 0x6321, size: 0x8, addend: 0x0, symName: _gesture_magnification_magnification, symObjAddr: 0x5800, symBinAddr: 0x6478, symSize: 0xDC }
+  - { offset: 0x6369, size: 0x8, addend: 0x0, symName: _gesture_pan_translationInView, symObjAddr: 0x58DC, symBinAddr: 0x6554, symSize: 0x148 }
+  - { offset: 0x63DD, size: 0x8, addend: 0x0, symName: _gesture_pan_velocityInView, symObjAddr: 0x5A24, symBinAddr: 0x669C, symSize: 0x1BC }
+  - { offset: 0x6451, size: 0x8, addend: 0x0, symName: _gesture_press_allowableMovement, symObjAddr: 0x5BE0, symBinAddr: 0x6858, symSize: 0x158 }
+  - { offset: 0x64B6, size: 0x8, addend: 0x0, symName: _gesture_press_minimumPressDuration, symObjAddr: 0x5D38, symBinAddr: 0x69B0, symSize: 0x158 }
+  - { offset: 0x651B, size: 0x8, addend: 0x0, symName: _gesture_rotation_rotation, symObjAddr: 0x5E90, symBinAddr: 0x6B08, symSize: 0x144 }
+...

@@ -1,0 +1,32 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     'obj_arm64/libutil_color.dylib'
+relocations:
+  - { offset: 0x27, size: 0x8, addend: 0x0, symName: '-[NSColorList(HammerspoonAdditions) setSelfRefCount:]', symObjAddr: 0x0, symBinAddr: 0xAE8, symSize: 0x70 }
+  - { offset: 0x58, size: 0x8, addend: 0x0, symName: _SELFREFCOUNT_KEY, symObjAddr: 0x2CF0, symBinAddr: 0xC368, symSize: 0x0 }
+  - { offset: 0x6F, size: 0x8, addend: 0x0, symName: _moduleLib, symObjAddr: 0x2CF8, symBinAddr: 0xC370, symSize: 0x0 }
+  - { offset: 0xCD2, size: 0x8, addend: 0x0, symName: _refTable, symObjAddr: 0x2D28, symBinAddr: 0xC3A0, symSize: 0x0 }
+  - { offset: 0xCF3, size: 0x8, addend: 0x0, symName: _list_moduleLib, symObjAddr: 0x2D30, symBinAddr: 0xC3A8, symSize: 0x0 }
+  - { offset: 0xD15, size: 0x8, addend: 0x0, symName: _ud_list_metaLib, symObjAddr: 0x3100, symBinAddr: 0x8020, symSize: 0x0 }
+  - { offset: 0xEE1, size: 0x8, addend: 0x0, symName: '-[NSColorList(HammerspoonAdditions) setSelfRefCount:]', symObjAddr: 0x0, symBinAddr: 0xAE8, symSize: 0x70 }
+  - { offset: 0xF2F, size: 0x8, addend: 0x0, symName: '-[NSColorList(HammerspoonAdditions) selfRefCount]', symObjAddr: 0x70, symBinAddr: 0xB58, symSize: 0xC0 }
+  - { offset: 0xF73, size: 0x8, addend: 0x0, symName: _luaopen_hs__asm_uitk_libutil_color, symObjAddr: 0x130, symBinAddr: 0xC18, symSize: 0x188 }
+  - { offset: 0xFAC, size: 0x8, addend: 0x0, symName: _pushNSColor, symObjAddr: 0x2B8, symBinAddr: 0xDA0, symSize: 0x458 }
+  - { offset: 0x106C, size: 0x8, addend: 0x0, symName: _table_toNSColor, symObjAddr: 0x710, symBinAddr: 0x11F8, symSize: 0xDFC }
+  - { offset: 0x1305, size: 0x8, addend: 0x0, symName: _pushNSColorList, symObjAddr: 0x150C, symBinAddr: 0x1FF4, symSize: 0xE8 }
+  - { offset: 0x135C, size: 0x8, addend: 0x0, symName: _toNSColorList, symObjAddr: 0x15F4, symBinAddr: 0x20DC, symSize: 0x154 }
+  - { offset: 0x13B3, size: 0x8, addend: 0x0, symName: _color_asRGB, symObjAddr: 0x1748, symBinAddr: 0x2230, symSize: 0x2A0 }
+  - { offset: 0x1405, size: 0x8, addend: 0x0, symName: _color_asHSB, symObjAddr: 0x19E8, symBinAddr: 0x24D0, symSize: 0x2A0 }
+  - { offset: 0x1457, size: 0x8, addend: 0x0, symName: _colorList_loadList, symObjAddr: 0x1C88, symBinAddr: 0x2770, symSize: 0x15C }
+  - { offset: 0x14B7, size: 0x8, addend: 0x0, symName: _colorList_listNamed, symObjAddr: 0x1DE4, symBinAddr: 0x28CC, symSize: 0x1A0 }
+  - { offset: 0x1517, size: 0x8, addend: 0x0, symName: _colorList_availableColorLists, symObjAddr: 0x1F84, symBinAddr: 0x2A6C, symSize: 0xA8 }
+  - { offset: 0x154D, size: 0x8, addend: 0x0, symName: _colorList_name, symObjAddr: 0x202C, symBinAddr: 0x2B14, symSize: 0xF4 }
+  - { offset: 0x1591, size: 0x8, addend: 0x0, symName: _colorList_editable, symObjAddr: 0x2120, symBinAddr: 0x2C08, symSize: 0xD4 }
+  - { offset: 0x15D5, size: 0x8, addend: 0x0, symName: _colorList_allKeys, symObjAddr: 0x21F4, symBinAddr: 0x2CDC, symSize: 0xF4 }
+  - { offset: 0x1619, size: 0x8, addend: 0x0, symName: _colorList_colorWithKey, symObjAddr: 0x22E8, symBinAddr: 0x2DD0, symSize: 0x220 }
+  - { offset: 0x169A, size: 0x8, addend: 0x0, symName: _colorList_writeToFile, symObjAddr: 0x2508, symBinAddr: 0x2FF0, symSize: 0x3AC }
+  - { offset: 0x1711, size: 0x8, addend: 0x0, symName: _colorList_removeFile, symObjAddr: 0x28B4, symBinAddr: 0x339C, symSize: 0xCC }
+  - { offset: 0x1759, size: 0x8, addend: 0x0, symName: _userdata_tostring, symObjAddr: 0x2980, symBinAddr: 0x3468, symSize: 0x144 }
+  - { offset: 0x17B0, size: 0x8, addend: 0x0, symName: _userdata_eq, symObjAddr: 0x2AC4, symBinAddr: 0x35AC, symSize: 0x138 }
+  - { offset: 0x180D, size: 0x8, addend: 0x0, symName: _userdata_gc, symObjAddr: 0x2BFC, symBinAddr: 0x36E4, symSize: 0xB4 }
+...
