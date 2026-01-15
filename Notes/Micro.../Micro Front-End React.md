@@ -277,3 +277,7 @@ const { theme } = useContext(ThemeContext);
       - `cz-conventional-changelog` Like commitizen, you specify the configuration of cz-conventional-changelog through the package.json's config.commitizen key.
     - changesets `@changesets/cli`
     - <https://brianschiller.com/blog/2023/09/18/changesets-vs-semantic-release/>
+
+## sources
+
+- [For Env files](nextjs-ssr-react-query/apps/host/next.config.js)

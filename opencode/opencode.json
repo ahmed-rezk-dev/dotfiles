@@ -5,6 +5,16 @@
     "bash": "allow",
     "webfetch": "allow"
   },
+  "mcp": {
+    "figma": {
+      "type": "local",
+      "command": ["npx", "-y", "@yhy2001/figma-mcp-server", "--stdio"],
+      "environment": {
+        "FIGMA_API_KEY": "{env:FIGMA_ACCESS_TOKEN}"
+      },
+      "enabled": true
+    },
+  },
   "provider": {
     "ollama": {
       "npm": "@ai-sdk/openai-compatible",
@@ -55,6 +65,25 @@
           "name": "command-a-03-2025"
         }
       }
+    },
+  },
+
+    "command": {
+      "test": {
+        "template": "Run the full test suite with coverage report and show any failures.\nFocus on the failing tests and suggest fixes.",
+        "description": "Run tests with coverage",
+        "agent": "build",
+      },
+      "gitCommit": {
+        "template": "Use npm run commit to commit all changes, group them logically and commit them separately that make sense, and follow the commit script steps, the branch name prefixed to commit messages following a specific convention Jira ticket prefixes (E2G-XXXXX)., At the end don't commit without my confimation and reviewing with yes, no, edit",
+        "description": "Git commit changes",
+        "agent": "build",
+      },
+      "lint": {
+        "template": "Run lint, Typecheck, Format and apply fixes",
+        "description": "Lint",
+        "agent": "build",
+      }
+
     }
-  }
 }

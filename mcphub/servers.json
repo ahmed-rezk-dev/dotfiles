@@ -35,6 +35,9 @@
     },
     "documenter": {
       "url": "https://documenter-mcp.onrender.com/mcp/request"
+    },
+    "figma": {
+      "url": "https://mcp.figma.com/mcp"
     }
   },
   "nativeMCPServers": []
