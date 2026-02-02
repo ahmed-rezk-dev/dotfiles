@@ -24,8 +24,8 @@
       "command": ["npx", "mcp-atlassian"],
       "environment": {
         "JIRA_URL": "https://jira.cengage.com",
-        "JIRA_API_TOKEN": "***REMOVED***",
-        "JIRA_PERSONAL_TOKEN": "***REMOVED***",
+        "JIRA_API_TOKEN": "{env:JIRA_TOKEN}",
+        "JIRA_PERSONAL_TOKEN": "{env:JIRA_TOKEN}",
         "JIRA_USERNAME": "arezk48437"
       },
       "enabled": true
@@ -74,7 +74,7 @@
       "name": "cohere",
       "options": {
         "baseURL": "https://api.cohere.ai/compatibility/v1",
-        "apiKey": "vgQwOevupSQC1SfJUol9MAwRP4IlIWynSVEEIeRU"
+        "apiKey": "{env:COHERE_API_KEY}"
       },
       "models": {
         "command-a-03-2025": {
