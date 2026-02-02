@@ -14,6 +14,22 @@
       },
       "enabled": true
     },
+    "jira": {
+      "type": "remote",
+      "url": "https://mcp.atlassian.com/v1/mcp",
+      "enabled": true
+    },
+    "jira-server": {
+      "type": "local",
+      "command": ["npx", "mcp-atlassian"],
+      "environment": {
+        "JIRA_URL": "https://jira.cengage.com",
+        "JIRA_API_TOKEN": "***REMOVED***",
+        "JIRA_PERSONAL_TOKEN": "***REMOVED***",
+        "JIRA_USERNAME": "arezk48437"
+      },
+      "enabled": true
+    }
   },
   "provider": {
     "ollama": {
@@ -65,25 +81,29 @@
           "name": "command-a-03-2025"
         }
       }
-    },
+    }
   },
 
-    "command": {
-      "test": {
-        "template": "Run the full test suite with coverage report and show any failures.\nFocus on the failing tests and suggest fixes.",
-        "description": "Run tests with coverage",
-        "agent": "build",
-      },
-      "gitCommit": {
-        "template": "Use npm run commit to commit all changes, group them logically and commit them separately that make sense, and follow the commit script steps, the branch name prefixed to commit messages following a specific convention Jira ticket prefixes (E2G-XXXXX)., At the end don't commit without my confimation and reviewing with yes, no, edit",
-        "description": "Git commit changes",
-        "agent": "build",
-      },
-      "lint": {
-        "template": "Run lint, Typecheck, Format and apply fixes",
-        "description": "Lint",
-        "agent": "build",
-      }
-
+  "command": {
+    "test": {
+      "template": "Run the full test suite with coverage report and show any failures.\nFocus on the failing tests and suggest fixes.",
+      "description": "Run tests with coverage",
+      "agent": "build"
+    },
+    "gitCommit": {
+      "template": "Use npm run commit to commit all changes, group them logically and commit them separately that make sense, and follow the commit script steps, the branch name prefixed to commit messages following a specific convention Jira ticket prefixes (E2G-XXXXX). if the branch name is has prefixes, At the end don't commit without my confimation and reviewing with yes, no, edit",
+      "description": "Git commit changes",
+      "agent": "build"
+    },
+    "lint": {
+      "template": "Run lint, Typecheck Format and apply fixes, for all monorepo",
+      "description": "Lint",
+      "agent": "build"
+    },
+    "accessibility": {
+      "template": "I need you to only check and improve all we accessibility, Screen Reader Support, Generic semantic structure, Missing ARIA labels, Heading hierarchy, Keyboard navigation, WCAG 2.1 AA Compliance on the following files/code",
+      "description": "Accessibility Check",
+      "agent": "build"
     }
+  }
 }

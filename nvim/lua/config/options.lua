@@ -9,3 +9,10 @@ vim.lsp.inlay_hint.enable(false)
 opt.spell = true
 opt.spelllang = "en_us"
 opt.spellsuggest = "best,9"
+opt.laststatus = 3 -- global statusline
+opt.wrap = true -- Wrap lines at convenient points
+
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
+vim.opt.expandtab = true -- Use spaces instead of tabs
