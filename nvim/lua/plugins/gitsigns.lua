@@ -1,4 +1,4 @@
-  return {
+return {
   "lewis6991/gitsigns.nvim",
   event = "LazyFile",
   opts = {
@@ -11,7 +11,7 @@
       untracked = { text = "?", hl = "GitSignsUntracked" },
     },
     signs_staged = {
-      add = { text = "", hl = "GitSignsStaged" },
+      add = { text = "", hl = "GitSignsStaged" },
       change = { text = "", hl = "GitSignsStaged" },
       delete = { text = "", hl = "GitSignsStaged" },
       topdelete = { text = "", hl = "GitSignsStaged" },
@@ -20,7 +20,6 @@
     signcolumn = true,
     numhl = false,
     linehl = false,
-    signhl = true,
     word_diff = false,
     watch_gitdir = {
       interval = 1000,
@@ -42,15 +41,5 @@
       row = 0,
       col = 1,
     },
-    yadm = { enable = false },
-    on_attach = function()
-      -- Custom highlight groups with vivid colors
-      vim.api.nvim_set_hl(0, "GitSignsAdd", { fg = "#98C379", bold = true, ctermfg = "green" })
-      vim.api.nvim_set_hl(0, "GitSignsChange", { fg = "#E5C07B", bold = true, ctermfg = "magenta" })
-      vim.api.nvim_set_hl(0, "GitSignsDelete", { fg = "#E06C75", bold = true, ctermfg = "red" })
-      vim.api.nvim_set_hl(0, "GitSignsUntracked", { fg = "#61AFEF", bold = true, ctermfg = "blue" })
-      vim.api.nvim_set_hl(0, "GitSignsStaged", { fg = "#C678DD", bold = true, ctermfg = "purple" })
-    end,
   },
 }
-
