@@ -5,10 +5,19 @@
     "bash": "allow",
     "webfetch": "allow"
   },
+  "plugin": [
+    "opencode-agent-memory",
+    "oh-my-opencode@latest"
+  ],
   "mcp": {
     "figma": {
       "type": "local",
-      "command": ["npx", "-y", "@yhy2001/figma-mcp-server", "--stdio"],
+      "command": [
+        "npx",
+        "-y",
+        "@yhy2001/figma-mcp-server",
+        "--stdio"
+      ],
       "environment": {
         "FIGMA_API_KEY": "{env:FIGMA_ACCESS_TOKEN}"
       },
@@ -21,7 +30,10 @@
     },
     "jira-server": {
       "type": "local",
-      "command": ["npx", "mcp-atlassian"],
+      "command": [
+        "npx",
+        "mcp-atlassian"
+      ],
       "environment": {
         "JIRA_URL": "https://jira.cengage.com",
         "JIRA_API_TOKEN": "{env:JIRA_TOKEN}",
@@ -48,7 +60,6 @@
         }
       }
     },
-
     "lmstudio": {
       "npm": "@ai-sdk/openai-compatible",
       "name": "LM Studio (local)",
@@ -68,7 +79,6 @@
         }
       }
     },
-
     "cohere": {
       "npm": "@ai-sdk/openai-compatible",
       "name": "cohere",
@@ -83,7 +93,6 @@
       }
     }
   },
-
   "command": {
     "test": {
       "template": "Run the full test suite with coverage report and show any failures.\nFocus on the failing tests and suggest fixes.",

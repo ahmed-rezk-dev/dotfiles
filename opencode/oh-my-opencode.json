@@ -1,0 +1,52 @@
+{
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
+  "agents": {
+    "sisyphus": {
+      "model": "zai-coding-plan/glm-4.7"
+    },
+    "oracle": {
+      "model": "opencode/glm-4.7-free"
+    },
+    "librarian": {
+      "model": "zai-coding-plan/glm-4.7"
+    },
+    "explore": {
+      "model": "opencode/gpt-5-nano"
+    },
+    "multimodal-looker": {
+      "model": "zai-coding-plan/glm-4.6v"
+    },
+    "prometheus": {
+      "model": "opencode/glm-4.7-free"
+    },
+    "metis": {
+      "model": "opencode/glm-4.7-free"
+    },
+    "momus": {
+      "model": "opencode/glm-4.7-free"
+    },
+    "atlas": {
+      "model": "opencode/glm-4.7-free"
+    }
+  },
+  "categories": {
+    "visual-engineering": {
+      "model": "zai-coding-plan/glm-4.7"
+    },
+    "ultrabrain": {
+      "model": "opencode/glm-4.7-free"
+    },
+    "quick": {
+      "model": "opencode/glm-4.7-free"
+    },
+    "unspecified-low": {
+      "model": "opencode/glm-4.7-free"
+    },
+    "unspecified-high": {
+      "model": "opencode/glm-4.7-free"
+    },
+    "writing": {
+      "model": "zai-coding-plan/glm-4.7"
+    }
+  }
+}
