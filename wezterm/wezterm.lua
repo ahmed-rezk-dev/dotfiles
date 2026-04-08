@@ -22,12 +22,28 @@ config.set_environment_variables = {
 -- 	config.color_scheme = "Tokyo Night"
 -- end
 
+-- Auto colorscheme based on OS appearance
 if appearance.is_dark() then
 	config.color_scheme = "onedarkpro_vaporwave"
 else
 	config.color_scheme = "onedarkpro_onelight"
 end
 config.color_scheme_dirs = { wezterm.home_dir .. "/.cache/nvim/onedarkpro_dotfiles/extras/wezterm" }
+
+-- Toggle colorscheme manually with SUPER + T
+local schemes = {
+	dark = "onedarkpro_vaporwave",
+	light = "onedarkpro_onelight",
+}
+
+wezterm.on("toggle-colorscheme", function(window)
+	local pane = window:active_pane()
+	local current = pane:get_foreground_process_name()
+	local is_dark = appearance.is_dark()
+	local new_scheme = is_dark and schemes.light or schemes.dark
+	config.color_scheme = new_scheme
+	window:toast_notification("Colorscheme switched to " .. (is_dark and "light" or "dark"))
+end)
 
 -- config.font = wezterm.font("JetBrainsMono Nerd Font")
 -- config.font_size = 13
@@ -151,6 +167,22 @@ config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
 
 -- Table mapping keypresses to actions
 config.keys = {
+	-- Toggle colorscheme: SUPER + T
+	{
+		key = "t",
+		mods = "SUPER",
+		action = wezterm.action_callback(function(window, pane)
+			local is_dark = appearance.is_dark()
+			if is_dark then
+				config.color_scheme = "onedarkpro_onelight"
+				window:toast_notification("Switched to light mode 🌙")
+			else
+				config.color_scheme = "onedarkpro_vaporwave"
+				window:toast_notification("Switched to dark mode ☀️")
+			end
+			window:perform_action(wezterm.action.ReloadConfiguration)
+		end),
+	},
 	-- Sends ESC + b and ESC + f sequence, which is used
 	-- for telling your shell to jump back/forward.
 	{
