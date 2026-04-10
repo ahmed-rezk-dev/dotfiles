@@ -1,0 +1,1 @@
+../../Documents/opencode/docs/AGENTS.md

@@ -1,0 +1,1 @@
+../../../Documents/opencode/opencode/rules/creating-diagrams.md
