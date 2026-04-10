@@ -3,8 +3,10 @@ service = services.getService()
 require("ai.chat")
 require("ai.tasks")
 
-local prompt = require("playground/prompter").prompt
-local webChooser = require("playground.webchooser").run
+-- playground modules not in repo
+-- local prompt = require("playground/prompter").prompt
+-- local webChooser = require("playground.webchooser").run
+
 hs.hotkey.bind(Settings.keys.ULTRA, "k", function()
   log.d("inininin")
   -- local frame = hs.screen.mainScreen():fullFrame()

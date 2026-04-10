@@ -1,6 +1,6 @@
 Settings = require("settings")
 log = require("logger")
-require("ext")
+-- require("ext") -- removed - module not in repo
 require("ai.init")
 bindings = require("bindings")
 
@@ -73,12 +73,13 @@ end)
 require("config.uielements")
 require("config.ui_callouts")
 require("config.observer")
+local editorOverlay = require("config.editor-overlay")
 
 -- bindings
 bindings.enabled = {}
 
 -- start/stop modules
-local modules = { bindings }
+local modules = { bindings, editorOverlay }
 
 hs.fnutils.each(modules, function(module)
   if module then
@@ -102,36 +103,21 @@ hs.loadSpoon("EmmyLua")
 -- START VIM CONFIG
 --------------------------------
 local VimMode = hs.loadSpoon("VimMode")
-local vim = VimMode:new()
-
--- Configure apps you do *not* want Vim mode enabled in
--- For example, you don't want this plugin overriding your control of Terminal
--- vim
-vim
-  :disableForApp("Code")
-  :disableForApp("zoom.us")
-  :disableForApp("iTerm")
-  :disableForApp("iTerm2")
-  :disableForApp("Terminal")
-
--- If you want the screen to dim (a la Flux) when you enter normal mode
--- flip this to true.
-vim:shouldDimScreenInNormalMode(false)
-
--- If you want to show an on-screen alert when you enter normal mode, set
--- this to true
-vim:shouldShowAlertInNormalMode(true)
-
--- You can configure your on-screen alert font
-vim:setAlertFont("Courier New")
-
--- Enter normal mode by typing a key sequence
-vim:enterWithSequence("jk")
-
--- if you want to bind a single key to entering vim, remove the
--- :enterWithSequence('jk') line above and uncomment the bindHotKeys line
--- below:
---
+if VimMode then
+  local vim = VimMode:new()
+  vim:disableForApp("Code")
+  vim:disableForApp("zoom.us")
+  vim:disableForApp("iTerm")
+  vim:disableForApp("iTerm2")
+  vim:disableForApp("Terminal")
+  vim:shouldDimScreenInNormalMode(false)
+  vim:shouldShowAlertInNormalMode(true)
+  vim:setAlertFont("Courier New")
+  vim:enterWithSequence("jk")
+  vim:bindHotKeys({ enter = { Settings.keys.ULTRA, "." } })
+else
+  log.w("VimMode spoon not available - skipping vim config")
+end
 -- To customize the hot key you want, see the mods and key parameters at:
 --   https://www.hammerspoon.org/docs/hs.hotkey.html#bind
 --
