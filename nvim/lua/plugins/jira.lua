@@ -21,6 +21,7 @@ return {
       ["Backlog"] = "project = 'E2G' AND statusCategory != Done ORDER BY Rank ASC",
       ["My Tasks"] = "assignee = currentUser() ORDER BY updated DESC",
       ["Kanban Board"] = "project = 'E2G' AND labels = 'Shopper_Acc' ORDER BY Rank ASC",
+      ["Active Sprints"] = "Project = E2G OR (Project = PPM AND issuetype = EPIC AND component = 'ed2go') ORDER BY Rank ASC",
     },
 
     -- Project-specific overrides

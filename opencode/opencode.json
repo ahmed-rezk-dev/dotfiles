@@ -5,21 +5,13 @@
     "bash": "allow",
     "webfetch": "allow"
   },
-  "plugin": [
-    "opencode-agent-memory",
-    "oh-my-opencode@latest"
-  ],
+  "plugin": ["opencode-agent-memory", "oh-my-opencode@latest"],
   "mcp": {
     "figma": {
       "type": "local",
-      "command": [
-        "npx",
-        "-y",
-        "@yhy2001/figma-mcp-server",
-        "--stdio"
-      ],
+      "command": ["npx", "-y", "@yhy2001/figma-mcp-server", "--stdio"],
       "environment": {
-        "FIGMA_API_KEY": "{env:FIGMA_ACCESS_TOKEN}"
+        "FIGMA_API_KEY": "{env:FIGMA_API_KEY}"
       },
       "enabled": true
     },
@@ -30,16 +22,18 @@
     },
     "jira-server": {
       "type": "local",
-      "command": [
-        "npx",
-        "mcp-atlassian"
-      ],
+      "command": ["npx", "mcp-atlassian"],
       "environment": {
         "JIRA_URL": "https://jira.cengage.com",
         "JIRA_API_TOKEN": "{env:JIRA_TOKEN}",
         "JIRA_PERSONAL_TOKEN": "{env:JIRA_TOKEN}",
         "JIRA_USERNAME": "arezk48437"
       },
+      "enabled": true
+    },
+    "chrome-devtools": {
+      "type": "local",
+      "command": ["npx", "-y", "chrome-devtools-mcp@latest"],
       "enabled": true
     }
   },
