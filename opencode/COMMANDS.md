@@ -1,0 +1,1 @@
+../../work/opencode/docs/COMMANDS.md

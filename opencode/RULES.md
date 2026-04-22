@@ -1,0 +1,1 @@
+../../work/opencode/docs/RULES.md

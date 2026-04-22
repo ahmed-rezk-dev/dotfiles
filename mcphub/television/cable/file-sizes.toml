@@ -1,0 +1,42 @@
+[metadata]
+name = "file-sizes"
+description = "Browse files and folders sorted by size (largest first)"
+requirements = ["du"]
+
+[source]
+command = [
+  "du -sh * 2>/dev/null | sort -rh",
+  "du -sh * .* 2>/dev/null | sort -rh"
+]
+display = "{split:\\t:1}  {split:\\t:0}"
+output = "{split:\\t:1}"
+
+[preview]
+command = "du -sh '{split:\\t:1}' 2>/dev/null; echo ''; ls -la '{split:\\t:1}' 2>/dev/null || echo \"(not accessible)\""
+
+[ui]
+layout = "landscape"
+
+[ui.preview_panel]
+size = 40
+
+[keybindings]
+shortcut = "f4"
+ctrl-d = "actions:delete"
+enter = "actions:cd"
+ctrl-up = "actions:parent"
+
+[actions.delete]
+description = "Delete selected file or folder"
+command = "rm -rf '{split:\\t:1}'"
+mode = "fork"
+
+[actions.cd]
+description = "Navigate into selected folder"
+command = "sh -c 'tv file-sizes \"$1\"' '' '{split:\\t:1}'"
+mode = "execute"
+
+[actions.parent]
+description = "Go to parent directory"
+command = "tv file-sizes .."
+mode = "execute"
