@@ -111,6 +111,8 @@ local AGENT_PROMPT = string.format(
 local PROMPT_LIBRARY = {
   -- Custom the default prompt
   ["Generate a Commit Message"] = {
+    interaction = "chat",
+    description = "Write commit message with commitizen convention",
     prompts = {
       {
         role = "user",
@@ -127,14 +129,12 @@ local PROMPT_LIBRARY = {
     },
   },
   ["Explain"] = {
-    strategy = "chat",
+    interaction = "chat",
     description = "Explain how code in a buffer works",
     opts = {
       default_prompt = true,
       modes = { "v" },
-      short_name = "explain",
       auto_submit = true,
-      user_prompt = false,
       stop_context_insertion = true,
     },
     prompts = {
@@ -164,10 +164,10 @@ local PROMPT_LIBRARY = {
     },
   },
   ["Explain Code"] = {
-    strategy = "chat",
+    interaction = "chat",
     description = "Explain how code works",
     opts = {
-      short_name = "explain-code",
+      alias = "explain-code",
       auto_submit = false,
       is_slash_cmd = true,
     },
@@ -187,10 +187,10 @@ local PROMPT_LIBRARY = {
   },
   -- Add custom prompts
   ["Generate a Commit Message for Staged"] = {
-    strategy = "chat",
+    interaction = "chat",
     description = "Generate a commit message for staged change",
     opts = {
-      short_name = "staged-commit",
+      alias = "staged-commit",
       auto_submit = true,
       is_slash_cmd = true,
     },
@@ -210,13 +210,12 @@ local PROMPT_LIBRARY = {
     },
   },
   ["Inline Document"] = {
-    strategy = "inline",
+    interaction = "inline",
     description = "Add documentation for code.",
     opts = {
       modes = { "v" },
-      short_name = "inline-doc",
+      alias = "inline-doc",
       auto_submit = true,
-      user_prompt = false,
       stop_context_insertion = true,
     },
     prompts = {
@@ -238,13 +237,12 @@ local PROMPT_LIBRARY = {
     },
   },
   ["Document"] = {
-    strategy = "chat",
+    interaction = "chat",
     description = "Write documentation for code.",
     opts = {
       modes = { "v" },
-      short_name = "doc",
+      alias = "doc",
       auto_submit = true,
-      user_prompt = false,
       stop_context_insertion = true,
     },
     prompts = {
@@ -266,13 +264,12 @@ local PROMPT_LIBRARY = {
     },
   },
   ["Review"] = {
-    strategy = "chat",
+    interaction = "chat",
     description = "Review the provided code snippet.",
     opts = {
       modes = { "v" },
-      short_name = "review",
+      alias = "review",
       auto_submit = true,
-      user_prompt = false,
       stop_context_insertion = true,
     },
     prompts = {
@@ -301,10 +298,10 @@ local PROMPT_LIBRARY = {
     },
   },
   ["Review Code"] = {
-    strategy = "chat",
+    interaction = "chat",
     description = "Review code and provide suggestions for improvement.",
     opts = {
-      short_name = "review-code",
+      alias = "review-code",
       auto_submit = false,
       is_slash_cmd = true,
     },
@@ -323,13 +320,12 @@ local PROMPT_LIBRARY = {
     },
   },
   ["Refactor"] = {
-    strategy = "inline",
+    interaction = "inline",
     description = "Refactor the provided code snippet.",
     opts = {
       modes = { "v" },
-      short_name = "refactor",
+      alias = "refactor",
       auto_submit = true,
-      user_prompt = false,
       stop_context_insertion = true,
     },
     prompts = {
@@ -358,10 +354,10 @@ local PROMPT_LIBRARY = {
     },
   },
   ["Refactor Code"] = {
-    strategy = "chat",
+    interaction = "chat",
     description = "Refactor the provided code snippet.",
     opts = {
-      short_name = "refactor-code",
+      alias = "refactor-code",
       auto_submit = false,
       is_slash_cmd = true,
     },
@@ -380,13 +376,12 @@ local PROMPT_LIBRARY = {
     },
   },
   ["Naming"] = {
-    strategy = "inline",
+    interaction = "inline",
     description = "Give betting naming for the provided code snippet.",
     opts = {
       modes = { "v" },
-      short_name = "naming",
+      alias = "naming",
       auto_submit = true,
-      user_prompt = false,
       stop_context_insertion = true,
     },
     prompts = {
@@ -408,10 +403,10 @@ local PROMPT_LIBRARY = {
     },
   },
   ["Better Naming"] = {
-    strategy = "chat",
+    interaction = "chat",
     description = "Give betting naming for the provided code snippet.",
     opts = {
-      short_name = "better-naming",
+      alias = "better-naming",
       auto_submit = false,
       is_slash_cmd = true,
     },
@@ -423,12 +418,13 @@ local PROMPT_LIBRARY = {
     },
   },
   ["English Review"] = {
-    strategy = "chat",
+    interaction = "chat",
     description = "Review English writing for spelling, grammar, and phrasing improvements.",
     opts = {
-      short_name = "english",
+      alias = "english",
       auto_submit = true,
       ignore_system_prompt = true,
+      is_slash_cmd = true,
     },
     prompts = {
       {
@@ -471,6 +467,46 @@ If no issues are found, simply respond: "No writing issues detected."
           else
             return "#buffer\nPlease review the following text for spelling errors, grammatical mistakes, and non-native phrasing. Provide improved alternatives or corrections where necessary."
           end
+        end,
+        opts = {
+          contains_code = false,
+        },
+      },
+    },
+  },
+  ["Grammar Fix"] = {
+    interaction = "inline",
+    description = "Fix English grammar in selected text",
+    opts = {
+      modes = { "v", "n" },
+      alias = "grammar",
+      auto_submit = true,
+      user_prompt = false,
+      stop_context_insertion = true,
+      is_slash_cmd = true,
+    },
+    prompts = {
+      {
+        role = "system",
+        content = [[
+You are an expert English grammar assistant. Your task is to correct grammar mistakes in the provided text.
+
+Rules:
+- Fix spelling errors
+- Fix grammatical mistakes
+- Improve sentence flow
+- Keep changes minimal and focused
+- Only return the corrected text, no explanations unless requested
+        ]],
+        opts = {
+          visible = false,
+        },
+      },
+      {
+        role = "user",
+        content = function(context)
+          local code = require("codecompanion.helpers.actions").get_code(context.start_line, context.end_line)
+          return "Please fix the grammar in the following text:\n\n" .. code
         end,
         opts = {
           contains_code = false,

@@ -8,7 +8,7 @@ local function generate_slash_commands()
   for _, command in ipairs({ "buffer", "file", "help", "symbols" }) do
     commands[command] = {
       opts = {
-        provider = LazyVim.pick.picker.name, -- dynamically resolve the provider
+        provider = "copilot",
       },
     }
   end
@@ -27,31 +27,37 @@ return {
       display = {
         chat = {
           intro_message = "Welcome to CodeCompanion ✨! Press ? for options",
-          show_header_separator = true, -- Show header separators in the chat buffer? Set this to false if you're using an external markdown formatting plugin
+          show_header_separator = true,
           auto_scroll = true,
+        },
+        diff = {
+          provider = "inline",
+        },
+      },
+      interactions = {
+        inline = {
+          keymaps = {
+            accept_change = {
+              modes = { n = "gda" },
+              description = "Accept the suggested change",
+            },
+            reject_change = {
+              modes = { n = "gdr" },
+              description = "Reject the suggested change",
+            },
+          },
         },
       },
       adapters = {
-        ollama = function()
-          return require("codecompanion.adapters").extend("ollama", {
-            env = {
-              url = "http://localhost:11434",
-              endpoint = "http://localhost:11434",
-            },
-            schema = {
-              model = {
-                default = "qwen3:8b", -- 'deepseek-r1' | 'deepseek-r1:14b' | 'qwq:32b' | 'qwen2.5-coder:14b' | 'qwen2.5-coder:7b' | 'codellama:7b-code' | 'codewriter'
-              },
-              num_ctx = {
-                default = 20000,
-              },
-            },
+        copilot = function()
+          return require("codecompanion.adapters").extend("copilot", {
+            name = "Copilot",
           })
         end,
       },
       strategies = {
         chat = {
-          adapter = "ollama",
+          adapter = "copilot",
           roles = {
             llm = "CodeCompanion",
             user = "Me",
@@ -83,10 +89,12 @@ return {
         },
 
         inline = {
-          adapter = "ollama",
+          adapter = "copilot",
+          prompt_library = PROMPTS.PROMPT_LIBRARY,
         },
         cmd = {
-          adapter = "ollama",
+          adapter = "copilot",
+          prompt_library = PROMPTS.PROMPT_LIBRARY,
         },
       },
       prompt_library = PROMPTS.PROMPT_LIBRARY,
@@ -101,9 +109,9 @@ return {
             show_result_in_chat = true, -- Show tool results directly in chat buffer
             format_tool = nil, -- function(tool_name:string, tool: CodeCompanion.Agent.Tool) : string Function to format tool names to show in the chat buffer
             -- MCP Resources
-            make_vars = true, -- Convert MCP resources to #variables for prompts
+            make_vars = false, -- Convert MCP resources to #variables for prompts (disable if no MCP servers)
             -- MCP Prompts
-            make_slash_commands = true, -- Add MCP prompts as /slash commands
+            make_slash_commands = false, -- Add MCP prompts as /slash commands (disable if no MCP servers)
           },
         },
       },
@@ -124,6 +132,9 @@ return {
         desc = "Code Companion - Toggle",
         mode = { "n", "v" },
       },
+      -- Inline Diff Mode (https://codecompanion.olimorris.dev/usage/inline.html)
+      { "gda", "<cmd>CodeCompanionInlineInteractAccept<cr>", desc = "Accept inline edit", mode = { "n", "v" } },
+      { "gdr", "<cmd>CodeCompanionInlineInteractReject<cr>", desc = "Reject inline edit", mode = { "n", "v" } },
       -- Some common usages with visual mode
       {
         mapping_key_prefix .. "e",
@@ -136,6 +147,14 @@ return {
         "<cmd>CodeCompanion /english<cr>",
         desc = "Code Companion - English Review",
         mode = "v",
+      },
+      { mapping_key_prefix .. "g",
+        function()
+          vim.cmd("CodeCompanion /grammar")
+          vim.cmd("startinsert")
+        end,
+        desc = "Code Companion - Grammar Fix",
+        mode = { "n", "v" },
       },
       {
         mapping_key_prefix .. "f",
