@@ -132,9 +132,6 @@ return {
         desc = "Code Companion - Toggle",
         mode = { "n", "v" },
       },
-      -- Inline Diff Mode (https://codecompanion.olimorris.dev/usage/inline.html)
-      { "gda", "<cmd>CodeCompanionInlineInteractAccept<cr>", desc = "Accept inline edit", mode = { "n", "v" } },
-      { "gdr", "<cmd>CodeCompanionInlineInteractReject<cr>", desc = "Reject inline edit", mode = { "n", "v" } },
       -- Some common usages with visual mode
       {
         mapping_key_prefix .. "e",
@@ -148,7 +145,8 @@ return {
         desc = "Code Companion - English Review",
         mode = "v",
       },
-      { mapping_key_prefix .. "g",
+      {
+        mapping_key_prefix .. "g",
         function()
           vim.cmd("CodeCompanion /grammar")
           vim.cmd("startinsert")

@@ -3,6 +3,11 @@
 -- Add any additional options here
 local opt = vim.opt
 
+-- Fix for Neovim GUI apps not finding NVM Node.js
+-- This error occurs because GUI apps don't inherit shell PATH
+vim.opt.shell = "/bin/zsh"
+vim.env.PATH = "/Users/ahmed.rezk/.nvm/versions/node/v22.22.2/bin:" .. vim.env.PATH
+
 vim.lsp.inlay_hint.enable(false)
 
 -- Spell check
