@@ -2,26 +2,29 @@ return {
   "nvim-mini/mini.indentscope",
   version = "*",
   event = "VeryLazy",
-  opts = {
-    symbol = "❘",
-    options = {
-      try_as_border = true,
-      indent_at_cursor = true,
-      border = "both",
-      n_lines = 100,
-    },
-    mappings = {
-      object_scope = "ii",
-      object_scope_with_border = "ai",
-      goto_top = "[i",
-      goto_bottom = "]i",
-    },
-    draw = {
-      delay = 50,
-      animation = require("mini.indentscope").gen_animation.cubic(),
-      priority = 2,
-    },
-  },
+  opts = function()
+    local gen_animation = require("mini.indentscope").gen_animation
+    return {
+      symbol = "❘",
+      options = {
+        try_as_border = true,
+        indent_at_cursor = true,
+        border = "both",
+        n_lines = 100,
+      },
+      mappings = {
+        object_scope = "ii",
+        object_scope_with_border = "ai",
+        goto_top = "[i",
+        goto_bottom = "]i",
+      },
+      draw = {
+        delay = 50,
+        animation = gen_animation.cubic(),
+        priority = 2,
+      },
+    }
+  end,
   config = function(_, opts)
     require("mini.indentscope").setup(opts)
 

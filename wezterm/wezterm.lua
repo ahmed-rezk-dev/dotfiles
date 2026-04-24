@@ -16,18 +16,23 @@ config.set_environment_variables = {
 -- lights in Tokyo. It provides high contrast and visually appealing colors
 -- for coding environments.
 ------------------------------------------------------------------------------
+if appearance.is_dark() then
+	config.color_scheme = "tokyonight_moon"
+else
+	config.color_scheme = "tokyonight_day"
+end
+config.color_scheme_dirs = { wezterm.home_dir .. "/.cache/nvim/tokeyonight/extras/wezterm" }
+
+-- Make colors bright and vibrant like Alacritty
+-- This makes bold text render with bright colors
+config.bold_brightens_ansi_colors = "BrightAndBold"
+
 -- if appearance.is_dark() then
 -- 	config.color_scheme = "onedarkpro_vaporwave"
 -- else
--- 	config.color_scheme = "Tokyo Night"
+-- 	config.color_scheme = "onedarkpro_onelight"
 -- end
-
-if appearance.is_dark() then
-	config.color_scheme = "onedarkpro_vaporwave"
-else
-	config.color_scheme = "onedarkpro_onelight"
-end
-config.color_scheme_dirs = { wezterm.home_dir .. "/.cache/nvim/onedarkpro_dotfiles/extras/wezterm" }
+-- config.color_scheme_dirs = { wezterm.home_dir .. "/.cache/nvim/onedarkpro_dotfiles/extras/wezterm" }
 
 config.font = wezterm.font("JetBrainsMono Nerd Font")
 -- config.font_size = 13

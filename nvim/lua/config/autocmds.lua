@@ -6,3 +6,13 @@
 --
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+
+-- Theme watcher initialization
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    local ok, theme_watcher = pcall(require, "utils.theme-watcher")
+    if ok then
+      theme_watcher.init()
+    end
+  end,
+})

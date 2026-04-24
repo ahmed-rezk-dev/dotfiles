@@ -2,11 +2,10 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
--- Grammar check / English review with CopilotChat
--- <leader>sg - inline grammar fix (applies directly in-place)
-vim.keymap.set({ "n", "x" }, "<leader>sg", function()
-  vim.cmd("CopilotChat Grammar Fix")
-end, { desc = "CopilotChat - Grammar Fix (inline)" })
+-- Grammar check using CodeCompanion (via <leader>ag)
+vim.keymap.set({ "n", "x" }, "<leader>ag", function()
+  vim.cmd("CodeCompanion /grammar")
+end, { desc = "CodeCompanion - Grammar Fix" })
 -- local map = LazyVim.safe_keymap_set
 -- map(
 --   "s",
