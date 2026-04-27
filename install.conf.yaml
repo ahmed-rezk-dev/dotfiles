@@ -7,6 +7,8 @@
       relink: true
 
 - link:
+    ~/.zshrc: .zshrc
+    ~/.antigen.zsh: antigen.zsh
     ~/.config/nvim: nvim
     ~/.config/tmuxinator: tmuxinator
     ~/.config/tmux: tmux
