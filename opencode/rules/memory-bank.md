@@ -1,1 +1,0 @@
-../../../Documents/opencode/opencode/rules/memory-bank.md

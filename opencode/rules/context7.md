@@ -1,1 +1,0 @@
-../../../Documents/opencode/opencode/rules/context7.md
