@@ -1,0 +1,116 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "edit": "allow",
+    "bash": "allow",
+    "webfetch": "allow",
+  },
+  "plugin": [
+    // "opencode-agent-memory",
+    // "oh-my-opencode@latest",
+    "superpowers@git+https://github.com/obra/superpowers.git",
+  ],
+  "mcp": {
+    "figma": {
+      "type": "local",
+      "command": ["npx", "-y", "@yhy2001/figma-mcp-server", "--stdio"],
+      "environment": {
+        "FIGMA_API_KEY": "{env:FIGMA_API_KEY}",
+      },
+      "enabled": true,
+    },
+    "jira": {
+      "type": "remote",
+      "url": "https://mcp.atlassian.com/v1/mcp",
+      "enabled": false,
+    },
+    "jira-server": {
+      "type": "local",
+      "command": ["npx", "mcp-atlassian"],
+      "environment": {
+        "JIRA_URL": "https://jira.cengage.com",
+        "JIRA_API_TOKEN": "{env:JIRA_TOKEN}",
+        "JIRA_PERSONAL_TOKEN": "{env:JIRA_TOKEN}",
+        "JIRA_USERNAME": "arezk48437",
+      },
+      "enabled": false,
+    },
+    "chrome-devtools": {
+      "type": "local",
+      "command": ["npx", "-y", "chrome-devtools-mcp@latest"],
+      "enabled": true,
+    },
+  },
+  // "provider": {
+  //   "ollama": {
+  //     "npm": "@ai-sdk/openai-compatible",
+  //     "options": {
+  //       "baseURL": "http://192.168.50.252:11434/v1"
+  //     },
+  //     "models": {
+  //       "qwen3:latest-16k": {
+  //         "tool_call": true,
+  //         "reasoning": true
+  //       },
+  //       "qwen3:latest": {
+  //         "tool_call": true,
+  //         "reasoning": true
+  //       }
+  //     }
+  //   },
+  //   "lmstudio": {
+  //     "npm": "@ai-sdk/openai-compatible",
+  //     "name": "LM Studio (local)",
+  //     "options": {
+  //       "baseURL": "http://127.0.0.1:1234/v1"
+  //     },
+  //     "models": {
+  //       "qwen3-8b": {
+  //         "name": "qwen3-8b"
+  //       },
+  //       "mistralai/devstral-small-2507": {
+  //         "name": "Devstral small (LMStudio)"
+  //       },
+  //       "qwen/qwen3-coder-30b": {
+  //         "tool_call": true,
+  //         "reasoning": true
+  //       }
+  //     }
+  //   },
+  //   "cohere": {
+  //     "npm": "@ai-sdk/openai-compatible",
+  //     "name": "cohere",
+  //     "options": {
+  //       "baseURL": "https://api.cohere.ai/compatibility/v1",
+  //       "apiKey": "{env:COHERE_API_KEY}"
+  //     },
+  //     "models": {
+  //       "command-a-03-2025": {
+  //         "name": "command-a-03-2025"
+  //       }
+  //     }
+  //   }
+  // },
+  "command": {
+    "test": {
+      "template": "Run the full test suite with coverage report and show any failures.\nFocus on the failing tests and suggest fixes.",
+      "description": "Run tests with coverage",
+      "agent": "build",
+    },
+    "gitCommit": {
+      "template": "Use npm run commit to commit all changes, group them logically and commit them separately that make sense, and follow the commit script steps, the branch name prefixed to commit messages following a specific convention Jira ticket prefixes (E2G-XXXXX). if the branch name is has prefixes, At the end don't commit without my confimation and reviewing with yes, no, edit",
+      "description": "Git commit changes",
+      "agent": "build",
+    },
+    "lint": {
+      "template": "Run lint, Typecheck Format and apply fixes, for all monorepo",
+      "description": "Lint",
+      "agent": "build",
+    },
+    "accessibility": {
+      "template": "I need you to only check and improve all we accessibility, Screen Reader Support, Generic semantic structure, Missing ARIA labels, Heading hierarchy, Keyboard navigation, WCAG 2.1 AA Compliance on the following files/code",
+      "description": "Accessibility Check",
+      "agent": "build",
+    },
+  },
+}
