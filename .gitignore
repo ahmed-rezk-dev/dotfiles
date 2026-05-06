@@ -7,3 +7,6 @@ opencode/node_modules/
 opencode/.lock-*
 opencode/*.bak
 opencode/package-lock.json
+
+# Local secrets (never commit)
+.zshrc.local
