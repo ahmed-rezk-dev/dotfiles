@@ -14,6 +14,7 @@ export FIGMA_ACCESS_TOKEN="your-figma-access-token-here"
 # Local Service URLs
 # ──────────────────────────────────────────────
 
+# Valkey/Redis URL (localhost default works for local dev)
 export VALKEY_URL="redis://localhost:6379"
 
 # ──────────────────────────────────────────────
@@ -34,28 +35,20 @@ case ":$PATH:" in
 esac
 
 # ──────────────────────────────────────────────
-# Bun configuration
+# Tool configuration (already in .zshrc — uncomment if migrating)
 # ──────────────────────────────────────────────
 
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+# # Bun
+# export BUN_INSTALL="$HOME/.bun"
+# export PATH="$BUN_INSTALL/bin:$PATH"
 
-# ──────────────────────────────────────────────
-# Cargo (Rust)
-# ──────────────────────────────────────────────
+# # Cargo (Rust)
+# export PATH="$HOME/.cargo/bin:$PATH"
 
-export PATH="$HOME/.cargo/bin:$PATH"
+# # NVM (Node Version Manager)
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-# ──────────────────────────────────────────────
-# NVM (Node Version Manager)
-# ──────────────────────────────────────────────
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
-# ──────────────────────────────────────────────
-# RVM (Ruby Version Manager)
-# ──────────────────────────────────────────────
-
-export PATH="$PATH:$HOME/.rvm/bin"
+# # RVM (Ruby Version Manager)
+# export PATH="$PATH:$HOME/.rvm/bin"
