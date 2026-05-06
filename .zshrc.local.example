@@ -21,13 +21,13 @@ export VALKEY_URL="redis://localhost:6379"
 # ──────────────────────────────────────────────
 
 # LM Studio CLI
-export PATH="$PATH:/Users/ahmed.rezk/.lmstudio/bin"
+export PATH="$PATH:$HOME/.lmstudio/bin"
 
 # Docker Desktop completions
-fpath=(/Users/ahmed.rezk/.docker/completions $fpath)
+fpath=($HOME/.docker/completions $fpath)
 
 # PNPM home
-export PNPM_HOME="/Users/ahmed.rezk/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
