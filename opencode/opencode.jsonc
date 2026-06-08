@@ -8,7 +8,7 @@
   "plugin": [
     // "opencode-agent-memory",
     // "oh-my-opencode@latest",
-    "superpowers@git+https://github.com/obra/superpowers.git",
+    // "superpowers@git+https://github.com/obra/superpowers.git",
   ],
   "mcp": {
     "figma": {
@@ -17,6 +17,11 @@
       "environment": {
         "FIGMA_API_KEY": "{env:FIGMA_API_KEY}",
       },
+      "enabled": true,
+    },
+    "figma-write": {
+      "type": "local",
+      "command": ["node", "/Users/ahmed.rezk/.config/opencode/mcp-servers/figma-write/mcp/dist/index.js"],
       "enabled": true,
     },
     "jira": {
@@ -38,6 +43,17 @@
     "chrome-devtools": {
       "type": "local",
       "command": ["npx", "-y", "chrome-devtools-mcp@latest"],
+      "enabled": true,
+    },
+    "bitbucket": {
+      "type": "local",
+      "command": ["node", "/Users/ahmed.rezk/.config/opencode/mcp-servers/bitbucket-server/build/index.js"],
+      "environment": {
+        "BITBUCKET_URL": "{env:BITBUCKET_URL}",
+        "BITBUCKET_USERNAME": "{env:BITBUCKET_USERNAME}",
+        "BITBUCKET_PASSWORD": "{env:BITBUCKET_PASSWORD}",
+        "BITBUCKET_DEFAULT_PROJECT": "{env:BITBUCKET_DEFAULT_PROJECT}",
+      },
       "enabled": true,
     },
   },
@@ -110,6 +126,26 @@
     "accessibility": {
       "template": "I need you to only check and improve all we accessibility, Screen Reader Support, Generic semantic structure, Missing ARIA labels, Heading hierarchy, Keyboard navigation, WCAG 2.1 AA Compliance on the following files/code",
       "description": "Accessibility Check",
+      "agent": "build",
+    },
+    "pr-create": {
+      "template": "Create a new pull request. Follow the instructions in the pr-create command file exactly.",
+      "description": "Create a pull request",
+      "agent": "build",
+    },
+    "pr-review": {
+      "template": "Review an open pull request. Follow the instructions in the pr-review command file exactly.",
+      "description": "Review a pull request",
+      "agent": "build",
+    },
+    "pr-details": {
+      "template": "Show detailed pull request information with diff and comments. Follow the instructions in the pr-details command file exactly.",
+      "description": "Show PR details with diff and comments",
+      "agent": "build",
+    },
+    "pr-ci": {
+      "template": "Monitor CI/build status for a pull request with real-time updates. Follow the instructions in the pr-ci command file exactly.",
+      "description": "Monitor PR CI status with notifications",
       "agent": "build",
     },
   },
