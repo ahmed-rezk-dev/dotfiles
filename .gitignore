@@ -10,3 +10,4 @@ opencode/package-lock.json
 
 # Local secrets (never commit)
 /.zshrc.local
+mcphub/openchamber/speech-models/
