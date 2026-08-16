@@ -122,7 +122,7 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source /Users/ahmed.rezk/antigen.zsh
+source ~/antigen.zsh
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 
@@ -192,6 +192,7 @@ export FZF_DEFAULT_OPTS='--height 40% --tmux bottom,40% --layout reverse --borde
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/ahmed.rezk/.lmstudio/bin"
@@ -211,3 +212,6 @@ autoload -Uz compinit
 compinit
 # End of Docker CLI completions
 eval "$(tv init zsh)"
+
+# opencode
+export PATH=/Users/ahmed/.opencode/bin:$PATH

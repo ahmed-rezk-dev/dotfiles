@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "clients": [
+    {
+      "id": "2a9ae35ca20ecd79a5206da8",
+      "label": "phone",
+      "tokenHash": "855493bd4de8fcf8ab13a604b692425fe8375e3ffa6aabc2c19175c4f55d9b3e",
+      "createdAt": "2026-07-10T01:50:22.023Z",
+      "lastUsedAt": null,
+      "revokedAt": "2026-07-10T16:17:13.398Z",
+      "expiresAt": null,
+      "clientKind": null,
+      "dedupeKey": null
+    },
+    {
+      "id": "c834777b69118fff73bcf89a",
+      "label": "Paired client",
+      "tokenHash": "626386a08b3511b91018d191ce22306c16c135048339d8c10a3f2e359d958bb2",
+      "createdAt": "2026-07-10T15:24:06.196Z",
+      "lastUsedAt": null,
+      "revokedAt": "2026-07-10T16:17:15.068Z",
+      "expiresAt": null,
+      "clientKind": null,
+      "dedupeKey": null
+    },
+    {
+      "id": "289266a1ebba0053b337e851",
+      "label": "Remote client",
+      "tokenHash": "e99321f7351544491e9d7aaf28457b817c3990b5bcbf65e09eb6209d994dc68b",
+      "createdAt": "2026-07-10T16:17:17.634Z",
+      "lastUsedAt": null,
+      "revokedAt": null,
+      "expiresAt": null,
+      "clientKind": null,
+      "dedupeKey": null
+    }
+  ]
+}

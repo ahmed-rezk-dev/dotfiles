@@ -9,6 +9,7 @@
     // "opencode-agent-memory",
     // "oh-my-opencode@latest",
     "superpowers@git+https://github.com/obra/superpowers.git",
+    "@mohak34/opencode-notifier@latest",
   ],
   "mcp": {
     "figma": {
@@ -41,43 +42,53 @@
       "enabled": true,
     },
   },
-  // "provider": {
-  //   "ollama": {
-  //     "npm": "@ai-sdk/openai-compatible",
-  //     "options": {
-  //       "baseURL": "http://192.168.50.252:11434/v1"
-  //     },
-  //     "models": {
-  //       "qwen3:latest-16k": {
-  //         "tool_call": true,
-  //         "reasoning": true
-  //       },
-  //       "qwen3:latest": {
-  //         "tool_call": true,
-  //         "reasoning": true
-  //       }
-  //     }
-  //   },
-  //   "lmstudio": {
-  //     "npm": "@ai-sdk/openai-compatible",
-  //     "name": "LM Studio (local)",
-  //     "options": {
-  //       "baseURL": "http://127.0.0.1:1234/v1"
-  //     },
-  //     "models": {
-  //       "qwen3-8b": {
-  //         "name": "qwen3-8b"
-  //       },
-  //       "mistralai/devstral-small-2507": {
-  //         "name": "Devstral small (LMStudio)"
-  //       },
-  //       "qwen/qwen3-coder-30b": {
-  //         "tool_call": true,
-  //         "reasoning": true
-  //       }
-  //     }
-  //   },
-  //   "cohere": {
+  "provider": {
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "http://192.168.50.252:11434/v1",
+      },
+      "models": {
+        "qwen3:latest-16k": {
+          "tool_call": true,
+          "reasoning": true,
+        },
+        "qwen3:latest": {
+          "tool_call": true,
+          "reasoning": true,
+        },
+      },
+    },
+    "lmstudio": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "LM Studio (local)",
+      "options": {
+        "baseURL": "http://192.168.50.252:1234/v1",
+      },
+      "models": {
+        "zai-org/glm-4.6v-flash:2": {
+          "tool_call": true,
+          "vision": true,
+        },
+        "qwen/qwen3-8b": {
+          "tool_call": true,
+          "reasoning": true,
+        },
+        "mistralai/devstral-small-2507": {
+          "name": "Devstral small (LMStudio)",
+        },
+        "qwen/qwen3-coder-30b": {
+          "tool_call": true,
+          "reasoning": true,
+        },
+        "qwen/qwen3.5-35b-a3b": {
+          "tool_call": true,
+          "reasoning": true,
+        },
+      },
+    },
+  },
+  // "cohere": {
   //     "npm": "@ai-sdk/openai-compatible",
   //     "name": "cohere",
   //     "options": {

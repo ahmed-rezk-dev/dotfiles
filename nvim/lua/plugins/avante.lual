@@ -3,8 +3,19 @@ return {
   build = vim.fn.has("win32") ~= 0 and "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false"
     or "make",
   event = "VeryLazy",
+  dependencies = {
+    "nvim-treesitter/nvim-treesitter",
+    "nvim-lua/plenary.nvim",
+    "MunifTanjim/nui.nvim",
+  },
   opts = {
     provider = "copilot",
+    copilot = {
+      endpoint = "https://api.githubcopilot.com",
+      proxy = nil,
+      allow_insecure = false,
+      timeout = 30000,
+    },
     selection = {
       hint_display = "inline",
     },

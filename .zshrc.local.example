@@ -8,7 +8,7 @@
 
 # Figma MCP Server Access Token
 # Get your token from: https://www.figma.com/developers/api#access-tokens
-export FIGMA_ACCESS_TOKEN="your-figma-access-token-here"
+export FIGMA_API_KEY="figd_B4YR_VSOyTHTHpIgHOCiO7l0OU9KZ5aLyw7k6Ftm"
 
 # ──────────────────────────────────────────────
 # Local Service URLs
