@@ -20,3 +20,4 @@
     ~/.hammerspoon/: hammerspoon
     ~/.config/mcphub: mcphub
     ~/.config/opencode: opencode
+    ~/.zshrc.local.example: .zshrc.local.example

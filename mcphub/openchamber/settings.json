@@ -1,0 +1,60 @@
+{
+  "desktopWindowState": {
+    "x": 5,
+    "y": 65,
+    "width": 2038,
+    "height": 1081,
+    "maximized": false,
+    "fullscreen": false
+  },
+  "lightThemeId": "flexoki-light",
+  "darkThemeId": "flexoki-dark",
+  "securityScopedBookmarks": [],
+  "notifyOnSubtasks": true,
+  "notifyOnCompletion": true,
+  "notifyOnError": true,
+  "notifyOnQuestion": true,
+  "notificationTemplates": {
+    "completion": {
+      "title": "{agent_name} is ready",
+      "message": "{model_name} completed the task"
+    },
+    "error": {
+      "title": "Tool error",
+      "message": "{last_message}"
+    },
+    "question": {
+      "title": "Input needed",
+      "message": "{last_message}"
+    },
+    "subtask": {
+      "title": "{agent_name} is ready",
+      "message": "{model_name} completed the task"
+    }
+  },
+  "desktopLocalPort": 57123,
+  "themeId": "flexoki-dark",
+  "themeVariant": "dark",
+  "useSystemTheme": true,
+  "splashBgLight": "#fffdf4",
+  "splashFgLight": "#100F0F",
+  "splashBgDark": "#171515",
+  "splashFgDark": "#CECDC3",
+  "lastDirectory": "/Users/ahmed",
+  "homeDirectory": "/Users/ahmed",
+  "showReasoningTraces": false,
+  "mobileKeyboardMode": "native",
+  "desktopHosts": [],
+  "desktopDefaultHostId": "local",
+  "desktopInitialHostChoiceCompleted": true,
+  "projects": [
+    {
+      "id": "path_L1VzZXJzL2FobWVk",
+      "path": "/Users/ahmed",
+      "addedAt": 1783647888418,
+      "lastOpenedAt": 1783647888418
+    }
+  ],
+  "activeProjectId": "path_L1VzZXJzL2FobWVk",
+  "desktopKeepAwakeEnabled": true
+}

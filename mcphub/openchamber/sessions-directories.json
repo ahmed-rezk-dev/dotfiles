@@ -1,0 +1,746 @@
+{
+  "version": 1,
+  "foldersMap": {
+    "__archived__:/Users/ahmed": [
+      {
+        "id": "404b0621-dfd1-40e4-8716-82fa993b4666",
+        "name": "CAAL",
+        "sessionIds": [
+          "ses_0b6899b3bffeGMlwJShM5fgntp",
+          "ses_0b6648f0effeFLZfaP1wY8ZiwB",
+          "ses_0b6647563ffe7PXLxmK9gv1dLo",
+          "ses_0b6653351ffewvBKg1vm17ubIJ",
+          "ses_0b66683c4ffeiCx644xYlBg0Ew",
+          "ses_0b665e86affeQgM8788zA7bzv0",
+          "ses_0b666f802ffePtKtsdM813q6AA",
+          "ses_0b667e14cffe2XqMSoAILNHkGB",
+          "ses_0b66a1f32ffeuzr1i177y8lykx",
+          "ses_0b66a0afdffexGvLw0dQCEGrR6",
+          "ses_0b66be86bffeLyi3VsIDrsJYA1",
+          "ses_0b66bdd97ffeBRug2Fjuj5KfJr",
+          "ses_0b66ca8bbffebnWP3FegYLTIX0",
+          "ses_0b66e0993ffebs3eJmnQWeThMc",
+          "ses_0b66df842ffe4nztL7NaIvEAL6",
+          "ses_0b66e79e4ffewOOg8nw6kzgjYk",
+          "ses_0b66f4006ffeaHMxQbiqT88XZA",
+          "ses_0b670b0e9ffecMvQifePfKQXfb",
+          "ses_0b67091d5ffehx4h6E7eX4hC3h",
+          "ses_0b6728630ffeFu1v8iC76zhn2l",
+          "ses_0b6726385ffe602M22lorIdexx",
+          "ses_0b6740974ffeic8756jnUCa5El",
+          "ses_0b689647fffePVvD1AMAlfjFl0",
+          "ses_2b5742022ffekn1qPhyH9V5IVJ",
+          "ses_29b329df4ffeKp8GrFJbFIgmZe",
+          "ses_2b52951c0ffen5d1D9qJ0BFZgl",
+          "ses_2b52b8050ffe7wLhGAoQ8wWxUp",
+          "ses_43b42fd99ffejos0fe1BPXQ520"
+        ],
+        "createdAt": 1783696774617,
+        "parentId": null
+      },
+      {
+        "id": "09842407-5e5c-4471-90b8-4af564c866cb",
+        "name": "openrocky_android",
+        "sessionIds": [
+          "ses_0bbfe652affe3htWAVYfgLzVQf",
+          "ses_0bbb5ec02ffef2FNor3n7tblv9"
+        ],
+        "createdAt": 1783696774617,
+        "parentId": null
+      },
+      {
+        "id": "b30d4a2b-1e61-450f-94bc-ed7c00746f43",
+        "name": "opendroid",
+        "sessionIds": [
+          "ses_0bc2d2040ffebiUYXnS7ShWtaQ"
+        ],
+        "createdAt": 1783696774617,
+        "parentId": null
+      },
+      {
+        "id": "4ef01bf2-eab9-43e6-9c88-7db29bf07d26",
+        "name": "work",
+        "sessionIds": [
+          "ses_0c64f4e6fffes94ug595rJ9u8J",
+          "ses_0c64eb712ffeZRWHYLKZf6yc27",
+          "ses_25c6860c6ffeDIPNIopdkqBPi1",
+          "ses_3621dc594ffe3lvmq0Edqt4f0A",
+          "ses_3621e773fffekZItQJ1k7WOWJy",
+          "ses_36224e75affelAF2jEJGAU7hOj",
+          "ses_36226c9a1ffehTqkbXWqW4HKKO",
+          "ses_36228d895ffeFUzfmTNJVydNsM"
+        ],
+        "createdAt": 1783696774618,
+        "parentId": null
+      },
+      {
+        "id": "36e23af7-98e1-4637-937a-23891374e475",
+        "name": ".hermes",
+        "sessionIds": [
+          "ses_0d09af6b4ffeSri71WLsfxfGjK",
+          "ses_0e97c7df5ffeHh3k6D4bdX4vLG",
+          "ses_0e97f4b0affebCAfv1ENzvXUJy",
+          "ses_1091e0d1fffeEjVqmHHpsNbjKU",
+          "ses_0fb758c65ffeFOVz0x8S06riHz",
+          "ses_1090203f9ffeM6l8zpsq6BlL56",
+          "ses_1091ea01affeSYDDZoycQb4Xj8"
+        ],
+        "createdAt": 1783696774618,
+        "parentId": null
+      },
+      {
+        "id": "4802ca7a-4340-4f7c-9fbc-f73eda0abc44",
+        "name": "homelab",
+        "sessionIds": [
+          "ses_0d13dd7dbffewzDK3rmakDF55n",
+          "ses_11878d067ffeHmg0eCTZ0NckC2",
+          "ses_1516a0199ffes5M4tHIs7GGYj0",
+          "ses_180f4f93dffeSisXq8CqbHuwHg",
+          "ses_4262944bfffe3Sat49w7gJjAQk"
+        ],
+        "createdAt": 1783696774618,
+        "parentId": null
+      },
+      {
+        "id": "4b1809be-db01-4f13-b6b5-b6428c827bd6",
+        "name": "project root",
+        "sessionIds": [
+          "ses_109200cdeffe2sHqb24jL0DYnV",
+          "ses_28c51b610ffe3RnPebtNfXH1Aj",
+          "ses_28c524681ffehjUv4Fq4Gzjaom",
+          "ses_4283b0b39ffeU2qBMnfg2T7rNf",
+          "ses_4283b27d1ffejXaTsXuFYdHUiq",
+          "ses_46b524265ffecKSefkxXwptNla",
+          "ses_46ba788e7ffe1dLhNUTERBEBS8",
+          "ses_46bbe3ba4ffey3OJAQW7XaSiYW",
+          "ses_46c0ddec8ffe1r0dMrBuEExSYC",
+          "ses_4886613f3ffeJqroA4st8zclSo",
+          "ses_4d025b2e5ffe5rN3sEow8pFV4m"
+        ],
+        "createdAt": 1783696774618,
+        "parentId": null
+      },
+      {
+        "id": "c463ff15-dc0f-4773-8829-a50ebeb61061",
+        "name": "fitnice",
+        "sessionIds": [
+          "ses_171817505ffeYVRhaP2gfvEpvr",
+          "ses_12976d525ffe6SAilfsp5kh0gA",
+          "ses_17181631affeh1M29HQj3gEai7",
+          "ses_1718f527fffeW1Xw75e5LTOM6E",
+          "ses_1f785dea2ffeCOnYVAfu55643o",
+          "ses_171b16e43ffetaNy34ajIFUThH",
+          "ses_171b15e1dffec0SGdvZI0v2mzl",
+          "ses_171b2ac4fffejh6IHl8ypVycg5",
+          "ses_171b3678bffeayRNDDIl1GZESb",
+          "ses_171b88d49ffeCPEVuCnFgZp1tt",
+          "ses_171bb882dfferudpLTpspJj7u6",
+          "ses_171ba07a2ffeG343ZvBGIOONAl",
+          "ses_171bb77cbffeaoZK18otpbmlwO",
+          "ses_171bc6d0dffe8FbzBF3gelHhQB",
+          "ses_171bd2193ffepg8CdavYDqTW03",
+          "ses_1745beae2ffeW8ejtT3tU8w3t6",
+          "ses_1745c1f6bffeV7IWjwcs6O2ORd",
+          "ses_17534c950ffeFU06QZ50gK3EQy",
+          "ses_17534d734ffexdbr1HxqviMSm6",
+          "ses_17535e51fffeDCsI3seHrULZkn",
+          "ses_17537629fffeZhwfUJi0K7XDnG",
+          "ses_175373be1ffeHX4Y558ZhzH4T9",
+          "ses_17538f1f0ffeIMrGzpOf9znIIG",
+          "ses_1e6915ed4ffe6pI8Vvjck1B55J",
+          "ses_1e734ec2cffeSgU2JK2yFHLoGW",
+          "ses_1e7356ab9ffe83bH1nU3V1o0Lk",
+          "ses_1e7364107ffeHGARQQSlrlb7kQ",
+          "ses_1e7375c4fffeH4XDQ9mMp7wr64",
+          "ses_1e7b19aa7ffeKw3kN3CT9pVXr3",
+          "ses_1ec717481ffeZyKfGpBfnxagTN",
+          "ses_1ec7156ceffegxH260VkuS7wl1",
+          "ses_1ec78202affeHWTOVKoqt2PnvS",
+          "ses_1ec7833c0ffeZo2mN0pTFJwJHx",
+          "ses_1eccbf0e7ffeKf0wwuF7cwSm6C",
+          "ses_1eccc1454ffevANAyiw3cMcjAA",
+          "ses_1ed0f5b74ffeCXQDsxbFGo2JUg",
+          "ses_1ed0f73f3ffeIRYVVsgm53yFIg",
+          "ses_1ed615391ffevHlJ2ok6B6OKit",
+          "ses_1ed617514ffedocwJHV60ouRAY",
+          "ses_1ed68869effebtsYRqBMia71oa",
+          "ses_1f785c5adffey4XilrUhURNwJK",
+          "ses_1f7ed645bffeDs35cMt8AuLgnI",
+          "ses_201098039ffe47Uy1OuhqXf0RU",
+          "ses_1fc248752ffepsmcw5fjwjT1jF"
+        ],
+        "createdAt": 1783696774618,
+        "parentId": null
+      },
+      {
+        "id": "f1bc852a-5510-46c2-9967-3e50a6e44cc5",
+        "name": "Notes",
+        "sessionIds": [
+          "ses_1609ad587ffePpeTPPKhrLl01y",
+          "ses_1ae25ce93ffeimrBQTgXyhofeK",
+          "ses_1ec27c941ffeL0Pt0DnghQic6i",
+          "ses_206b052daffe2W2I2fLbUEJzo3",
+          "ses_22ea088b7ffe5OaBie0b6Y3uWD"
+        ],
+        "createdAt": 1783696774618,
+        "parentId": null
+      },
+      {
+        "id": "14246d7e-a85b-43b3-ac9d-e126eccee299",
+        "name": "workout-cool",
+        "sessionIds": [
+          "ses_17698eabfffegdX82iuJTWA7A3",
+          "ses_175cc2ad2ffeBWzA51sNKzEiMa",
+          "ses_175cc32daffe08AaI7Q15h9hla",
+          "ses_175cc3aabffenJnxN74IFtKdp2",
+          "ses_175cc42a8ffeDP37bKOWyPjCjy",
+          "ses_175cc53e1ffegciMEClmFPku5G",
+          "ses_175cc4ad4ffekUODltwRoRNyku",
+          "ses_17633512dffeegnQwb3eJOSMRo",
+          "ses_176357fdaffeqXhxy76lBtuiye",
+          "ses_1763689a1ffe7r9h7zeGo8z4vu"
+        ],
+        "createdAt": 1783696774618,
+        "parentId": null
+      },
+      {
+        "id": "66c24d8f-6ef3-4e1a-9927-c8565ccde6c9",
+        "name": "dotfiles",
+        "sessionIds": [
+          "ses_1af7b4e99ffeE3QQir5IqzEgPV",
+          "ses_1e8430f41ffe1IZu5DqPI2GdL3",
+          "ses_1e8512cf1ffe6NlUcYwKV46iwL",
+          "ses_1e8610bb8ffeaBG3zawjyRSz59",
+          "ses_1eadf1d46ffe0HXurjD4UaTOhA",
+          "ses_200c447b5ffetvzYb3n8OKA4RD",
+          "ses_20086ad8dffe4jNOUCHonvFlSP",
+          "ses_20084f402ffeQIdPDRGjg1bsQc",
+          "ses_200869338ffe4jJcnbfTIYWB4N",
+          "ses_20088e2dcffegEiqOJXVco4PiT",
+          "ses_20088c6d5ffe6HVmcDQ4cjPlfu",
+          "ses_2008926c2ffeEDHgFgXEkxFPHn",
+          "ses_20089a378ffeZe1aEQLrDmN1q3",
+          "ses_2008b842bffejHjZBJC0sSJdMb",
+          "ses_2008b68c9ffeRrNIedltDHQSsh",
+          "ses_2008bdc55ffe4elHVinLFj6Zox",
+          "ses_2008c74ecffezFkAugSP6WsGAP",
+          "ses_2008d5675ffeq7ArvmZbDxfULx",
+          "ses_2008e1a13ffecGqOcAiqYiekC1",
+          "ses_2009216beffeta2qc5PkgpdLUK",
+          "ses_2008f7cd4ffeKX8rbaPE0Ddq3Y",
+          "ses_200911175ffeWw6CTsl4n1jjw8",
+          "ses_200932cc5ffeBLeXzUuHb1MQII",
+          "ses_200950bb6ffekd3mTOQRyv2i9g",
+          "ses_200c80a01ffe0zETkWCvlq0yI3",
+          "ses_22321ab61ffeGdkM7fi58ormoZ",
+          "ses_22321db77ffeZUb3h7pjMo4r5Y",
+          "ses_22eb52591ffeF1E1o23cj7ZB9k",
+          "ses_24f0b9996ffey5GSe8QgOLeIKy",
+          "ses_2a4f949aaffeePglm1lB3RIYwc",
+          "ses_2a3aef5caffeF1JrSKawSQhcuV",
+          "ses_2a4f922d1ffeMqpKQVwUmAy4Vs",
+          "ses_2a4fe9222ffe6GGrUPPrl3dxvM",
+          "ses_2d4218372ffekeuAXTgUcGBpaR",
+          "ses_2d342fb49ffeK2WERtAPMyYpcu",
+          "ses_4283a4ce2ffeete8BH7wpB5CGb",
+          "ses_46b48a40affewqfkxT8m5Nb0p9",
+          "ses_46b5137d9ffe2XXcNgC3aaPhk8",
+          "ses_46baa60e7ffegV0VErtCZR4abl",
+          "ses_4d0245852ffem6pd55yqzJi36y",
+          "ses_4bc40dfb4ffeiySWlYAkOgorRm",
+          "ses_4bc3f7594ffedPnuCjLaVa9s6W",
+          "ses_7849f820dffengFba55XZk6nmy",
+          "ses_7925c7e6fffewvseAqnoeTXXE1",
+          "ses_797a2b924ffeXMadKWSS2xvcWG",
+          "ses_797b7ef75ffe01Q0wtcmi48PCy",
+          "ses_797bcb425ffeN5a6frgXx6NWCp",
+          "ses_79c1dbe39ffetDBqy7HAwCCCzM",
+          "ses_79c1cf947ffeFbpCdTVMelSuze"
+        ],
+        "createdAt": 1783696774619,
+        "parentId": null
+      },
+      {
+        "id": "2eb8ae7d-2076-490d-8e77-f9026a54c0b1",
+        "name": "community-zip-collector",
+        "sessionIds": [
+          "ses_1d3dfc8a1ffe6wznnxdVwWK5OU",
+          "ses_200876d30ffemqNHdWIF57ZvLR",
+          "ses_1ff138fd1ffecEYflpGffVwK7Z",
+          "ses_1ff1208d2ffemnNsTFCcpej8sm",
+          "ses_1ff13727bffeToruj5c3vQ0naY",
+          "ses_1ff172e69ffeCo72zygYt1fZWo",
+          "ses_1ff1711eaffe40dTqYR0wL8grm",
+          "ses_1ff1844dbffeP90lNvJzHZ44Go",
+          "ses_1ff1b7a4affexds1K3E4taVuh0",
+          "ses_1ff1b63d3ffepuuvh5cGs2LNQn",
+          "ses_1ff1c4cffffe9n5Vc6eyJFRCY2",
+          "ses_1ff1ff252ffea03QpcoVd8F5gW",
+          "ses_1ff1fdb3bffe19qRT2LS8rYzeM",
+          "ses_1ff2179caffeiPLFUSwLXnvt7a",
+          "ses_1ff244897ffe6hDv2hxP4rEVPM",
+          "ses_1ff242e3fffetBIdLtyFonNQw1",
+          "ses_1ff252d79fferZK3SdU2OzkKld",
+          "ses_1ff276bf7ffeyb7XMJxykE6yzv",
+          "ses_1ff2748d1ffe21mrXmmNGFNYXu",
+          "ses_1ff280b85ffegWBVqbi2nrkYy1",
+          "ses_2005bb735ffe41Gr5phDuxLliF",
+          "ses_2005b93ecffeImsvcU5RC9AmIs",
+          "ses_2005f7ef5ffeEv47mxmthFA2jc",
+          "ses_2005efd7bffeQ4n37ueGTarb6x",
+          "ses_200602518ffeD7zIUspYtu9OWM",
+          "ses_20061fa86ffe6sDSwr9mLjTWDR",
+          "ses_20061ded2ffezZ7zs4pwPg141o",
+          "ses_200629227ffea6QtUiy410GIku",
+          "ses_20064f801ffe1n4lxncb22OZ0u",
+          "ses_20065f341ffefQyAxnms3V1j4g",
+          "ses_20067cf16ffez4WFxkrtF3L0QO",
+          "ses_20067b84dffehQVrOaFLr8gZRn",
+          "ses_2006a5a63ffeMbcjjoqAq8h1KQ",
+          "ses_2006a39e4ffeB0nMnV0nXsrI1A",
+          "ses_2006aac83ffeQSBDoIGwZDQlzu",
+          "ses_2006bba89ffevUq5JDg0u48s56",
+          "ses_2006e9686ffeDKrkQlNHptUOl1",
+          "ses_2006e7465ffeFY3lPadB6emjh3",
+          "ses_2006eda02ffekntcuhKajubjXt",
+          "ses_2006f9dfdffeC20S540GQeGDIi",
+          "ses_2007256cdffeueoSfQyD1p1jWW",
+          "ses_200723da9ffeZ1VCRA5y58zZGO",
+          "ses_200729952ffes75n8XAAduN4mA",
+          "ses_200732e1dffeTouNgGr3LFe32Q",
+          "ses_200757bd5ffecL1JLcJaw7cF2x",
+          "ses_20075552effemfaZanszfBhyLw",
+          "ses_20076035bffes3w28Yl2AkY4Oi",
+          "ses_200769e19ffele983xLnFbZnlg"
+        ],
+        "createdAt": 1783696774619,
+        "parentId": null
+      },
+      {
+        "id": "5391fad7-ec32-4305-b4cb-afb682c5eba3",
+        "name": "opencode",
+        "sessionIds": [
+          "ses_1e7d52d66ffetRrFbb8MmTB6d2",
+          "ses_1e7d555b9ffe6LAJXnHCV3Akiz",
+          "ses_1e7d59ddaffe7rAiLijRRx1m7P",
+          "ses_1e7d5b267ffeietFq4zH7U4WWh",
+          "ses_1e7d60950ffeaqTAXS48PdXuaE",
+          "ses_276e2e3d8ffetMdmM1haRIQipX",
+          "ses_29040939effe27OGENzALkEufL"
+        ],
+        "createdAt": 1783696774619,
+        "parentId": null
+      },
+      {
+        "id": "88edf928-9c24-4da5-8571-7180b7bb4763",
+        "name": "ai-repos",
+        "sessionIds": [
+          "ses_2050dc6b9ffeJkKFDB0l5sCxB0",
+          "ses_201724ed9ffeaxOhmBCP5jglG0",
+          "ses_201724ed0ffeTQ0Pf1iJNFlP3R",
+          "ses_20173ae90ffez6bfM2hIJk24p9",
+          "ses_20175091effeWV9VietM2XsNco",
+          "ses_201750912ffepcGN6HcfFRKBQq",
+          "ses_20177374effe8x1nCk1MXql5Iv",
+          "ses_201773727ffe4K01J8xW51jHzN",
+          "ses_201793b37ffejKVApQxs6qi5YW",
+          "ses_2018dbc2bffeQR38ZYnEkw7u50",
+          "ses_2018fbf5fffefo25ztZkWwYEMj",
+          "ses_2018fbf53ffeBSE606YyUHlNp6",
+          "ses_20191a656ffexgO0cxWAo0rl6I",
+          "ses_20191a65affeFknmnFNOGYkYm6",
+          "ses_20191a662ffeNtNwwqg03zyLGa",
+          "ses_20193cdb9ffeK28LdcbGOCumzP",
+          "ses_201954558ffeoL606iLAJZveHJ",
+          "ses_20198d800ffecg00VYW7NL84Vt",
+          "ses_20198d809ffeCSkeHboRcuS7hr",
+          "ses_2019a83b3ffeM4SJNhIPNORrG3",
+          "ses_2019cf982ffewDOzDup2IfULXo",
+          "ses_2019f9eaeffetZvozGHdD1MoFh",
+          "ses_204593192ffemQnCMoLprvK75r",
+          "ses_204abb012ffe25RkF0fJxwrxpn",
+          "ses_204adffedffekOGm8I2OFWbvbr",
+          "ses_204af7886ffe8oz2RwPVi5JzKY",
+          "ses_204b099cbffeOu7hSXQ5GCu7Lp",
+          "ses_204b1bb0effe4uXh3j7b0Yn10V",
+          "ses_204e84ae8ffeyGN5NsQCIXzlPz",
+          "ses_204e84ae2ffeaxtfckfpCdIhQb",
+          "ses_204ebd87bffeNygWEG7wyE8yyb",
+          "ses_2050e9e08ffeY7OL6d33Vx4SRz"
+        ],
+        "createdAt": 1783696774622,
+        "parentId": null
+      },
+      {
+        "id": "cc95cef7-9262-44fa-8eaa-7172f9f948aa",
+        "name": "cad-projects",
+        "sessionIds": [
+          "ses_21a061a9dffeoi7wmK72efWy6P"
+        ],
+        "createdAt": 1783696774623,
+        "parentId": null
+      },
+      {
+        "id": "b6b1e4cd-10db-41ab-9d67-670ef3e55713",
+        "name": "text-to-cad",
+        "sessionIds": [
+          "ses_21bf3208dffe5ErJtt39nNNYel",
+          "ses_21bc00467ffebwUVGbIDLSl8um",
+          "ses_21bbfe2f9ffeqxb6V2Dt9OMTpF",
+          "ses_21bc71748ffes064AGDmxottS7",
+          "ses_21bc6fe19ffePcNtEIiVLMK9fF",
+          "ses_21bcac06fffet0F7nNAshV5alK",
+          "ses_21bca9fa8ffe4lkOrhRZvu1jlE",
+          "ses_21bcb4313ffe2OHzx3iwqmGiLJ",
+          "ses_21bcd25e7ffe7Kt7CSTEN1sVKd",
+          "ses_21bcf2488ffeO5eE2CyVjC7tZs",
+          "ses_21bfeda80ffeNrCnSZU1TYguHb",
+          "ses_21dd5008cffeOL9sYnKkot9GdP",
+          "ses_21c0afcf8ffeN9IOix1zlO2aco",
+          "ses_21da6c14cffedCn4T4nB45ppOr",
+          "ses_21da91b5effeeY8z10M7SxKdw1",
+          "ses_21dacb0e1ffe3TDI2bT62iuP4S",
+          "ses_21dae3523ffewyXgbQuj6OAdJT",
+          "ses_21daea7a3ffesz59sAA7zlxpmC",
+          "ses_21db45847ffeU5QmQIXUBV9dT3",
+          "ses_21db8ac9dffeQ4sErh9f50W5i6",
+          "ses_21dc5591affefjTbmmKzsU3Fjm",
+          "ses_21dc6f1afffeacaPLjKiYxQFdr",
+          "ses_21dc93049ffe46ufxXU4iGsQ41",
+          "ses_21e0200ceffer9uZF9TgKVtSfP"
+        ],
+        "createdAt": 1783696774623,
+        "parentId": null
+      },
+      {
+        "id": "f185f1db-718e-49d7-88a9-7f5b5e736340",
+        "name": "3D Printing",
+        "sessionIds": [
+          "ses_21a568f1affe3gtyjRG3UQYtR0",
+          "ses_21a369a31ffeCHFVZhTYpLOSij",
+          "ses_21a382d47ffeUCs1dKX6N2yF2z",
+          "ses_21a3a8da7ffe159TNmv6MaE8Xn",
+          "ses_21a3bb824ffeo3CO2LINEg6MGo",
+          "ses_21a3c1708ffeH9xQAleb0lNXc0",
+          "ses_21a3ce176ffeZhw234aB4woQ0n",
+          "ses_21a3e0f22ffeVFV5BPNwsooZn1",
+          "ses_21a3ea4e1ffeBDmd4WHw4YxgVw",
+          "ses_21a3f5a5dffeK2TaPYqwofE9EW",
+          "ses_21a40c860ffe6nPE90oSJrMQ19",
+          "ses_21a424ab5ffehQbKeixyaKYwhP",
+          "ses_21a45c123ffeyvD4mgOnhvmAjV",
+          "ses_21a474256ffeRkpn1EzqoNH9Lp",
+          "ses_21a4847c0ffekAP8SNkuxh1oE9",
+          "ses_21a4a2f83ffeyUTlALVzNCLKsS",
+          "ses_21a4ba9b1ffeQnasxYopQOT2Uy",
+          "ses_21a4c1375ffe65l9ccdxqGOalF",
+          "ses_21a4ce07bffeCjK0YLzWjkuhTv"
+        ],
+        "createdAt": 1783696774623,
+        "parentId": null
+      },
+      {
+        "id": "40a7966c-2aa8-4739-887a-0a7f4f7f4dff",
+        "name": "openscad-agent",
+        "sessionIds": [
+          "ses_21b9e3793ffeeRE0sHrlyDq03p",
+          "ses_21ba883b5ffeCzI782LNH7Btgu",
+          "ses_21ba088deffe8rCICx9ztYxhCL"
+        ],
+        "createdAt": 1783696774624,
+        "parentId": null
+      },
+      {
+        "id": "e18bfbd6-4b2d-482c-b21d-b4c8f0bee8f8",
+        "name": "kb_zmk_ps2_mouse_trackpoint_driver-zmk_config",
+        "sessionIds": [
+          "ses_22055326effelKW8ucJ9IijuCe",
+          "ses_224b2f676ffebSQRWoLIz6wxE2",
+          "ses_224b50874ffepy3k7sR5uM2GqM",
+          "ses_224b6131affezlmAZVNbFgLQYt",
+          "ses_22aa89811ffe9heIOKw9fUGsgA",
+          "ses_270f7d862ffetrLQrRFiramUY7",
+          "ses_27b6ee975ffeLyQ08Y8uNlp173"
+        ],
+        "createdAt": 1783696774625,
+        "parentId": null
+      },
+      {
+        "id": "92584b25-df96-46f9-8fba-a280f02e2947",
+        "name": "homelap",
+        "sessionIds": [
+          "ses_245013765ffeKOAJLCFWDDA9UN"
+        ],
+        "createdAt": 1783696774625,
+        "parentId": null
+      },
+      {
+        "id": "8744a1cf-b46e-46eb-9c22-7d1099200d31",
+        "name": "navcaps",
+        "sessionIds": [
+          "ses_272bc44cffferfUVayN5k9mhwu",
+          "ses_27a7db046ffeoIpB42Tqv3ePWx"
+        ],
+        "createdAt": 1783696774625,
+        "parentId": null
+      },
+      {
+        "id": "40a1ab2d-18b1-40f3-8ed5-cd40d8c7a451",
+        "name": "kb_trackpoint_extension",
+        "sessionIds": [
+          "ses_27d5a0b7effew7AJquER3qT0Hm",
+          "ses_27d42d373ffeKxy403Uq2UbGfW",
+          "ses_27d4828b9ffemF9FYHiFtb1US7"
+        ],
+        "createdAt": 1783696774626,
+        "parentId": null
+      },
+      {
+        "id": "1d5b750f-390d-4aeb-bee3-61af1a0d9240",
+        "name": "kb_keycaps_trackpoint",
+        "sessionIds": [
+          "ses_27d612689ffenJQiskumFND5ZI"
+        ],
+        "createdAt": 1783696774626,
+        "parentId": null
+      },
+      {
+        "id": "7e2a3790-5b62-45be-847c-3de151aea91a",
+        "name": "television",
+        "sessionIds": [
+          "ses_2b401b580ffe9mBL4aHsoEbaRj"
+        ],
+        "createdAt": 1783696774626,
+        "parentId": null
+      },
+      {
+        "id": "5a521558-5847-4604-ad23-4b404b844113",
+        "name": "hammerspoon",
+        "sessionIds": [
+          "ses_2ca5e428bffe0XkpwcT9vXSt0h",
+          "ses_2ca5776b3ffefa3YhJIoDhGJ3O",
+          "ses_2ca5ee5d9ffeOlAYMZA8qgQSV8"
+        ],
+        "createdAt": 1783696774626,
+        "parentId": null
+      },
+      {
+        "id": "0e07964a-ac52-4c78-b0ed-261272010fe9",
+        "name": "corne",
+        "sessionIds": [
+          "ses_2d75dfa7effe89VCywcDo9J0kr",
+          "ses_2d019f3c1ffePUecKTOoqZXQtM",
+          "ses_2d3b3cb19ffevvsuOo8fNP2NDZ",
+          "ses_2d3c7882affeQBn48Nv81yFBZG",
+          "ses_2d3d9bd32ffer8wqtfJxfoSu5S",
+          "ses_2d3dcc862ffea1PfhC6n9hNl6o",
+          "ses_2d418d13bffeHJp8ijnipMsKd3",
+          "ses_2d44138c3ffeK57mN2ObBIRyJ8",
+          "ses_2d75f3485ffefTp02PGYYEpwPX"
+        ],
+        "createdAt": 1783696774627,
+        "parentId": null
+      },
+      {
+        "id": "14779a1a-3724-4f61-bee6-194e8b75ecc8",
+        "name": "zmk-keyboard",
+        "sessionIds": [
+          "ses_30f9c8cb2ffeeMpc9Yzxf9QqTz",
+          "ses_30f9d3563ffe31Iq6n6mneX194",
+          "ses_4276bb905ffezt27r5sGhGTs5t",
+          "ses_4277dcb3fffeoRW0v7oc93hcgx"
+        ],
+        "createdAt": 1783696774627,
+        "parentId": null
+      },
+      {
+        "id": "db2cfae6-cc70-4347-bb21-73ffb98f9255",
+        "name": "zmk-config-corne",
+        "sessionIds": [
+          "ses_2e9916e3effeEJumTIkq6A1uNP",
+          "ses_2e991ea75ffet8IHbUZAzeWkQE"
+        ],
+        "createdAt": 1783696774627,
+        "parentId": null
+      },
+      {
+        "id": "23d41c63-9266-42da-b7bf-b085f2b3ef2b",
+        "name": "simsim",
+        "sessionIds": [
+          "ses_42875653cffebfhDS84y3DiyiD",
+          "ses_4434dda40ffeeebckOFfOjo4h4",
+          "ses_44509f66dffeHVYfNUrA2BwfUX",
+          "ses_44682f50dffeO4NLMrKK7i5OM8",
+          "ses_46b4749bcffepG1xqk7ycpfK1v",
+          "ses_46b4b6a90ffep4CaLluU5OSv3G",
+          "ses_482700f28ffeY3LRyi3TYFwllm",
+          "ses_46f141f83ffeYpJsz12Uz7l4v8",
+          "ses_489316773ffertNJqwaRQWEJqm"
+        ],
+        "createdAt": 1783696774628,
+        "parentId": null
+      },
+      {
+        "id": "94f81cc4-de31-4efd-9f12-b3ff7cb059bf",
+        "name": "frontend",
+        "sessionIds": [
+          "ses_42dd1baa8ffevDGVNjU2T1lFEa",
+          "ses_46b4780b6ffe6h1pgBBj1Llrcv"
+        ],
+        "createdAt": 1783696774628,
+        "parentId": null
+      },
+      {
+        "id": "f128333e-4f74-4eeb-b65e-12bcbbf2deb4",
+        "name": "n8n-workflows",
+        "sessionIds": [
+          "ses_43b9404bbffe2fW5oW5IvrkOUh"
+        ],
+        "createdAt": 1783696774628,
+        "parentId": null
+      },
+      {
+        "id": "116a5ead-9747-4f36-b280-ec7605377230",
+        "name": "homeassistant",
+        "sessionIds": [
+          "ses_47a24ad5cffeY7QWaoEWGaj0M5"
+        ],
+        "createdAt": 1783696774629,
+        "parentId": null
+      },
+      {
+        "id": "43e5c3d3-e774-4a59-b118-9fc3647909fe",
+        "name": "local-voice-ai",
+        "sessionIds": [
+          "ses_4853af188ffe7az2qr5K9QAj2T"
+        ],
+        "createdAt": 1783696774629,
+        "parentId": null
+      },
+      {
+        "id": "8cc23ca8-b0f3-4d66-a472-547f8f108542",
+        "name": "platform-tools",
+        "sessionIds": [
+          "ses_4893b0b2bffeeRIGnENOzIV6gR"
+        ],
+        "createdAt": 1783696774630,
+        "parentId": null
+      },
+      {
+        "id": "ced5404a-fa27-47c8-b4ef-e651d0cd6ebd",
+        "name": "conversify",
+        "sessionIds": [
+          "ses_4894cd1ddffe12rr1B83OZO4Lb"
+        ],
+        "createdAt": 1783696774630,
+        "parentId": null
+      },
+      {
+        "id": "fcb0a08c-144f-4ae3-8aea-12d6816ac523",
+        "name": "nx-micros",
+        "sessionIds": [
+          "ses_4c5383c26ffeL4w4ggFR6ABjx6",
+          "ses_4c77d8853ffenDgLokG4pn8wUj",
+          "ses_4c785327dffeSGxzZOe0s5pIUy",
+          "ses_4c78565f6ffegEp7YHY98HoVru",
+          "ses_4c79be9f7ffeXwiGUqvZJVh25x",
+          "ses_4c79f687effeNu6WFP04OOhC1b",
+          "ses_4c79ef68dffeJ1eNs86Wi6Tnfc",
+          "ses_4ca7ce268ffe2rlIdJ15bOiMyD",
+          "ses_4ca81ab13ffeLzO6Zgp96hEvFc",
+          "ses_4cfed448dffe0atYRrbklWOYSv",
+          "ses_4d01c31a8ffeXGBpygQQdpSk47",
+          "ses_4d025638fffeESxOVMY6qcW81Q"
+        ],
+        "createdAt": 1783696774630,
+        "parentId": null
+      },
+      {
+        "id": "ab7ea145-074e-479a-b3e2-429ab02edbaa",
+        "name": "apps",
+        "sessionIds": [
+          "ses_4d01b569cffeMTVlrrR61qJumB"
+        ],
+        "createdAt": 1783696774631,
+        "parentId": null
+      },
+      {
+        "id": "f9d41b9b-a5e6-439e-9df8-588ffe71250f",
+        "name": "micro-all-in-on",
+        "sessionIds": [
+          "ses_5a3209034ffe6Vqyyn3ESFYJhc",
+          "ses_5a3bdbdf5ffeB53OlTVfSywcbZ"
+        ],
+        "createdAt": 1783696774631,
+        "parentId": null
+      },
+      {
+        "id": "8fdeeac5-7e3d-4bba-b1fa-c3caad56bd3a",
+        "name": "shop-remote",
+        "sessionIds": [
+          "ses_5a3b0885fffe9jHDrk4Ze1wO0u",
+          "ses_5a3b80806ffeffdlFRAsPK92zp",
+          "ses_5a3c2f1a1ffe9Xd3Vtk4zCoGT6",
+          "ses_5a3d5ef3effecTQGpq4zy1hCAG"
+        ],
+        "createdAt": 1783696774633,
+        "parentId": null
+      },
+      {
+        "id": "8564f4f5-40b7-4f0e-b2fd-1f673b0b1257",
+        "name": "admin-tool",
+        "sessionIds": [
+          "ses_5a3bc5214ffehyiL6bh3PR5MAb",
+          "ses_5a3bf5aceffeSg2947EpJKEMwI",
+          "ses_5a3c2b862ffenUQguJXK9vHpIh",
+          "ses_5a3d55e86ffekaLvyS3hcbNoJQ"
+        ],
+        "createdAt": 1783696774633,
+        "parentId": null
+      },
+      {
+        "id": "a3a1e78f-7eac-456a-abbb-7c98a3bc175f",
+        "name": "design-token-transformer",
+        "sessionIds": [
+          "ses_5a3f2aefaffeUZnE93aYG3uLDo",
+          "ses_5a4010f72ffebcZSWQo7cDaXsQ"
+        ],
+        "createdAt": 1783696774634,
+        "parentId": null
+      },
+      {
+        "id": "1a201de5-e775-4ee2-9915-4cbaae24aded",
+        "name": "rnr-method",
+        "sessionIds": [
+          "ses_784a1a31fffe63NdVn2LSE7RVR",
+          "ses_784a4e63effeSORsg2JftrcIbX",
+          "ses_784a522d1ffe0RkKE876CZ6i1S",
+          "ses_784a57e69ffeCvynWQbo1XF1eR",
+          "ses_784a5f5b9ffeKqJKp3O8h1uILT",
+          "ses_784ae5044ffeyZcCKUy66zJsOw",
+          "ses_784b3f8fcffeyiyzbBj4Uxabfd",
+          "ses_784b35ab8ffe4keGHKYmdcsDDw",
+          "ses_79270a977ffeIQ9YywTazoeA6S",
+          "ses_792737966ffeejsOE6IOTQI3Mh",
+          "ses_7927c31b9ffeUFoLArujP4MnBg",
+          "ses_793fad45affeGC2bVsxsOv1PIs",
+          "ses_793fbd7a8ffeWD3lDyPaGuWgJ8",
+          "ses_7940148f6ffezX3isEBNylRBwx",
+          "ses_7940771aaffe1aG4y68LZgPbVZ",
+          "ses_7940c862effex60hGibP2Qf8CZ",
+          "ses_7941830daffeuOA6pEhWbhO1E5",
+          "ses_7941ca558ffeFd0A77sgTO0pNv",
+          "ses_79422b470ffeEP9JR7URxyfA9E",
+          "ses_794278f14ffeOMrXcw7Z1Ul48n",
+          "ses_79427cc64ffenqu434yvAGIXHD",
+          "ses_7978adc7affecxruSFI8aJxQ1j",
+          "ses_7978dbf16ffe0D89VKFBzWxzxW"
+        ],
+        "createdAt": 1783696774634,
+        "parentId": null
+      }
+    ]
+  },
+  "collapsedFolderIds": [],
+  "updatedAt": 1783696774886
+}

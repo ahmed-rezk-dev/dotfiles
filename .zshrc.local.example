@@ -1,0 +1,54 @@
+# ~/.zshrc.local — Machine-specific secrets and environment variables
+# Copy this file to ~/.zshrc.local and fill in your values:
+#   cp ~/.zshrc.local.example ~/.zshrc.local
+
+# ──────────────────────────────────────────────
+# API Tokens & Secrets
+# ──────────────────────────────────────────────
+
+# Figma MCP Server Access Token
+# Get your token from: https://www.figma.com/developers/api#access-tokens
+export FIGMA_API_KEY="figd_B4YR_VSOyTHTHpIgHOCiO7l0OU9KZ5aLyw7k6Ftm"
+
+# ──────────────────────────────────────────────
+# Local Service URLs
+# ──────────────────────────────────────────────
+
+# Valkey/Redis URL (localhost default works for local dev)
+export VALKEY_URL="redis://localhost:6379"
+
+# ──────────────────────────────────────────────
+# Machine-specific PATH additions
+# ──────────────────────────────────────────────
+
+# LM Studio CLI
+export PATH="$PATH:$HOME/.lmstudio/bin"
+
+# Docker Desktop completions
+fpath=($HOME/.docker/completions $fpath)
+
+# PNPM home
+export PNPM_HOME="$HOME/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
+# ──────────────────────────────────────────────
+# Tool configuration (already in .zshrc — uncomment if migrating)
+# ──────────────────────────────────────────────
+
+# # Bun
+# export BUN_INSTALL="$HOME/.bun"
+# export PATH="$BUN_INSTALL/bin:$PATH"
+
+# # Cargo (Rust)
+# export PATH="$HOME/.cargo/bin:$PATH"
+
+# # NVM (Node Version Manager)
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+# # RVM (Ruby Version Manager)
+# export PATH="$PATH:$HOME/.rvm/bin"

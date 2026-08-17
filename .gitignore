@@ -8,3 +8,7 @@ opencode/.lock-*
 opencode/*.bak
 opencode/package-lock.json
 opencode/mcp-servers/
+
+# Local secrets (never commit)
+/.zshrc.local
+mcphub/openchamber/speech-models/
