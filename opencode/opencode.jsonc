@@ -6,7 +6,8 @@
     "webfetch": "allow",
   },
   "plugin": [
-    // "opencode-agent-memory",
+    "opencode-agent-memory",
+    "@mohak34/opencode-notifier@latest",
     // "oh-my-opencode@latest",
     // "superpowers@git+https://github.com/obra/superpowers.git",
   ],
@@ -21,7 +22,10 @@
     },
     "figma-write": {
       "type": "local",
-      "command": ["node", "/Users/ahmed.rezk/.config/opencode/mcp-servers/figma-write/mcp/dist/index.js"],
+      "command": [
+        "node",
+        "/Users/ahmed.rezk/.config/opencode/mcp-servers/figma-write/mcp/dist/index.js",
+      ],
       "enabled": true,
     },
     "jira": {
@@ -31,14 +35,14 @@
     },
     "jira-server": {
       "type": "local",
-      "command": ["npx", "mcp-atlassian"],
+      "command": ["node", "/Users/ahmed.rezk/.config/opencode/mcp-servers/jira/node_modules/mcp-atlassian/dist/index.js"],
       "environment": {
         "JIRA_URL": "https://jira.cengage.com",
         "JIRA_API_TOKEN": "{env:JIRA_TOKEN}",
         "JIRA_PERSONAL_TOKEN": "{env:JIRA_TOKEN}",
         "JIRA_USERNAME": "arezk48437",
       },
-      "enabled": false,
+      "enabled": true,
     },
     "chrome-devtools": {
       "type": "local",
@@ -47,7 +51,10 @@
     },
     "bitbucket": {
       "type": "local",
-      "command": ["node", "/Users/ahmed.rezk/.config/opencode/mcp-servers/bitbucket-server/build/index.js"],
+      "command": [
+        "node",
+        "/Users/ahmed.rezk/.config/opencode/mcp-servers/bitbucket-server/build/index.js",
+      ],
       "environment": {
         "BITBUCKET_URL": "{env:BITBUCKET_URL}",
         "BITBUCKET_USERNAME": "{env:BITBUCKET_USERNAME}",

@@ -7,3 +7,4 @@ opencode/node_modules/
 opencode/.lock-*
 opencode/*.bak
 opencode/package-lock.json
+opencode/mcp-servers/

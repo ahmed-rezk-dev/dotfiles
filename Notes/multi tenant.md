@@ -216,6 +216,204 @@ _Authored by Cloudinary_
 
 <https://www.dotcms.com/blog/empowering-multi-brand-strategies-maintaining-brand-consistency-across-multiple-sites>
 
+---
+
+## Headless CMS Options with Multi-Tenancy Support
+
+Research of headless CMS platforms that support multi-tenancy and work with Next.js, React, .NET, and other frontend frameworks.
+
+### 1. Payload CMS
+
+- **Multi-tenancy**: Official `@payloadcms/plugin-multi-tenant` plugin (community alternatives too). Adds tenant field to collections, filters admin panel data by tenant, auto-assigns tenant on create.
+- **Architecture**: Installs directly into your Next.js app — CMS and frontend share codebase, TypeScript types, DB connection, and deployment. No separate API service.
+- **License**: MIT, self-hosted. Data lives in your own Postgres instance.
+- **Frontends**: Next.js (first-class), any REST/GraphQL client including .NET.
+- **Best for**: Next.js projects, data ownership, TypeScript-native development.
+- **Caveats**: Tenant scoping requires deliberate implementation at every query level. Plugin ecosystem is smaller than Strapi.
+- **GitHub**: 40k+ stars, 105k weekly npm downloads (as of 2026).
+- **Pricing**: Free self-hosted (unlimited). Payload Cloud available.
+
+### 2. Webiny
+
+- **Multi-tenancy**: Built-in Tenant Manager. Create tenants programmatically via GraphQL API. Content inheritance and propagation across tenants. Tenant hierarchies (brands, regions, customers).
+- **Architecture**: Serverless (AWS). TypeScript framework. GraphQL API + SDK.
+- **License**: Open-source.
+- **Frontends**: Next.js Starter Kit included. Any GraphQL client.
+- **Best for**: Serverless SaaS platforms, multi-brand ecosystems, enterprise.
+- **Caveats**: Tied to AWS serverless stack. Learning curve for plugin system.
+- **Pricing**: Self-hosted (free, unlimited). Enterprise with advanced tenant management.
+
+### 3. Strapi
+
+- **Multi-tenancy**: NOT supported out of the box. Recommended approach: separate Strapi instances per client. Community plugins exist (e.g., `strapi-plugin-multitenancy` with PostgreSQL schema-per-tenant isolation, or `strapi-plugin-multi-tenant` for organization/user-group based isolation).
+- **Architecture**: Separate Node.js process, separate deployment, separate schema from your frontend.
+- **License**: MIT, self-hosted.
+- **Frontends**: Any (REST + GraphQL). Works with Next.js, React, .NET.
+- **Best for**: Single-tenant-per-instance setups. Projects needing many third-party integrations.
+- **Caveats**: True multi-tenancy requires complex custom work. Strapi Cloud helps manage multiple instances.
+- **Pricing**: Free self-hosted. Strapi Cloud paid plans.
+
+### 4. Directus
+
+- **Multi-tenancy**: Role-based access control + relational fields. Create a Tenants collection, add relationships to data collections, set permission rules to filter by tenant. Also supports multi-instance via Directus Hub (proposed orchestration layer).
+- **Architecture**: Headless CMS + backend. REST + GraphQL APIs. Self-hosted or Cloud.
+- **License**: Open-source (BSL).
+- **Frontends**: Any (REST, GraphQL, SDKs). Works with .NET, React, Next.js.
+- **Best for**: Custom multi-tenant setups via RBAC. SQL flexibility. Teams wanting full data control.
+- **Caveats**: Multi-tenancy is manually configured (not a plugin). No native tenant isolation at DB level.
+- **Pricing**: Free self-hosted. Directus Cloud paid plans.
+
+### 5. dotCMS
+
+- **Multi-tenancy**: TRUE multi-tenancy built-in. Massively multisite (1000+ sites). Each site has own branding, users, permissions, content — while sharing/reusing content across sites.
+- **Architecture**: Java-based. REST + GraphQL. Hybrid headless (traditional + headless).
+- **License**: Enterprise (community edition available).
+- **Frontends**: Any (REST, GraphQL). Next.js, React, .NET, etc.
+- **Best for**: Enterprise, large-scale multi-brand, omnichannel.
+- **Caveats**: Java stack (heavier). Enterprise-focused pricing.
+- **Pricing**: Community Edition (free). Enterprise (paid).
+
+### 6. Storyblok
+
+- **Multi-tenancy**: Via "spaces" concept — each space is an independent content repository with its own components, assets, environments, collaborators, and permissions.
+- **Architecture**: SaaS. Visual editor. REST + GraphQL APIs.
+- **License**: Proprietary (SaaS).
+- **Frontends**: Any (REST, GraphQL). SDKs for React, Next.js, Vue, Nuxt, .NET.
+- **Best for**: Enterprise, multi-brand content management, marketing teams.
+- **Caveats**: Fully SaaS (no self-hosted option). Pricing tiers limit spaces.
+- **Pricing**: Free tier available. Paid plans start at ~$50/mo.
+
+### 7. Hygraph (formerly GraphCMS)
+
+- **Multi-tenancy**: Multiple projects/instances for tenant isolation. Can share schemas across instances.
+- **Architecture**: GraphQL-native. SaaS.
+- **Frontends**: Any GraphQL client. React, Next.js, Vue, .NET.
+- **Best for**: GraphQL-first teams, multi-brand enterprises.
+- **Caveats**: SaaS-only. Not self-hostable.
+- **Pricing**: Free tier. Paid plans based on content volume.
+
+### 8. Contentful
+
+- **Multi-tenancy**: Multi-tenant SaaS platform. Multi-space architecture for isolation — spaces can be divided by business unit, region, or channel. Cross-space referencing for shared content.
+- **Architecture**: SaaS. REST + GraphQL. Microservices-based infrastructure.
+- **License**: Proprietary.
+- **Frontends**: Any (REST, GraphQL, SDKs). First-class support for React, Next.js, .NET, iOS, Android.
+- **Best for**: Enterprise, vendor-managed, content-heavy editorial workflows.
+- **Caveats**: Expensive at scale. Vendor lock-in. SaaS-only.
+- **Pricing**: Free tier. Enterprise pricing (custom).
+
+### 9. Sigil CMS
+
+- **Multi-tenancy**: NATIVE multi-tenancy with PostgreSQL Row-Level Security (database-layer isolation). Unlimited tenants from one deployment. Tenant switcher, subdomain routing, site cloning.
+- **Architecture**: Node.js + PostgreSQL. TypeScript SDK. GraphQL + REST. Next.js App Router integration.
+- **License**: Open-source (self-hosted free, unlimited).
+- **Frontends**: Next.js (first-class via `@sigil-cms/next`), any REST/GraphQL client.
+- **Best for**: Agencies managing multiple clients. Cost-sensitive multi-tenant. AI-era features.
+- **Caveats**: Very new project (2026). Smaller community. Requires PostgreSQL.
+- **Pricing**: Free self-hosted (unlimited). Cloud plans from $12/mo (Solo) to $249/mo (Enterprise).
+
+### 10. Caisy
+
+- **Multi-tenancy**: Projects, groups, and organizations hierarchy. Quick switching between projects. Duplicate entire projects.
+- **Architecture**: SaaS. GraphQL API. Visual editor with live preview.
+- **Best for**: Agencies managing multiple client projects.
+- **Caveats**: SaaS-only. Relatively new.
+- **Pricing**: Proprietary.
+
+### 11. TinaCMS
+
+- **Multi-tenancy**: Domain-based middleware rewrites in Next.js. Single Next.js + Tina instance serves multiple domains. Content segmented by tenant in folders.
+- **Architecture**: Git-based (content in MDX/MD files). Next.js-only.
+- **Frontends**: Next.js only (tightly coupled).
+- **Best for**: Next.js, git-centric workflows, teams wanting version-controlled content.
+- **Caveats**: Next.js only. Git-based (not ideal for non-developer content editors).
+- **Pricing**: Free self-hosted. TinaCloud paid plans.
+
+### 12. SkyCMS
+
+- **Multi-tenancy**: Built-in from the ground up. Single deployment serves multiple independent websites. Domain-based tenant resolution via middleware. Multi-database support (FlexDb — auto-selects between Cosmos DB, SQL Server, MySQL, SQLite).
+- **Architecture**: .NET (ASP.NET Core). Entity Framework Core. MediatR. REST API.
+- **Frontends**: Any (REST API). Built for .NET ecosystem.
+- **Best for**: .NET shops, ASP.NET Core ecosystems, enterprises on Microsoft stack.
+- **Caveats**: .NET-only ecosystem. Less known.
+- **Pricing**: Open-source.
+
+### 13. Odin CMS
+
+- **Multi-tenancy**: Organizations, properties, and RBAC with granular permissions.
+- **Architecture**: NestJS (backend) + Next.js (dashboard). MongoDB + Redis + Elasticsearch. AI-enhanced.
+- **Best for**: Editorial teams, publishers, AI-powered content workflows.
+- **Pricing**: Open-source (CE).
+
+---
+
+### Comparison Summary
+
+| CMS | Multi-Tenancy Approach | Self-Host | Frontend Compatibility | Best For |
+|-----|----------------------|-----------|----------------------|----------|
+| **Payload CMS** | Plugin (tenant field per collection) | ✅ Free | Next.js (native), any REST/GraphQL | Next.js, TypeScript, data ownership |
+| **Webiny** | Built-in Tenant Manager | ✅ Free | Next.js kit, any GraphQL | Serverless SaaS, multi-brand |
+| **Strapi** | ❌ Not native (separate instances) | ✅ Free | Any (REST + GraphQL) | Single-tenant per instance |
+| **Directus** | RBAC + relational fields | ✅ Free | Any (REST + GraphQL + SDKs) | Custom RBAC, SQL flexibility |
+| **dotCMS** | ✅ True multi-tenant (1000+ sites) | ✅ Community | Any (REST + GraphQL) | Enterprise, multi-brand |
+| **Storyblok** | Spaces (content repositories) | ❌ SaaS only | Any (SDKs for all) | Enterprise, marketing teams |
+| **Hygraph** | Multiple projects | ❌ SaaS only | Any (GraphQL) | GraphQL-first teams |
+| **Contentful** | Multi-space architecture | ❌ SaaS only | Any (SDKs for all) | Enterprise, editorial workflows |
+| **Sigil CMS** | ✅ Native RLS (PostgreSQL) | ✅ Free | Next.js kit, any REST/GraphQL | Agencies, cost-sensitive |
+| **Caisy** | Projects/groups/orgs | ❌ SaaS only | Any (GraphQL) | Agencies, multi-client |
+| **TinaCMS** | Domain-based middleware | ✅ Free | Next.js only | Git-centric, Next.js |
+| **SkyCMS** | ✅ Built-in, domain-based | ✅ Free | Any (REST), .NET ecosystem | .NET/ASP.NET Core teams |
+| **Odin CMS** | Organizations + RBAC | ✅ Free | Next.js dashboard | Editorial, AI workflows |
+
+### Frontend Compatibility Matrix
+
+| CMS | Next.js | React | .NET | Vue/Angular/Svelte | Mobile |
+|-----|---------|-------|------|-------------------|--------|
+| Payload CMS | ⭐ Native | ✅ | ✅ REST/GraphQL | ✅ | ✅ |
+| Webiny | ✅ Starter Kit | ✅ | ✅ GraphQL | ✅ | ✅ |
+| Strapi | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Directus | ✅ SDK | ✅ SDK | ✅ SDK | ✅ SDK | ✅ SDK |
+| dotCMS | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Storyblok | ✅ SDK | ✅ SDK | ✅ SDK | ✅ SDK | ✅ SDK |
+| Hygraph | ✅ | ✅ | ✅ GraphQL | ✅ | ✅ |
+| Contentful | ✅ SDK | ✅ SDK | ✅ SDK | ✅ SDK | ✅ |
+| Sigil CMS | ⭐ `@sigil-cms/next` | ✅ | ✅ REST/GraphQL | ✅ | ✅ |
+| Caisy | ✅ | ✅ | ✅ GraphQL | ✅ | ✅ |
+| TinaCMS | ⭐ Tightly coupled | ❌ | ❌ | ❌ | ❌ |
+| SkyCMS | ✅ REST | ✅ REST | ⭐ Native (.NET) | ✅ | ✅ |
+
+---
+
+### Open-Source & Free-License Options (Filtered)
+
+CMS options with true open-source licenses (MIT, Apache, etc.) or free self-hosting with no feature gating:
+
+| CMS | License | Self-Host | Multi-Tenancy | Cost at Scale | Notes |
+|-----|---------|-----------|---------------|---------------|-------|
+| **Payload CMS** | MIT | ✅ Unlimited | Plugin-based | Free forever | TypeScript-native, Next.js tight integration |
+| **Webiny** | MIT/Apache 2.0 | ✅ Unlimited | Built-in Tenant Manager | Free forever | Serverless AWS, GraphQL |
+| **Strapi** | MIT | ✅ Unlimited | ❌ Not native (per-instance) | Free (but need N instances for N tenants) | Best ecosystem for plugins |
+| **Directus** | BSL (source-available) | ✅ Unlimited | RBAC + relational fields | Free forever | Custom-built, very flexible |
+| **Sigil CMS** | MIT | ✅ Unlimited | Native (PostgreSQL RLS) | Free forever | Newest option, most native multi-tenant |
+| **TinaCMS** | Apache 2.0 | ✅ Unlimited | Domain middleware | Free forever | Next.js only, git-based |
+| **SkyCMS** | MIT | ✅ Unlimited | Built-in domain-based | Free forever | .NET/ASP.NET Core stack |
+| **Odin CMS** | MIT | ✅ Unlimited | Organizations + RBAC | Free forever | NestJS/Next.js, AI features |
+| **dotCMS** | Community (free) | ✅ Community | True multi-tenant (1000+ sites) | Free (CE has limits) | Java-based, enterprise features |
+
+#### Truly Free Self-Hosted with Native Multi-Tenancy (Best Picks)
+
+These are the projects that are **both** free to self-host **and** have native/built-in multi-tenancy (not bolted on):
+
+1. **SkyCMS** — Built-in domain-based multi-tenancy, .NET ecosystem
+2. **Sigil CMS** — Native PostgreSQL RLS isolation, TypeScript/Next.js
+3. **dotCMS (CE)** — Built-in multisite (1000+ sites), Java-based
+4. **Webiny** — Built-in Tenant Manager, serverless framework
+
+These need manual multi-tenancy setup but are free and flexible:
+5. **Payload CMS** — Plugin-based (requires deliberate implementation)
+6. **Directus** — RBAC-based (manual configuration)
+7. **Odin CMS** — Organizations/RBAC
+
 - Sources
   - [Achieving Multitenancy and Localization in React](https://medium.com/@bernardofoegbu/achieving-multitenancy-and-localization-in-react-6fd1bf694d85)
   - [Multi-Tenant Architecture: How It Works, Pros, and Cons](https://frontegg.com/guides/multi-tenant-architecture)
