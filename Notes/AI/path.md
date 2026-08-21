@@ -33,6 +33,10 @@ This document outlines a structured learning path to develop expertise in agenti
 - [ ] Reinforcement learning concepts
 - [ ] Optimization and gradient descent techniques
 
+**Watch Later:**
+
+- [ ] [ML Foundations for AI Engineers (in 34 Minutes)](https://www.youtube.com/watch?v=BUTjcAjfMgY)
+
 ### 3. Programming & AI Frameworks
 
 - [ ] Gain hands-on experience with tools that power modern agentic systems

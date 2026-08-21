@@ -12,3 +12,7 @@ opencode/mcp-servers/
 # Local secrets (never commit)
 /.zshrc.local
 mcphub/openchamber/speech-models/
+
+# Graphify build artifacts
+graphify-out/
+*/graphify-out/
