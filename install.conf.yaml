@@ -21,3 +21,6 @@
     ~/.config/mcphub: mcphub
     ~/.config/opencode: opencode
     ~/.zshrc.local.example: .zshrc.local.example
+    ~/.agents/skills/: agents/skills
+    ~/.agents/.skill-lock.json: agents/.skill-lock.json
+    ~/.pi/agent/skills/: pi-agent-skills
