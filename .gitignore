@@ -16,3 +16,6 @@ mcphub/openchamber/speech-models/
 # Graphify build artifacts
 graphify-out/
 */graphify-out/
+
+# macOS
+.DS_Store
