@@ -2,7 +2,7 @@
 cmd="$1"
 [ -z "$cmd" ] && exit 1
 
-selection=$(workmux list | tail -n +2 | fzf)
+selection=$(workmux list | tail -n +2 | FZF_DEFAULT_OPTS='--height 100% --layout reverse --border top' fzf)
 [ -z "$selection" ] && exit 0
 
 branch=$(echo "$selection" | awk '{print $1}')

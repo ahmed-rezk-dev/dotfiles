@@ -31,9 +31,9 @@ function M.openEditor()
   log.i("Opening Neovim in Terminal. :wq to save and exit.")
   hs.alert.show("Editing in Neovim... :wq to finish", 2)
 
-  local nvimCmd = string.format('nvim %s', tempFile)
+  local nvimCmd = string.format("nvim %s", tempFile)
   local asCmd = string.format(
-    "osascript -e 'tell application \"Terminal\" to activate' -e 'tell application \"Terminal\" to do script \"%s\"'",
+    'osascript -e \'tell application "Terminal" to activate\' -e \'tell application "Terminal" to do script "%s"\'',
     nvimCmd
   )
 
@@ -42,7 +42,9 @@ function M.openEditor()
   M.watchTimer = hs.timer.new(1.0, function()
     local term = hs.application.find("Terminal")
     if not term then
-      if M.watchTimer then M.watchTimer:stop() end
+      if M.watchTimer then
+        M.watchTimer:stop()
+      end
       M.watchTimer = nil
       M.finishEditing()
       return
@@ -50,7 +52,9 @@ function M.openEditor()
 
     local wins = term:allWindows()
     if wins and #wins == 0 then
-      if M.watchTimer then M.watchTimer:stop() end
+      if M.watchTimer then
+        M.watchTimer:stop()
+      end
       M.watchTimer = nil
       M.finishEditing()
     end
@@ -72,13 +76,15 @@ function M.openEditorWezterm()
   log.i("Opening WezTerm Neovim. :wq to save and exit.")
   hs.alert.show("Editing in WezTerm Neovim... :wq to finish", 2)
 
-  local cmd = string.format('open -a WezTerm --args nvim %s', tempFile)
+  local cmd = string.format("open -a WezTerm --args nvim %s", tempFile)
   hs.execute(cmd, false)
 
   M.watchTimer = hs.timer.new(1.0, function()
     local wez = hs.application.find("WezTerm")
     if not wez then
-      if M.watchTimer then M.watchTimer:stop() end
+      if M.watchTimer then
+        M.watchTimer:stop()
+      end
       M.watchTimer = nil
       M.finishEditing()
       return
@@ -86,7 +92,9 @@ function M.openEditorWezterm()
 
     local wins = wez:allWindows()
     if wins and #wins == 0 then
-      if M.watchTimer then M.watchTimer:stop() end
+      if M.watchTimer then
+        M.watchTimer:stop()
+      end
       M.watchTimer = nil
       M.finishEditing()
     end
@@ -115,16 +123,16 @@ function M.finishEditing()
 end
 
 function M.start()
-  hs.hotkey.bind({ "cmd", "shift" }, "e", function()
-    log.i("Hotkey Cmd+Shift+E pressed")
-    M.openEditor()
-  end)
-  hs.hotkey.bind({ "cmd", "shift" }, "g", function()
-    log.i("Hotkey Cmd+Shift+G pressed")
-    M.openEditorWezterm()
-  end)
-
-  log.i("EditorOverlay loaded. Cmd+Shift+E = Terminal, Cmd+Shift+G = WezTerm")
+  --   hs.hotkey.bind({ "cmd", "shift" }, "e", function()
+  --     log.i("Hotkey Cmd+Shift+E pressed")
+  --     M.openEditor()
+  --   end)
+  --   hs.hotkey.bind({ "cmd", "shift" }, "g", function()
+  --     log.i("Hotkey Cmd+Shift+G pressed")
+  --     M.openEditorWezterm()
+  --   end)
+  --
+  --   log.i("EditorOverlay loaded. Cmd+Shift+E = Terminal, Cmd+Shift+G = WezTerm")
 end
 
 function M.stop()

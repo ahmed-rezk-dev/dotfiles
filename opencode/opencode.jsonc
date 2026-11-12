@@ -1,90 +1,97 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "permission": {
-    "edit": "allow",
-    "bash": "allow",
-    "webfetch": "allow",
-  },
-  "plugin": [
+  "permissions": [
+    { "action": "edit", "resource": "*", "effect": "allow" },
+    { "action": "shell", "resource": "*", "effect": "allow" },
+    { "action": "webfetch", "resource": "*", "effect": "allow" },
+    // V1 asked before accessing paths outside the project; V2 allows them by default.
+    // This rule keeps the V1 behavior. Remove it to use the V2 default.
+    { "action": "external_directory", "resource": "*", "effect": "ask" },
+  ],
+  "plugins": [
     "opencode-agent-memory",
     "@mohak34/opencode-notifier@latest",
     // "oh-my-opencode@latest",
     // "superpowers@git+https://github.com/obra/superpowers.git",
   ],
   "mcp": {
-    "figma": {
-      "type": "local",
-      "command": ["npx", "-y", "@yhy2001/figma-mcp-server", "--stdio"],
-      "environment": {
-        "FIGMA_API_KEY": "{env:FIGMA_API_KEY}",
+    "servers": {
+      "figma": {
+        "type": "local",
+        "command": ["npx", "-y", "@yhy2001/figma-mcp-server", "--stdio"],
+        "environment": {
+          "FIGMA_API_KEY": "{env:FIGMA_API_KEY}",
+        },
+        "disabled": false,
       },
-      "enabled": true,
-    },
-    "figma-write": {
-      "type": "local",
-      "command": [
-        "node",
-        "/Users/ahmed.rezk/.config/opencode/mcp-servers/figma-write/mcp/dist/index.js",
-      ],
-      "enabled": true,
-    },
-    "jira": {
-      "type": "remote",
-      "url": "https://mcp.atlassian.com/v1/mcp",
-      "enabled": false,
-    },
-    "jira-server": {
-      "type": "local",
-      "command": ["node", "/Users/ahmed.rezk/.config/opencode/mcp-servers/jira/node_modules/mcp-atlassian/dist/index.js"],
-      "environment": {
-        "JIRA_URL": "https://jira.cengage.com",
-        "JIRA_API_TOKEN": "{env:JIRA_TOKEN}",
-        "JIRA_PERSONAL_TOKEN": "{env:JIRA_TOKEN}",
-        "JIRA_USERNAME": "arezk48437",
+      "figma-write": {
+        "type": "local",
+        "command": [
+          "node",
+          "/Users/ahmed.rezk/.config/opencode/mcp-servers/figma-write/mcp/dist/index.js",
+        ],
+        "disabled": false,
       },
-      "enabled": true,
-    },
-    "chrome-devtools": {
-      "type": "local",
-      "command": ["npx", "-y", "chrome-devtools-mcp@latest"],
-      "enabled": true,
-    },
-    "bitbucket": {
-      "type": "local",
-      "command": [
-        "node",
-        "/Users/ahmed.rezk/.config/opencode/mcp-servers/bitbucket-server/build/index.js",
-      ],
-      "environment": {
-        "BITBUCKET_URL": "{env:BITBUCKET_URL}",
-        "BITBUCKET_USERNAME": "{env:BITBUCKET_USERNAME}",
-        "BITBUCKET_PASSWORD": "{env:BITBUCKET_PASSWORD}",
-        "BITBUCKET_DEFAULT_PROJECT": "{env:BITBUCKET_DEFAULT_PROJECT}",
+      "jira": {
+        "type": "remote",
+        "url": "https://mcp.atlassian.com/v1/mcp",
+        "disabled": true,
       },
-      "enabled": true,
+      "jira-server": {
+        "type": "local",
+        "command": [
+          "node",
+          "/Users/ahmed.rezk/.config/opencode/mcp-servers/jira/node_modules/mcp-atlassian/dist/index.js",
+        ],
+        "environment": {
+          "JIRA_URL": "https://jira.cengage.com",
+          "JIRA_API_TOKEN": "{env:JIRA_TOKEN}",
+          "JIRA_PERSONAL_TOKEN": "{env:JIRA_TOKEN}",
+          "JIRA_USERNAME": "arezk48437",
+        },
+        "disabled": false,
+      },
+      "chrome-devtools": {
+        "type": "local",
+        "command": ["npx", "-y", "chrome-devtools-mcp@latest"],
+        "disabled": false,
+      },
+      "bitbucket": {
+        "type": "local",
+        "command": [
+          "node",
+          "/Users/ahmed.rezk/.config/opencode/mcp-servers/bitbucket-server/build/index.js",
+        ],
+        "environment": {
+          "BITBUCKET_URL": "{env:BITBUCKET_URL}",
+          "BITBUCKET_USERNAME": "{env:BITBUCKET_USERNAME}",
+          "BITBUCKET_PASSWORD": "{env:BITBUCKET_PASSWORD}",
+          "BITBUCKET_DEFAULT_PROJECT": "{env:BITBUCKET_DEFAULT_PROJECT}",
+        },
+        "disabled": false,
+      },
     },
   },
-  // "provider": {
+  // "providers": {
   //   "ollama": {
-  //     "npm": "@ai-sdk/openai-compatible",
-  //     "options": {
+  //     "package": "aisdk:@ai-sdk/openai-compatible",
+  //     "settings": {
   //       "baseURL": "http://192.168.50.252:11434/v1"
   //     },
   //     "models": {
+  //       // V1 "reasoning" has no V2 equivalent and is ignored.
   //       "qwen3:latest-16k": {
-  //         "tool_call": true,
-  //         "reasoning": true
+  //         "capabilities": { "tools": true }
   //       },
   //       "qwen3:latest": {
-  //         "tool_call": true,
-  //         "reasoning": true
+  //         "capabilities": { "tools": true }
   //       }
   //     }
   //   },
   //   "lmstudio": {
-  //     "npm": "@ai-sdk/openai-compatible",
+  //     "package": "aisdk:@ai-sdk/openai-compatible",
   //     "name": "LM Studio (local)",
-  //     "options": {
+  //     "settings": {
   //       "baseURL": "http://127.0.0.1:1234/v1"
   //     },
   //     "models": {
@@ -95,15 +102,14 @@
   //         "name": "Devstral small (LMStudio)"
   //       },
   //       "qwen/qwen3-coder-30b": {
-  //         "tool_call": true,
-  //         "reasoning": true
+  //         "capabilities": { "tools": true }
   //       }
   //     }
   //   },
   //   "cohere": {
-  //     "npm": "@ai-sdk/openai-compatible",
+  //     "package": "aisdk:@ai-sdk/openai-compatible",
   //     "name": "cohere",
-  //     "options": {
+  //     "settings": {
   //       "baseURL": "https://api.cohere.ai/compatibility/v1",
   //       "apiKey": "{env:COHERE_API_KEY}"
   //     },
@@ -114,7 +120,7 @@
   //     }
   //   }
   // },
-  "command": {
+  "commands": {
     "test": {
       "template": "Run the full test suite with coverage report and show any failures.\nFocus on the failing tests and suggest fixes.",
       "description": "Run tests with coverage",

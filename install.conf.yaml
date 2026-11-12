@@ -10,6 +10,7 @@
     ~/.zshrc: .zshrc
     ~/.antigen.zsh: antigen.zsh
     ~/.config/nvim: nvim
+    ~/.local/bin/newvault: bin/newvault
     ~/.config/tmuxinator: tmuxinator
     ~/.config/tmux: tmux
     ~/.config/wezterm/: wezterm
@@ -18,9 +19,12 @@
     ~/.config/lazygit/: lazygit
     ~/.config/aichat/: aichat
     ~/.hammerspoon/: hammerspoon
-    ~/.config/mcphub: mcphub
+    ~/.config/starship.toml: starship/starship.toml
     ~/.config/opencode: opencode
     ~/.zshrc.local.example: .zshrc.local.example
     ~/.agents/skills/: agents/skills
     ~/.agents/.skill-lock.json: agents/.skill-lock.json
     ~/.pi/agent/skills/: pi-agent-skills
+    ~/.pi/agent/mcp.json: pi-agent/mcp.json
+    ~/.omp/agent/mcp.json: omp-agent/mcp.json
+    ~/.omp/agent/managed-skills/: omp-agent/managed-skills

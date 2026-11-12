@@ -1,0 +1,9 @@
+{
+  "useMarkdownLinks": true,
+  "newLinkFormat": "absolute",
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "concepts",
+  "attachmentFolderPath": "attachments",
+  "showUnsupportedFiles": false
+}

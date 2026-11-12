@@ -31,6 +31,12 @@ require("lazy").setup({
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
   install = { colorscheme = { "tokyonight", "habamax" } },
+  rocks = {
+    -- plugins that ship a rockspec (e.g. avante.nvim) would otherwise require
+    -- luarocks/hererocks at build time. Their Lua deps are added as plain
+    -- plugins instead, so keep lazy's rocks support off.
+    enabled = false,
+  },
   checker = {
     enabled = true, -- check for plugin updates periodically
     notify = false, -- notify on update

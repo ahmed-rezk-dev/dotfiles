@@ -120,8 +120,6 @@ else
 end
 -- To customize the hot key you want, see the mods and key parameters at:
 --   https://www.hammerspoon.org/docs/hs.hotkey.html#bind
---
-vim:bindHotKeys({ enter = { Settings.keys.ULTRA, "." } })
 
 --------------------------------
 -- END VIM CONFIG

@@ -1,0 +1,30 @@
+# Ghostty — primary daily driver
+# Palette: Catppuccin Macchiato (closest to Mocha; Ghostty doesn't ship Mocha)
+# Font: GeistMono Nerd Font
+# Role: clean, content-forward host for tmux.
+
+# -- theme ---------------------------------------------------------------------
+theme = dark:catppuccin-macchiato,light:catppuccin-latte
+
+# -- typography ----------------------------------------------------------------
+font-family = "GeistMono Nerd Font"
+font-size = 14
+adjust-cell-height = 20%
+
+# -- window chrome -------------------------------------------------------------
+macos-titlebar-style = hidden
+window-decoration = false
+window-padding-x = 8
+window-padding-y = 4
+window-padding-balance = true
+background-opacity = 0.95
+background-blur-radius = 20
+
+# -- cursor --------------------------------------------------------------------
+cursor-style = bar
+cursor-style-blink = true
+
+# -- misc ----------------------------------------------------------------------
+confirm-close-surface = false
+copy-on-select = clipboard
+scrollback-limit = 100000

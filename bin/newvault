@@ -1,0 +1,78 @@
+#!/usr/bin/env bash
+# newvault: layer the notes template onto an existing LLM wiki so Obsidian + obsidian.nvim can open it.
+#
+#   newvault [--system] [DIR]
+#
+#   (default)  project vault: DIR (default: $PWD) -> DIR/.llm-wiki/wiki, git-excluded locally
+#   --system   system vault:  DIR (default: $HOME) -> DIR/.llm-wiki/wiki, adds projects/ and daily/
+#
+# The wiki itself must already exist (open pi/omp in DIR once; the llm-wiki extension creates it).
+# Existing files are never overwritten, so re-running is safe.
+set -euo pipefail
+
+KANBAN_VERSION="2.0.51"
+KANBAN_URL="https://github.com/community-archive/obsidian-kanban/releases/download/${KANBAN_VERSION}"
+TEMPLATE_DIR="$(cd "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")/../obsidian-template" && pwd)"
+
+system=0
+if [[ "${1:-}" == "--system" ]]; then
+  system=1
+  shift
+fi
+if [[ $# -gt 1 || "${1:-}" == -* ]]; then
+  echo "usage: newvault [--system] [DIR]" >&2
+  exit 2
+fi
+
+if ((system)); then
+  base="${1:-$HOME}"
+else
+  base="${1:-$PWD}"
+fi
+base="$(cd "$base" && pwd)"
+vault="$base/.llm-wiki/wiki"
+
+if [[ ! -d "$vault" ]]; then
+  echo "newvault: no wiki at $vault" >&2
+  echo "Open pi/omp in $base once so the llm-wiki extension creates it, then re-run." >&2
+  exit 1
+fi
+
+if ((system)); then
+  # System-only files go first so their .obsidian config wins over the common one.
+  rsync -a --ignore-existing "$TEMPLATE_DIR/system-only/" "$vault/"
+  mkdir -p "$vault/projects" "$vault/daily"
+fi
+rsync -a --ignore-existing "$TEMPLATE_DIR/vault/" "$vault/"
+
+# The wiki indexes every .md under wiki/ but skips symlinks, so templates are linked, not copied.
+if [[ -L "$vault/templates" ]]; then
+  ln -sfn "$TEMPLATE_DIR/templates" "$vault/templates"
+elif [[ -e "$vault/templates" ]]; then
+  echo "newvault: $vault/templates exists and is not a symlink; remove it and re-run" >&2
+  exit 1
+else
+  ln -s "$TEMPLATE_DIR/templates" "$vault/templates"
+fi
+
+plugin_dir="$vault/.obsidian/plugins/obsidian-kanban"
+if [[ ! -f "$plugin_dir/main.js" ]]; then
+  mkdir -p "$plugin_dir"
+  for asset in main.js manifest.json styles.css; do
+    curl -fsSL "$KANBAN_URL/$asset" -o "$plugin_dir/$asset.part"
+    mv "$plugin_dir/$asset.part" "$plugin_dir/$asset"
+  done
+fi
+
+if ((!system)) && git -C "$base" rev-parse --git-dir >/dev/null 2>&1; then
+  exclude="$(git -C "$base" rev-parse --path-format=absolute --git-path info/exclude)"
+  mkdir -p "$(dirname "$exclude")"
+  if ! grep -qxF '.llm-wiki/' "$exclude" 2>/dev/null; then
+    echo '.llm-wiki/' >>"$exclude"
+  fi
+fi
+
+kind="project"
+((system)) && kind="system"
+echo "newvault: $kind vault ready at $vault"
+echo "Obsidian: open it via 'Open folder as vault' and enable community plugins (Kanban ${KANBAN_VERSION})."

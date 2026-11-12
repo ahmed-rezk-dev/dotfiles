@@ -21,3 +21,16 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 vim.opt.expandtab = true -- Use spaces instead of tabs
+
+-- Fix .env file detection: the built-in 'env' filetype has no treesitter
+-- parser, so files like .local.env render without syntax highlighting.
+-- Override all built-in env detection methods (filename, pattern, extension).
+-- Note: vim.filetype.add() auto-wraps patterns with ^...$, so don't include anchors.
+-- Pattern priority must be > 0 to beat the built-in ^%.env%. pattern (priority 0).
+vim.filetype.add({
+  filename = { [".env"] = "sh" },
+  extension = { env = "sh" },
+  pattern = {
+    ["%.env%..*"] = { "sh", { priority = 1 } },
+  },
+})

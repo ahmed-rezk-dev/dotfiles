@@ -6,6 +6,10 @@
         "hs"],
   "workspace": {
     "checkThirdParty": true
-  }
+  },
+    "workspace.library": [
+        "/opt/homebrew/Cellar/neovim/0.12.5/share/nvim/runtime/lua",
+        "${3rd}/luv/library"
+    ]
 }
 

@@ -185,8 +185,75 @@ alt-tab = 'workspace-back-and-forth'
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
-# See: https://nikitabobko.github.io/AeroSpace/commands#mode
+# See: https://nikitabobko.github.io/AeroSpace/commands#mode \
 alt-ctrl-backslash = 'mode service'
+
+# Zen mode: pop the focused window into a floating "island" sized to
+# ~55% width x 95% height of whatever screen it's on — a tall, narrow
+# column with big margins on the sides — centered on the screen, plus
+# hides every other app and dims the screen behind it. AeroSpace has no
+# native "hide other windows" or "dim background" command, so those two
+# are handled by a Hammerspoon module (hammerspoon/config/zen.lua),
+# driven here via the `hs` CLI (hs.ipc.cli, already enabled in init.lua).
+# AeroSpace's own resize command is unreliable for the sizing part —
+# resize is a no-op on floating windows (issue #9), and toggling `layout
+# floating` doesn't reliably keep the tiled size either (issues #1519,
+# #2028), so we query the screen bounds and set the frame directly via
+# System Events (macOS Accessibility) instead — this auto-adapts to
+# whichever screen/monitor the window is on, no hardcoded pixel numbers
+# to recompute. The `sleep 0.5` lets the floating transition settle
+# before we resize (racy otherwise), and the size/position are applied
+# three times because some apps (e.g. WezTerm) can reject or partially
+# clamp a big one-shot resize jump — an app-side accessibility-resize
+# quirk, not fully deterministic. IMPORTANT: resize runs BEFORE enable()
+# because enable() hides the app immediately, and then the osascript
+# couldn't find the window to resize it. First run may prompt for
+# Accessibility permission for osascript/System Events — approve it once.
+alt-ctrl-z = [
+    "exec-and-forget hs -c \"require('config.zen').prepare()\"",
+    'layout floating',
+    '''exec-and-forget sleep 0.5 && osascript -e '
+tell application "Finder"
+    set screenBounds to (get bounds of window of desktop)
+end tell
+set screenX to item 1 of screenBounds
+set screenY to item 2 of screenBounds
+set screenW to (item 3 of screenBounds) - screenX
+set screenH to (item 4 of screenBounds) - screenY
+set targetW to round (screenW * 0.55)
+set targetH to round (screenH * 0.95)
+set targetX to screenX + round ((screenW - targetW) / 2)
+set targetY to screenY + round ((screenH - targetH) / 2)
+tell application "System Events"
+    tell (first application process whose frontmost is true)
+        tell window 1
+            repeat 3 times
+                set size to {targetW, targetH}
+                set position to {targetX, targetY}
+                delay 0.15
+            end repeat
+        end tell
+    end tell
+end tell'
+''',
+    "exec-and-forget hs -c \"require('config.zen').enable()\"",
+    'mode zen',
+]
+
+# 'zen' binding mode declaration.
+# Esc restores the window to tiling and returns to the main mode.
+[mode.zen.binding]
+esc = [
+    "exec-and-forget hs -c \"require('config.zen').disable()\"",
+    'layout tiling',
+    'mode main',
+]
+alt-ctrl-z = [
+    "exec-and-forget hs -c \"require('config.zen').disable()\"",
+    'layout tiling',
+    'mode main',
+] # same key toggles zen mode off too
+
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes

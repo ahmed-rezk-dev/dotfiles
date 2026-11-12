@@ -171,10 +171,11 @@ alias emulator="$ANDROID_HOME/emulator/emulator"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# Prompt: Starship (catppuccin-powerline preset, mocha palette).
+# Previous prompt (p10k) kept commented below — restore to revert.
+eval "$(starship init zsh)"
+# source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
@@ -186,6 +187,22 @@ export FZF_DEFAULT_OPTS='--height 40% --tmux bottom,40% --layout reverse --borde
 
 . "$HOME/.local/bin/env"
 
+
+# Docker CLI completions. The old `~/.docker/completions` path is written by
+# Docker Desktop, which no longer ships it, so `_docker` was absent from fpath
+# and `docker <TAB>` completed nothing. Modern Docker CLIs generate it on demand.
+if command -v docker &>/dev/null; then
+  _docker_completion_dir="${XDG_CACHE_HOME:-$HOME/.cache}/docker-completion"
+  mkdir -p "$_docker_completion_dir"
+  command -v docker >/dev/null && docker completion zsh > "$_docker_completion_dir/_docker" 2>/dev/null
+  fpath=("$_docker_completion_dir" $fpath)
+  unset _docker_completion_dir
+fi
+# Run compinit once, early. Tool completions sourced below (bun, docker, ...)
+# call `compdef` as they are read, so they are silently ignored unless the
+# completion system is already initialised.
+autoload -Uz compinit
+compinit -u
 # bun completions
 [ -s "/Users/ahmed.rezk/.bun/_bun" ] && source "/Users/ahmed.rezk/.bun/_bun"
 
@@ -206,11 +223,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-# The following lines have been added by Docker Desktop to enable Docker CLI completions.
-fpath=(/Users/ahmed.rezk/.docker/completions $fpath)
-autoload -Uz compinit
-compinit
-# End of Docker CLI completions
 eval "$(tv init zsh)"
 
 # opencode

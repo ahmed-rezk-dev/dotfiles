@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "atlassian": {
+      "url": "https://mcp.atlassian.com/v1/mcp/authv2"
+    },
+    "github": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://api.githubcopilot.com/mcp/"]
+    },
+    "datadog": {
+      "url": "https://mcp.us3.datadoghq.com/v1/mcp"
+    },
+    "google-workspace": {
+      "command": "npx",
+      "args": ["-y", "@ibarcarty/mcp-server-google-drive"]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@latest"]
+    }
+  }
+}
