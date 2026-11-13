@@ -19,3 +19,4 @@ graphify-out/
 
 # macOS
 .DS_Store
+omp-agent/config.yml.lock
