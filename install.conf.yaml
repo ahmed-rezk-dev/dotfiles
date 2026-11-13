@@ -24,6 +24,7 @@
     ~/.zshrc.local.example: .zshrc.local.example
     ~/.agents/skills/: agents/skills
     ~/.agents/.skill-lock.json: agents/.skill-lock.json
+    ~/.agents/prompts/: agents/prompts
     ~/.pi/agent/skills/: pi-agent-skills
     ~/.pi/agent/mcp.json: pi-agent/mcp.json
     ~/.omp/agent/mcp.json: omp-agent/mcp.json
