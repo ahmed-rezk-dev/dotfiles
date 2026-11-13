@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Linked as .git/hooks/post-merge and post-rewrite by install.conf.yaml.
+# Keeps tmux plugin submodules in sync after `git pull` (git does not do this itself).
+# Deliberately does not run ./install: linking has side effects, so only hint at it.
+
+[ "$(basename "$0")" = "post-rewrite" ] && [ "${1:-}" != "rebase" ] && exit 0
+
+root="$(git rev-parse --show-toplevel)" || exit 0
+cd "$root" || exit 0
+
+git submodule update --init --recursive tmux/plugins ||
+  echo "post-merge: submodule update failed; run ./install to retry" >&2
+
+if git rev-parse --verify -q ORIG_HEAD >/dev/null &&
+  ! git diff --quiet ORIG_HEAD HEAD -- install.conf.yaml; then
+  echo "post-merge: install.conf.yaml changed; run ./install to apply new links" >&2
+fi
+exit 0

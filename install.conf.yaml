@@ -21,6 +21,8 @@
     ~/.hammerspoon/: hammerspoon
     ~/.config/starship.toml: starship/starship.toml
     ~/.config/workmux: workmux
+    .git/hooks/post-merge: .githooks/update-submodules
+    .git/hooks/post-rewrite: .githooks/update-submodules
     ~/.config/opencode: opencode
     ~/.zshrc.local.example: .zshrc.local.example
     ~/.agents/skills/: agents/skills

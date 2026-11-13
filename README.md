@@ -30,3 +30,7 @@ Optional PATH entries in `.zshrc` (rvm, Android, lmstudio, opencode) only matter
 | `workmux/` | `~/.config/workmux` |
 
 Run `./install` again after adding a link to `install.conf.yaml`.
+
+## Updating
+
+`git pull` is enough for plugin updates: `./install` links `.githooks/update-submodules` as the `post-merge` (and `post-rewrite`) hook, which syncs `tmux/plugins`. It prints a reminder to re-run `./install` when `install.conf.yaml` changed.
