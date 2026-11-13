@@ -73,6 +73,13 @@ fi
 step "Link dotfiles + submodules (./install)"
 run "${BASEDIR}/install"
 
+step "pi agent npm packages"
+if [ -d "${HOME}/.pi/agent/npm/node_modules" ]; then
+  echo "already installed"
+else
+  (cd "${HOME}/.pi/agent/npm" && run npm install)
+fi
+
 step "~/.zshrc.local"
 if [ -e "${HOME}/.zshrc.local" ]; then
   echo "already exists"
