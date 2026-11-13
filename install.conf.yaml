@@ -35,4 +35,5 @@
     ~/.omp/agent/RULES.md: omp-agent/RULES.md
     ~/.omp/agent/config.yml: omp-agent/config.yml
     ~/.omp/agent/models.yml: omp-agent/models.yml
+    ~/.omp/agent/themes/: omp-agent/themes
     ~/.omp/agent/extensions/: omp-agent/extensions

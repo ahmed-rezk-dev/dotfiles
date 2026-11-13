@@ -6,7 +6,7 @@ symbolPreset: nerd
 composer:
   shape: band
 theme:
-  dark: dark-twilight
+  dark: catppuccin-mocha
 setupVersion: 3
 terminal:
   showProgress: false
