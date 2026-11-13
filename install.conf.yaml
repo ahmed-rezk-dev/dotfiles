@@ -20,6 +20,7 @@
     ~/.config/aichat/: aichat
     ~/.hammerspoon/: hammerspoon
     ~/.config/starship.toml: starship/starship.toml
+    ~/.config/workmux: workmux
     ~/.config/opencode: opencode
     ~/.zshrc.local.example: .zshrc.local.example
     ~/.agents/skills/: agents/skills
