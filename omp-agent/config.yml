@@ -1,0 +1,60 @@
+modelRoles:
+  smol: ollama/qwen2.5-coder:14b
+  judge: opencode-zen/jev-1.13-free
+  default: opencode-go/beam-free
+symbolPreset: nerd
+composer:
+  shape: band
+theme:
+  dark: dark-twilight
+setupVersion: 3
+terminal:
+  showProgress: false
+tui:
+  renderMermaid: true
+  codexResetFireworks: true
+  vimMode: true
+display:
+  showTokenUsage: true
+  showTurnTime: true
+  cacheMissMarker: true
+error:
+  notify: "on"
+autoResume: false
+skills:
+  registryUrl: https://skills.omp.sh
+memory:
+  backend: mnemopi
+autolearn:
+  enabled: true
+  autoContinue: true
+vault:
+  enabled: true
+github:
+  enabled: true
+generate_image:
+  enabled: true
+statusLine:
+  preset: custom
+  rightSegments:
+    - session_name
+  leftSegments:
+    - vim
+    - model
+    - mode
+    - path
+    - git
+    - pr
+    - session
+    - token_total
+    - cost
+    - context_pct
+commands:
+  enableClaudeUser: true
+bash:
+  gitGuard: true
+task:
+  eager: preferred
+  structured: true
+update:
+  auto: true

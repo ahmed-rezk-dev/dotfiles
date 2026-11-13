@@ -1,0 +1,1 @@
+Whenever the `grilling` skill is loaded (directly, or via `grill-me`, `grill-with-docs`, or any skill that says to use "grilling"), also read `skill://grilling-interactive` and follow it: present each grilling round through the `ask` tool, not as a text Q&A block.

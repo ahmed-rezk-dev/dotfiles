@@ -29,3 +29,7 @@
     ~/.pi/agent/mcp.json: pi-agent/mcp.json
     ~/.omp/agent/mcp.json: omp-agent/mcp.json
     ~/.omp/agent/managed-skills/: omp-agent/managed-skills
+    ~/.omp/agent/RULES.md: omp-agent/RULES.md
+    ~/.omp/agent/config.yml: omp-agent/config.yml
+    ~/.omp/agent/models.yml: omp-agent/models.yml
+    ~/.omp/agent/extensions/: omp-agent/extensions

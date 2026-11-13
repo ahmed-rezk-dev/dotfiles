@@ -1,0 +1,8 @@
+providers:
+  opencode-zen:
+    baseUrl: https://opencode.ai
+    api: openai-responses
+    auth: none
+    headers:
+      User-Agent: "opencode/latest/2.0.12/cli"
+      X-Session-ID: "4bca7d42-ef92-4911-adba-ce690a2be744"
